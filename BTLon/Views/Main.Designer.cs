@@ -38,9 +38,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnMini = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelTitleBar.SuspendLayout();
             this.panelTitleMenu.SuspendLayout();
@@ -131,7 +131,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,9 +151,9 @@
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelMenu.Controls.Add(this.guna2Button4);
-            this.panelMenu.Controls.Add(this.guna2Button3);
+            this.panelMenu.Controls.Add(this.btnHome2);
             this.panelMenu.Controls.Add(this.btnManage);
-            this.panelMenu.Controls.Add(this.guna2Button1);
+            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel8);
             this.panelMenu.Controls.Add(this.panelTitleMenu);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -166,6 +166,9 @@
             // guna2Button4
             // 
             this.guna2Button4.BackColor = System.Drawing.Color.White;
+            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -174,6 +177,7 @@
             this.guna2Button4.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
             this.guna2Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -185,31 +189,38 @@
             this.guna2Button4.TabIndex = 14;
             this.guna2Button4.Text = "   Home";
             // 
-            // guna2Button3
+            // btnHome2
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.White;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 144);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Size = new System.Drawing.Size(156, 37);
-            this.guna2Button3.TabIndex = 13;
-            this.guna2Button3.Text = "   Home";
+            this.btnHome2.BackColor = System.Drawing.Color.White;
+            this.btnHome2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHome2.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnHome2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome2.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnHome2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome2.ForeColor = System.Drawing.Color.White;
+            this.btnHome2.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome2.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnHome2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnHome2.Location = new System.Drawing.Point(0, 144);
+            this.btnHome2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome2.Name = "btnHome2";
+            this.btnHome2.PressedColor = System.Drawing.Color.Transparent;
+            this.btnHome2.Size = new System.Drawing.Size(156, 37);
+            this.btnHome2.TabIndex = 13;
+            this.btnHome2.Text = "   Home";
             // 
             // btnManage
             // 
             this.btnManage.BackColor = System.Drawing.Color.White;
+            this.btnManage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnManage.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnManage.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.btnManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -218,6 +229,7 @@
             this.btnManage.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnManage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnManage.ForeColor = System.Drawing.Color.White;
+            this.btnManage.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManage.ImageSize = new System.Drawing.Size(25, 25);
             this.btnManage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -229,26 +241,33 @@
             this.btnManage.TabIndex = 12;
             this.btnManage.Text = "     Manage";
             // 
-            // guna2Button1
+            // btnHome
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.White;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 70);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Size = new System.Drawing.Size(156, 37);
-            this.guna2Button1.TabIndex = 11;
-            this.guna2Button1.Text = "   Home";
+            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHome.Checked = true;
+            this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome.CustomBorderColor = System.Drawing.Color.Black;
+            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnHome.Location = new System.Drawing.Point(0, 70);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.PressedColor = System.Drawing.Color.Transparent;
+            this.btnHome.Size = new System.Drawing.Size(156, 37);
+            this.btnHome.TabIndex = 11;
+            this.btnHome.Text = "   Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnMini
             // 
@@ -301,8 +320,8 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelMenu;
         private Guna.UI2.WinForms.Guna2Button btnManage;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
+        private Guna.UI2.WinForms.Guna2Button btnHome2;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnClose;

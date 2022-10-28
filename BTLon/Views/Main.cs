@@ -53,5 +53,9 @@ namespace BTLon.Views
                 btnMax.ImageSize = new Size(25, 25);
             }
         }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
