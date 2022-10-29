@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMini = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnMax = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.btnHome2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMini = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelTitleBar.SuspendLayout();
             this.panelTitleMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,9 +58,32 @@
             this.panelTitleBar.Location = new System.Drawing.Point(156, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(699, 24);
+            this.panelTitleBar.Size = new System.Drawing.Size(769, 24);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
+            // 
+            // btnMini
+            // 
+            this.btnMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMini.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMini.CustomBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMini.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMini.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMini.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMini.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMini.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMini.FillColor = System.Drawing.SystemColors.Window;
+            this.btnMini.FillColor2 = System.Drawing.SystemColors.Window;
+            this.btnMini.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMini.ForeColor = System.Drawing.Color.White;
+            this.btnMini.Image = ((System.Drawing.Image)(resources.GetObject("btnMini.Image")));
+            this.btnMini.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnMini.Location = new System.Drawing.Point(707, 0);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMini.Name = "btnMini";
+            this.btnMini.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMini.Size = new System.Drawing.Size(18, 20);
+            this.btnMini.TabIndex = 8;
             // 
             // btnMax
             // 
@@ -78,7 +101,7 @@
             this.btnMax.ForeColor = System.Drawing.Color.White;
             this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
             this.btnMax.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnMax.Location = new System.Drawing.Point(659, 4);
+            this.btnMax.Location = new System.Drawing.Point(729, 4);
             this.btnMax.Margin = new System.Windows.Forms.Padding(2);
             this.btnMax.Name = "btnMax";
             this.btnMax.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -101,7 +124,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(679, 4);
+            this.btnClose.Location = new System.Drawing.Point(749, 4);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -115,7 +138,7 @@
             this.panel3.Location = new System.Drawing.Point(156, 24);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 50);
+            this.panel3.Size = new System.Drawing.Size(769, 50);
             this.panel3.TabIndex = 2;
             // 
             // panelTitleMenu
@@ -141,7 +164,7 @@
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 390);
+            this.panel8.Location = new System.Drawing.Point(0, 453);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(156, 47);
@@ -160,7 +183,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(156, 437);
+            this.panelMenu.Size = new System.Drawing.Size(156, 500);
             this.panelMenu.TabIndex = 0;
             // 
             // guna2Button4
@@ -269,34 +292,11 @@
             this.btnHome.Text = "   Home";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnMini
-            // 
-            this.btnMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMini.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMini.CustomBorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMini.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMini.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMini.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMini.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMini.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMini.FillColor = System.Drawing.SystemColors.Window;
-            this.btnMini.FillColor2 = System.Drawing.SystemColors.Window;
-            this.btnMini.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMini.ForeColor = System.Drawing.Color.White;
-            this.btnMini.Image = ((System.Drawing.Image)(resources.GetObject("btnMini.Image")));
-            this.btnMini.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMini.Location = new System.Drawing.Point(637, 0);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMini.Name = "btnMini";
-            this.btnMini.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMini.Size = new System.Drawing.Size(18, 20);
-            this.btnMini.TabIndex = 8;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 437);
+            this.ClientSize = new System.Drawing.Size(925, 500);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);

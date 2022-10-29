@@ -40,5 +40,10 @@ namespace BTLon.Views
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.txtUserName.Focus();
+        }
     }
 }
