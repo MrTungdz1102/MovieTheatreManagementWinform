@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ModelView.cs" />
     <Compile Include="Models\DataProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,6 +124,9 @@
   <ItemGroup>
     <Content Include="Controls\Read.txt" />
     <Content Include="Models\Read2.txt" />
+    <Content Include="Picture\avt.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Picture\close.png" />
     <Content Include="Picture\iconMax.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -137,6 +141,9 @@
     <Content Include="Picture\logo3.png" />
     <Content Include="Picture\LogoMenu.png" />
     <Content Include="Picture\minimize.png" />
+    <Content Include="Picture\remove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

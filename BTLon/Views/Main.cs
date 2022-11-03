@@ -1,4 +1,5 @@
-﻿using BTLon.Views.User;
+﻿using BTLon.Models;
+using BTLon.Views.User;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -43,23 +44,18 @@ namespace BTLon.Views
         {
             this.Close();
         }
-        private string path(string name)
-        {
-            string path = Path.GetFullPath("Picture\\" + name);
-            return path;
-        }
         private void btnMax_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
             {
+                btnMax.Image = ModelView.Images("iconRestore.png");
                 this.WindowState = FormWindowState.Maximized;
-                btnMax.Image = Image.FromFile(path("iconRestore.png"));
                 btnMax.ImageSize = new Size(15,15);
             }
             else
             {
+                btnMax.Image = ModelView.Images("iconMax.png");
                 this.WindowState = FormWindowState.Normal;
-                btnMax.Image = Image.FromFile(path("iconMax.png"));
                 btnMax.ImageSize = new Size(25, 25);
             }
         }

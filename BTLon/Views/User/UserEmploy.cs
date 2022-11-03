@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,7 @@ namespace BTLon.Views.User
             setTooltip(toolTipSave, btnSave, "Save");
             setTooltip(toolTipEdit, btnEdit, "Edit");
             setTooltip(toolTipAdd, btnAdd, "Add");
+            setTooltip(toolTipDelete,btnDelete, "Delete");
             LoadData();
             panelDetail.Visible = false;
         }
@@ -40,6 +42,9 @@ namespace BTLon.Views.User
             string sql = "select * from tblNhanVien";
             cbMaPB.DataSource = Process.DataReader("select MaPB from tblPhongBan");
             cbMaPB.DisplayMember = "MaPB";
+            cbPB.DataSource = Process.DataReader("select MaPB from tblPhongBan");
+            cbPB.DisplayMember = "MaPB";
+            cbPB.Text = "Chọn phòng ban";
             dgvNhanVien.DataSource = Process.DataReader(sql);
             dgvNhanVien.ReadOnly = true;
         }
@@ -71,11 +76,27 @@ namespace BTLon.Views.User
             dgvNhanVien.ReadOnly = false;
             panelDetail.Visible = true;
         }
-
         private void txtSeach__TextChanged(object sender, EventArgs e)
         {
             string sql = "select * from tblNhanVien where DiaChi like N'%" + txtSeach.Texts + "%'";
             dgvNhanVien.DataSource = Process.DataReader(sql);
+        }
+        private void cbPB_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string sql = "select * from tblNhanVien where MaPB = N'" + cbPB.Text + "'";
+            dgvNhanVien.DataSource = Process.DataReader(sql);
+            dgvNhanVien.ReadOnly = true;
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có chắc chắn muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in dgvNhanVien.SelectedRows)
+                {
+                    dgvNhanVien.Rows.Remove(row);
+                }
+            }
         }
     }
 }
