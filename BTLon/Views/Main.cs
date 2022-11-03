@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using BTLon.Views.User;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,15 @@ namespace BTLon.Views
         public Main()
         {
             InitializeComponent();
+        }
+        private void Main_Load(object sender, EventArgs e)
+        {
+            panelProfile.Visible = false;
+            collapseMenu(true);
+            UserEmploy userEmploy = new UserEmploy();
+            userEmploy.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(userEmploy);
+            panelProfile.Visible = false;
         }
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -53,9 +63,91 @@ namespace BTLon.Views
                 btnMax.ImageSize = new Size(25, 25);
             }
         }
+        private void btnMini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
 
+        }
+        private void setMenu(bool check)
+        {
+            if (check == true)
+            {
+                panelMenu.Width = panelMenu.MinimumSize.Width;
+                btnHome.Text = "";
+                btnManage.Text = "";
+                //btnSales.Text = "";
+                //btnImport.Text = "";
+                btnExit.Text = "";
+                //ptbLogo.Visible = false;
+            }
+            else
+            {
+                panelMenu.Width = panelMenu.MaximumSize.Width;
+                btnHome.Text = btnHome.Tag.ToString();
+                btnManage.Text = btnManage.Tag.ToString();
+                //btnSales.Text = btnSales.Tag.ToString();
+                //btnImport.Text = btnImport.Tag.ToString();
+                btnExit.Text = btnExit.Tag.ToString();
+                //ptbLogo.Visible = true;
+            }
+        }
+        private void collapseMenu(bool check)
+        {
+            if (check == true)
+            {
+                if (this.panelMenu.Width > 100)
+                {
+                    setMenu(true);
+                }
+                else
+                {
+                    setMenu(false);
+                }
+            }
+            else
+            {
+                if (panelMenu.Width == panelMenu.MinimumSize.Width)
+                {
+                    setMenu(false);
+                }
+            }
+        }
+        private void collapseChild(Panel panel, bool check)
+        {
+            if (check == true)
+            {
+                if (panel.Visible == false)
+                {
+                    panel.Visible = true;
+                    panel.Height = 84;
+                }
+                else
+                {
+                    panel.Visible = false;
+                }
+            }
+            else
+            {
+                panel.Visible = false;
+            }
+        }
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            collapseMenu(true);
+            collapseChild(this.panelManage, false);
+        }
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            collapseMenu(false);
+            collapseChild(this.panelManage, true);
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            collapseChild(this.panelProfile, true); 
         }
     }
 }
