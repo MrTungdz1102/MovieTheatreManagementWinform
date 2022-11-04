@@ -15,5 +15,16 @@ namespace BTLon.Models
             Image image = Image.FromFile(Path.GetFullPath("Picture\\" + name));
             return image;
         }
+        public static byte[] ImageToByteArray(Image img)
+        {
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            return ms.ToArray();
+        }
+        public static Image ByteArrayToImage(byte[] byteimg)
+        {
+            MemoryStream ms = new MemoryStream(byteimg);
+            return Image.FromStream(ms);
+        }
     }
 }

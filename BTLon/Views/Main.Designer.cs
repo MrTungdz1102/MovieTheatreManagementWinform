@@ -37,7 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
             this.panelTitleMenu = new System.Windows.Forms.Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,24 +44,25 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelManage = new System.Windows.Forms.Panel();
-            this.btnManage2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnManage1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelProfile = new System.Windows.Forms.Panel();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
+            this.btnEmploy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.panelTitleBar.SuspendLayout();
             this.panelViewPro.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.panelTitleMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelManage.SuspendLayout();
             this.panelProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -203,23 +203,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "LongNT";
             // 
-            // ptbAvt
-            // 
-            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
-            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.ptbAvt.BorderSize = 2;
-            this.ptbAvt.GradientAngle = 50F;
-            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
-            this.ptbAvt.Location = new System.Drawing.Point(23, 0);
-            this.ptbAvt.Name = "ptbAvt";
-            this.ptbAvt.Size = new System.Drawing.Size(37, 37);
-            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbAvt.TabIndex = 0;
-            this.ptbAvt.TabStop = false;
-            // 
             // panelTitleMenu
             // 
             this.panelTitleMenu.Controls.Add(this.btnMenu);
@@ -318,77 +301,22 @@
             // panelManage
             // 
             this.panelManage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelManage.Controls.Add(this.btnManage2);
-            this.panelManage.Controls.Add(this.btnManage1);
+            this.panelManage.Controls.Add(this.btnCustomer);
+            this.panelManage.Controls.Add(this.btnEmploy);
             this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelManage.Location = new System.Drawing.Point(0, 140);
             this.panelManage.MaximumSize = new System.Drawing.Size(0, 77);
             this.panelManage.MinimumSize = new System.Drawing.Size(0, 10);
             this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(146, 10);
+            this.panelManage.Size = new System.Drawing.Size(146, 77);
             this.panelManage.TabIndex = 13;
             this.panelManage.Visible = false;
-            // 
-            // btnManage2
-            // 
-            this.btnManage2.BackColor = System.Drawing.Color.White;
-            this.btnManage2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnManage2.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnManage2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.btnManage2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManage2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManage2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManage2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManage2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManage2.FillColor = System.Drawing.Color.Silver;
-            this.btnManage2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnManage2.ForeColor = System.Drawing.Color.White;
-            this.btnManage2.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnManage2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManage2.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnManage2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnManage2.Location = new System.Drawing.Point(0, 37);
-            this.btnManage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnManage2.Name = "btnManage2";
-            this.btnManage2.PressedColor = System.Drawing.Color.Transparent;
-            this.btnManage2.Size = new System.Drawing.Size(146, 37);
-            this.btnManage2.TabIndex = 14;
-            this.btnManage2.Tag = "     Manage1";
-            this.btnManage2.Text = "            Manage2";
-            // 
-            // btnManage1
-            // 
-            this.btnManage1.BackColor = System.Drawing.Color.White;
-            this.btnManage1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnManage1.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnManage1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.btnManage1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManage1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManage1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManage1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManage1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManage1.FillColor = System.Drawing.Color.Silver;
-            this.btnManage1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnManage1.ForeColor = System.Drawing.Color.White;
-            this.btnManage1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnManage1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnManage1.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnManage1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnManage1.Location = new System.Drawing.Point(0, 0);
-            this.btnManage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnManage1.Name = "btnManage1";
-            this.btnManage1.PressedColor = System.Drawing.Color.Transparent;
-            this.btnManage1.Size = new System.Drawing.Size(146, 37);
-            this.btnManage1.TabIndex = 13;
-            this.btnManage1.Tag = "     Manage1";
-            this.btnManage1.Text = "            Manage1";
             // 
             // btnManage
             // 
             this.btnManage.BackColor = System.Drawing.Color.White;
             this.btnManage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnManage.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnManage.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.btnManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -407,8 +335,8 @@
             this.btnManage.PressedColor = System.Drawing.Color.Transparent;
             this.btnManage.Size = new System.Drawing.Size(146, 37);
             this.btnManage.TabIndex = 12;
-            this.btnManage.Tag = "     Manage";
-            this.btnManage.Text = "     Manage";
+            this.btnManage.Tag = "Quản lý";
+            this.btnManage.Text = "Quản lý";
             this.btnManage.Click += new System.EventHandler(this.btnManage_Click);
             // 
             // btnHome
@@ -416,9 +344,8 @@
             this.btnHome.BackColor = System.Drawing.Color.White;
             this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHome.Checked = true;
-            this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.White;
             this.btnHome.CustomBorderColor = System.Drawing.Color.Black;
-            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -436,8 +363,8 @@
             this.btnHome.PressedColor = System.Drawing.Color.Transparent;
             this.btnHome.Size = new System.Drawing.Size(146, 37);
             this.btnHome.TabIndex = 11;
-            this.btnHome.Tag = "   Home";
-            this.btnHome.Text = "   Home";
+            this.btnHome.Tag = "   Trang chủ";
+            this.btnHome.Text = "   Trang chủ";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panelProfile
@@ -495,6 +422,75 @@
             this.panelContent.Size = new System.Drawing.Size(912, 521);
             this.panelContent.TabIndex = 4;
             // 
+            // ptbAvt
+            // 
+            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
+            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.ptbAvt.BorderSize = 2;
+            this.ptbAvt.GradientAngle = 50F;
+            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
+            this.ptbAvt.Location = new System.Drawing.Point(23, 3);
+            this.ptbAvt.Name = "ptbAvt";
+            this.ptbAvt.Size = new System.Drawing.Size(37, 37);
+            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAvt.TabIndex = 0;
+            this.ptbAvt.TabStop = false;
+            // 
+            // btnEmploy
+            // 
+            this.btnEmploy.BackColor = System.Drawing.Color.White;
+            this.btnEmploy.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnEmploy.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnEmploy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmploy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmploy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEmploy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEmploy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmploy.FillColor = System.Drawing.Color.DimGray;
+            this.btnEmploy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmploy.ForeColor = System.Drawing.Color.White;
+            this.btnEmploy.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnEmploy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEmploy.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnEmploy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnEmploy.Location = new System.Drawing.Point(0, 0);
+            this.btnEmploy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmploy.Name = "btnEmploy";
+            this.btnEmploy.PressedColor = System.Drawing.Color.Transparent;
+            this.btnEmploy.Size = new System.Drawing.Size(146, 37);
+            this.btnEmploy.TabIndex = 13;
+            this.btnEmploy.Tag = "";
+            this.btnEmploy.Text = "     Nhân viên";
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.White;
+            this.btnCustomer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCustomer.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FillColor = System.Drawing.Color.DimGray;
+            this.btnCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomer.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnCustomer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 37);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.PressedColor = System.Drawing.Color.Transparent;
+            this.btnCustomer.Size = new System.Drawing.Size(146, 37);
+            this.btnCustomer.TabIndex = 14;
+            this.btnCustomer.Tag = "";
+            this.btnCustomer.Text = "        Khách hàng";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,13 +510,13 @@
             this.panelViewPro.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.panelTitleMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -540,8 +536,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnMini;
         private Guna.UI2.WinForms.Guna2GradientButton btnMenu;
         private System.Windows.Forms.Panel panelManage;
-        private Guna.UI2.WinForms.Guna2Button btnManage2;
-        private Guna.UI2.WinForms.Guna2Button btnManage1;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Custom.CirclePictureBox ptbAvt;
         private Guna.UI2.WinForms.Guna2GradientButton btnProfile;
@@ -551,5 +545,7 @@
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnEmploy;
     }
 }
