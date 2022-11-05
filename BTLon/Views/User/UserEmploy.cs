@@ -47,14 +47,6 @@ namespace BTLon.Views.User
             cbPB.DisplayMember = "MaPB";
             cbPB.Text = "Chọn phòng ban";
             dgvNhanVien.DataSource = Process.DataReader(sql);
-            for(int i = 0; i  < dgvNhanVien.Rows.Count; i++)
-            {
-                Image img = ModelView.Images("avt.jpg");
-                if(dgvNhanVien.Rows[i].Cells[7].Value == null)
-                {
-                   dgvNhanVien.Rows[i].Cells[7].Value = img;
-                }
-            }
             dgvNhanVien.ReadOnly = true;
         }
 
@@ -119,17 +111,29 @@ namespace BTLon.Views.User
                 string MaNV = row.Cells[0].Value.ToString();
                 ptbAvt.Image = Image.FromFile(openImage.FileName);
                 Process.InsertImage(MaNV, ptbAvt.Image);
+                MessageBox.Show("upload successfully","Notify", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panelDetail.Visible = true;
             try { 
-            byte[] img = (byte[])dgvNhanVien.CurrentRow.Cells[7].Value;
+                string MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                string sql = "select Anh from tblNhanVien where MaNV = N'" +MaNV + "'";
+                DataTable dt = Process.DataReader(sql);
+                object oj = dt.Rows[0][0];
+                byte[] img = oj as byte[];
                 ptbAvt.Image = ModelView.ByteArrayToImage(img);
             }catch(Exception ex)
-            { 
-                ptbAvt.Image = ModelView.Images("avt.jpg");
+            {
+                if(dgvNhanVien.CurrentRow.Cells[3].Value.ToString() == "Nam")
+                {
+                    ptbAvt.Image = ModelView.Images("avt.jpg");
+                }
+                else
+                {
+                    ptbAvt.Image = ModelView.Images("avtNu.jpg");
+                }
             }
         }
 
@@ -141,11 +145,23 @@ namespace BTLon.Views.User
                 string MaNV = row.Cells[0].Value.ToString();
                 string sql = "Update tblNhanVien set Anh = null where MaNV = N'" + MaNV + "'";
                 Process.DataChange(sql);
+                MessageBox.Show("upload successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+            panelDetail.Visible = false;
+            txtSeach.Texts = "Seach...";
+        }
+
+        private void btnAddPB_Click(object sender, EventArgs e)
+        {
+            UserDepart userDepart = new UserDepart();
+            userDepart.Dock = DockStyle.Fill;
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(userDepart);
+            cbPB.Visible = false;
         }
     }
 }

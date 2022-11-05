@@ -83,6 +83,24 @@
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserDepart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserDepart.Designer.cs">
+      <DependentUpon>UserDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserDetailDepart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserDetailDepart.Designer.cs">
+      <DependentUpon>UserDetailDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserDetailEmploy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserDetailEmploy.Designer.cs">
+      <DependentUpon>UserDetailEmploy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserEmploy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserDepart.resx">
+      <DependentUpon>UserDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserDetailDepart.resx">
+      <DependentUpon>UserDetailDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserDetailEmploy.resx">
+      <DependentUpon>UserDetailEmploy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserEmploy.resx">
       <DependentUpon>UserEmploy.cs</DependentUpon>
@@ -125,6 +152,9 @@
     <Content Include="Controls\Read.txt" />
     <Content Include="Models\Read2.txt" />
     <Content Include="Picture\avt.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Picture\avtNu.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Picture\close.png" />
