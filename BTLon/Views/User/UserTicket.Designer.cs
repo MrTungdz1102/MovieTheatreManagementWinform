@@ -73,20 +73,21 @@
             // 
             // PanelListFilm
             // 
+            this.PanelListFilm.AutoScroll = true;
             this.PanelListFilm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelListFilm.Location = new System.Drawing.Point(122, 92);
+            this.PanelListFilm.Location = new System.Drawing.Point(132, 92);
             this.PanelListFilm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelListFilm.Name = "PanelListFilm";
-            this.PanelListFilm.Size = new System.Drawing.Size(679, 429);
+            this.PanelListFilm.Size = new System.Drawing.Size(652, 429);
             this.PanelListFilm.TabIndex = 12;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(801, 92);
+            this.panel5.Location = new System.Drawing.Point(784, 92);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(111, 429);
+            this.panel5.Size = new System.Drawing.Size(128, 429);
             this.panel5.TabIndex = 11;
             // 
             // panel4
@@ -95,7 +96,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 92);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(122, 429);
+            this.panel4.Size = new System.Drawing.Size(132, 429);
             this.panel4.TabIndex = 10;
             // 
             // panel3

@@ -73,6 +73,7 @@ namespace BTLon.Models
             button.FlatStyle = flat;
             button.FlatAppearance.BorderSize = BorderSize;
             button.BackColor = color;
+            button.Text = "Đặt vé";
             return button;
         }
     }
