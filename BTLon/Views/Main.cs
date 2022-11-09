@@ -25,10 +25,10 @@ namespace BTLon.Views
         {
             panelProfile.Visible = false;
             collapseMenu(true);
-            UserEmploy userEmploy = new UserEmploy();
-            userEmploy.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(userEmploy);
             panelProfile.Visible = false;
+            UserTicket userTicket = new UserTicket();
+            userTicket.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(userTicket);
         }
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -39,7 +39,12 @@ namespace BTLon.Views
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
-
+        private void LoadUserControl(UserControl us)
+        {
+            us.Dock = DockStyle.Fill;
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(us);
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -74,7 +79,7 @@ namespace BTLon.Views
                 panelMenu.Width = panelMenu.MinimumSize.Width;
                 btnHome.Text = "";
                 btnManage.Text = "";
-                //btnSales.Text = "";
+                btnSales.Text = "";
                 //btnImport.Text = "";
                 btnExit.Text = "";
                 //ptbLogo.Visible = false;
@@ -84,7 +89,7 @@ namespace BTLon.Views
                 panelMenu.Width = panelMenu.MaximumSize.Width;
                 btnHome.Text = btnHome.Tag.ToString();
                 btnManage.Text = btnManage.Tag.ToString();
-                //btnSales.Text = btnSales.Tag.ToString();
+                btnSales.Text = btnSales.Tag.ToString();
                 //btnImport.Text = btnImport.Tag.ToString();
                 btnExit.Text = btnExit.Tag.ToString();
                 //ptbLogo.Visible = true;
@@ -144,6 +149,18 @@ namespace BTLon.Views
         private void btnProfile_Click(object sender, EventArgs e)
         {
             collapseChild(this.panelProfile, true); 
+        }
+
+        private void btnEmploy_Click(object sender, EventArgs e)
+        {
+            UserEmploy userEmploy = new UserEmploy();
+            LoadUserControl(userEmploy);
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            collapseMenu(false);
+            collapseChild(this.panelSales, true);
         }
     }
 }

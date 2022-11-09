@@ -73,6 +73,7 @@
             this.dgvPhongBan.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvPhongBan.Location = new System.Drawing.Point(0, 0);
             this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.ReadOnly = true;
             this.dgvPhongBan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -88,6 +89,7 @@
             this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhongBan.Size = new System.Drawing.Size(422, 228);
             this.dgvPhongBan.TabIndex = 8;
+            this.dgvPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellClick);
             // 
             // txtMaPB
             // 
@@ -96,6 +98,7 @@
             this.txtMaPB.HeaderText = "Mã phòng ban";
             this.txtMaPB.MinimumWidth = 6;
             this.txtMaPB.Name = "txtMaPB";
+            this.txtMaPB.ReadOnly = true;
             this.txtMaPB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.txtMaPB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -107,6 +110,7 @@
             this.txtTenPB.HeaderText = "Tên phòng ban";
             this.txtTenPB.MinimumWidth = 6;
             this.txtTenPB.Name = "txtTenPB";
+            this.txtTenPB.ReadOnly = true;
             this.txtTenPB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // txtQuanLy
@@ -116,6 +120,7 @@
             this.txtQuanLy.HeaderText = "Quản lý";
             this.txtQuanLy.MinimumWidth = 6;
             this.txtQuanLy.Name = "txtQuanLy";
+            this.txtQuanLy.ReadOnly = true;
             this.txtQuanLy.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.txtQuanLy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 

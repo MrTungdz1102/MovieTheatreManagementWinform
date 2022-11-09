@@ -11,10 +11,12 @@ namespace BTLon.Models
 {
     internal class DataProcess
     {
-        string strConnect = "Data Source=DESKTOP-F087CPF\\SQLEXPRESS;" 
-            + "DataBase=QuanLyRapChieuPhim;User ID=longnt;"
+        string strConnect = "Data Source=DESKTOP-F087CPF\\SQLEXPRESS;" + "DataBase=QuanLyRapChieuPhim;User ID=longnt;"
             + "Password=Anhlong123; Integrated Security=false";
         SqlConnection sqlConnect = null;
+        SqlDataAdapter da = null;
+        DataSet ds = null;
+        SqlCommandBuilder cmd = null;
         public void OpenConnect()
         {
             sqlConnect = new SqlConnection(strConnect);
@@ -39,6 +41,15 @@ namespace BTLon.Models
             CloseConnect();
             return tblData;
         }
+        public DataSet DataSetReader(string sqlSelect, string nameTable)
+        {
+            OpenConnect();
+            da = new SqlDataAdapter(sqlSelect, sqlConnect);
+            ds = new DataSet();
+            da.Fill(ds, nameTable);
+            CloseConnect();
+            return ds;
+        }
         public void DataChange(string sql)
         {
             OpenConnect();
@@ -48,12 +59,19 @@ namespace BTLon.Models
             sqlcomma.ExecuteNonQuery();
             CloseConnect();
         }
-        public void InsertImage(string MaNV,Image image)
+        public void DataSetChange(string nameTable)
+        {
+            OpenConnect();
+            cmd = new SqlCommandBuilder(da);
+            da.Update(ds, nameTable);
+            CloseConnect();
+        }
+        public void InsertImage(string MaNV, Image image)
         {
             byte[] img = ModelView.ImageToByteArray(image);
             OpenConnect();
             string sql = "update tblNhanVien set Anh = @img where MaNV = N'" + MaNV + "'";
-            SqlCommand sqlcomma = new SqlCommand(sql,sqlConnect);
+            SqlCommand sqlcomma = new SqlCommand(sql, sqlConnect);
             sqlcomma.Parameters.Add("@img", img);
             sqlcomma.ExecuteNonQuery();
             CloseConnect();
