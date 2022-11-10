@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace BTLon.Models
 {
@@ -19,10 +22,16 @@ namespace BTLon.Models
         SqlCommandBuilder cmd = null;
         public void OpenConnect()
         {
-            sqlConnect = new SqlConnection(strConnect);
-            if (sqlConnect.State != ConnectionState.Open)
+            try
             {
-                sqlConnect.Open();
+                sqlConnect = new SqlConnection(strConnect);
+                if (sqlConnect.State != ConnectionState.Open)
+                {
+                    sqlConnect.Open();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối", "Error", (MessageBoxButtons)MessageBoxButton.OK, MessageBoxIcon.Error);
             }
         }
         public void CloseConnect()

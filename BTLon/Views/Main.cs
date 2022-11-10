@@ -139,6 +139,7 @@ namespace BTLon.Views
         {
             collapseMenu(true);
             collapseChild(this.panelManage, false);
+            collapseChild(this.panelSales, false);
         }
         private void btnManage_Click(object sender, EventArgs e)
         {
@@ -161,6 +162,12 @@ namespace BTLon.Views
         {
             collapseMenu(false);
             collapseChild(this.panelSales, true);
+        }
+
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            //UserTicket userTicket = new UserTicket();
+            //LoadUserControl(userTicket);
         }
     }
 }
