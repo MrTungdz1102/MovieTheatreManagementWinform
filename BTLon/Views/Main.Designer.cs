@@ -78,7 +78,7 @@
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(146, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(916, 24);
             this.panelTitleBar.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.btnMini.Image = ((System.Drawing.Image)(resources.GetObject("btnMini.Image")));
             this.btnMini.ImageSize = new System.Drawing.Size(32, 32);
             this.btnMini.Location = new System.Drawing.Point(855, 0);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
             this.btnMini.Name = "btnMini";
             this.btnMini.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMini.Size = new System.Drawing.Size(18, 20);
@@ -125,7 +125,7 @@
             this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
             this.btnMax.ImageSize = new System.Drawing.Size(25, 25);
             this.btnMax.Location = new System.Drawing.Point(876, 4);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
             this.btnMax.Name = "btnMax";
             this.btnMax.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMax.Size = new System.Drawing.Size(18, 20);
@@ -148,7 +148,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(897, 4);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnClose.Size = new System.Drawing.Size(18, 20);
@@ -162,7 +162,7 @@
             this.panelViewPro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelViewPro.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelViewPro.Location = new System.Drawing.Point(146, 24);
-            this.panelViewPro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelViewPro.Margin = new System.Windows.Forms.Padding(2);
             this.panelViewPro.Name = "panelViewPro";
             this.panelViewPro.Size = new System.Drawing.Size(916, 42);
             this.panelViewPro.TabIndex = 2;
@@ -214,7 +214,7 @@
             this.panelTitleMenu.Controls.Add(this.pictureBox1);
             this.panelTitleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleMenu.Name = "panelTitleMenu";
             this.panelTitleMenu.Size = new System.Drawing.Size(146, 66);
             this.panelTitleMenu.TabIndex = 0;
@@ -233,7 +233,7 @@
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageSize = new System.Drawing.Size(22, 25);
             this.btnMenu.Location = new System.Drawing.Point(11, 24);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(34, 31);
             this.btnMenu.TabIndex = 1;
@@ -253,8 +253,8 @@
             // 
             this.panel8.Controls.Add(this.btnExit);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 569);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Location = new System.Drawing.Point(0, 586);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(146, 37);
             this.panel8.TabIndex = 10;
@@ -276,7 +276,7 @@
             this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExit.ImageSize = new System.Drawing.Size(25, 25);
             this.btnExit.Location = new System.Drawing.Point(0, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedColor = System.Drawing.Color.Transparent;
             this.btnExit.Size = new System.Drawing.Size(146, 37);
@@ -296,11 +296,11 @@
             this.panelMenu.Controls.Add(this.panelTitleMenu);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.MaximumSize = new System.Drawing.Size(146, 0);
             this.panelMenu.MinimumSize = new System.Drawing.Size(52, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(146, 606);
+            this.panelMenu.Size = new System.Drawing.Size(146, 623);
             this.panelMenu.TabIndex = 0;
             // 
             // panelSales
@@ -310,7 +310,7 @@
             this.panelSales.Controls.Add(this.btnTicket);
             this.panelSales.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSales.Location = new System.Drawing.Point(0, 187);
-            this.panelSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSales.Margin = new System.Windows.Forms.Padding(2);
             this.panelSales.MaximumSize = new System.Drawing.Size(0, 77);
             this.panelSales.MinimumSize = new System.Drawing.Size(0, 10);
             this.panelSales.Name = "panelSales";
@@ -329,7 +329,7 @@
             this.btnBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.Location = new System.Drawing.Point(0, 37);
-            this.btnBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(146, 37);
             this.btnBill.TabIndex = 16;
@@ -347,7 +347,7 @@
             this.btnTicket.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnTicket.ForeColor = System.Drawing.Color.White;
             this.btnTicket.Location = new System.Drawing.Point(0, 0);
-            this.btnTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btnTicket.Name = "btnTicket";
             this.btnTicket.Size = new System.Drawing.Size(146, 37);
             this.btnTicket.TabIndex = 15;
@@ -366,7 +366,7 @@
             this.btnSales.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnSales.ForeColor = System.Drawing.Color.White;
             this.btnSales.Location = new System.Drawing.Point(0, 150);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(2);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(146, 37);
             this.btnSales.TabIndex = 14;
@@ -406,7 +406,7 @@
             this.btnCustomer.ImageSize = new System.Drawing.Size(25, 25);
             this.btnCustomer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnCustomer.Location = new System.Drawing.Point(0, 37);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.PressedColor = System.Drawing.Color.Transparent;
             this.btnCustomer.Size = new System.Drawing.Size(146, 37);
@@ -432,7 +432,7 @@
             this.btnEmploy.ImageSize = new System.Drawing.Size(25, 25);
             this.btnEmploy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnEmploy.Location = new System.Drawing.Point(0, 0);
-            this.btnEmploy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmploy.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmploy.Name = "btnEmploy";
             this.btnEmploy.PressedColor = System.Drawing.Color.Transparent;
             this.btnEmploy.Size = new System.Drawing.Size(146, 37);
@@ -459,7 +459,7 @@
             this.btnManage.ImageSize = new System.Drawing.Size(25, 25);
             this.btnManage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnManage.Location = new System.Drawing.Point(0, 103);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(2);
             this.btnManage.Name = "btnManage";
             this.btnManage.PressedColor = System.Drawing.Color.Transparent;
             this.btnManage.Size = new System.Drawing.Size(146, 37);
@@ -486,7 +486,7 @@
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
             this.btnHome.Location = new System.Drawing.Point(0, 66);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.Transparent;
             this.btnHome.Size = new System.Drawing.Size(146, 37);
@@ -548,7 +548,7 @@
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(146, 66);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(916, 540);
+            this.panelContent.Size = new System.Drawing.Size(916, 557);
             this.panelContent.TabIndex = 4;
             // 
             // ptbAvt
@@ -572,14 +572,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 606);
+            this.ClientSize = new System.Drawing.Size(1062, 623);
             this.Controls.Add(this.panelProfile);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelViewPro);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
