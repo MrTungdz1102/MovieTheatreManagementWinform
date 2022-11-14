@@ -21,6 +21,7 @@ namespace BTLon.Views.User
             this.dgvNhanVien = dgvNhanVien;
             Process = new Models.DataProcess();
         }
+        //Set
         public void setPictureBox(Image image)
         {
             ptbAvt.Image = image;
@@ -34,6 +35,7 @@ namespace BTLon.Views.User
                 ptbAvt.Image = Image.FromFile(openImage.FileName);
                 Process.InsertImage(MaNV, ptbAvt.Image);
                 MessageBox.Show("upload successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvNhanVien.ReadOnly = true;
             }
         }
 

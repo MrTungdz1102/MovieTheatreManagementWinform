@@ -114,6 +114,18 @@
     <Compile Include="Views\User\UserEmploy.Designer.cs">
       <DependentUpon>UserEmploy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\userListEmploy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\userListEmploy.Designer.cs">
+      <DependentUpon>userListEmploy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserListFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserListFilm.Designer.cs">
+      <DependentUpon>UserListFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserTicket.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserEmploy.resx">
       <DependentUpon>UserEmploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\userListEmploy.resx">
+      <DependentUpon>userListEmploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserListFilm.resx">
+      <DependentUpon>UserListFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserTicket.resx">
       <DependentUpon>UserTicket.cs</DependentUpon>

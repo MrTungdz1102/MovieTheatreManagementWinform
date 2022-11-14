@@ -117,28 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipDelete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>145, 22</value>
+  <metadata name="txtMaNV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="toolTipAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>316, 24</value>
+  <metadata name="cbMaPB.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="toolTipEdit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>493, 27</value>
+  <metadata name="txtTenNV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="toolTipSave.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>647, 28</value>
+  <metadata name="cbGioiTinh.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABGdBTUEAALGPC/xhBQAAAUVJREFUSEvV
-        lstKw0AYhfMCMZPMlWi9IIrowsfyJd270IVYdWFVWkXRhc+gZ8KJizgNyPwV/GCgtIfzJc3PTIp/QdM0
-        k8aYS23MKT6v8WtZULwBwT3WZ7esPTPGlPxZBkpm3xIuiE4YyUdrvY7Su6EE66YsS81YHpX3OyhcDATx
-        b5uWbWsYy0OFsI3S+Q8J7sR77xjLY0Ry65zzjOWxTIKxfohDwVgefPCp6Xqs63qTsTxGpmuulNpiLA9c
-        cYvClOTFWrvHWD4oPB8I4vpQzh0zIgNKU6JX3Ok+IzLgGSgUp2TvmLQjxmQYkb1BdsiYDFVV1Si+GIg6
-        GabygDEZ4h6G0quE7Bm7wi5jMoQQ7BLZU9xoGZNhRLaI2xRjMnQyHAkJ2SzuJIzJEAtRnNo1rsUOvp4/
-        Ocp7KFvty0kPZKt/3fodRfEFcUyoRT3gCaEAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="txtNgaySinh.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtDiaChi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="txtSDT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

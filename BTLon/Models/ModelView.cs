@@ -13,7 +13,7 @@ using Color = System.Drawing.Color;
 
 namespace BTLon.Models
 {
-    internal class ModelView : EventArgs
+    internal class ModelView
     {
         public static Image Images(string name)
         {
@@ -31,23 +31,20 @@ namespace BTLon.Models
             MemoryStream ms = new MemoryStream(byteimg);
             return Image.FromStream(ms);
         }
-        //public static void addListPicture(Panel panelPicture, DataTable table, Button button)
-        //{
-        //    for (int i = 0; i < table.Rows.Count; i++)
-        //    {
-        //        Panel pan = new Panel();
-        //        pan = GetPanel(168, 274, Color.Red);
-        //        PictureBox picture = new PictureBox();
-        //        object oj = table.Rows[i][0];
-        //        byte[] img = oj as byte[];
-        //        Image image = ModelView.ByteArrayToImage(img);
-        //        picture = GetPictureBox(168, 244, DockStyle.Top, PictureBoxSizeMode.StretchImage, image);
-        //        button = GetButton(DockStyle.Bottom, FlatStyle.Flat, 0, Color.Red);
-        //        pan.Controls.Add(picture);
-        //        pan.Controls.Add(button);
-        //        panelPicture.Controls.Add(pan);
-        //    }
-        //}
+        public static void addUserToPanel(Panel panel,UserControl userRemove,UserControl userAdd, DockStyle style)
+        {
+            if (userRemove != null)
+            {
+                userAdd.Dock = style;
+                panel.Controls.Remove(userRemove);
+                panel.Controls.Add(userAdd);
+            }
+            else
+            {
+                userAdd.Dock = style;
+                panel.Controls.Add(userAdd);
+            }
+        }
         public static PictureBox GetPictureBox(int with,int height, DockStyle style, PictureBoxSizeMode sizeMode,Image image)
         {
             PictureBox picture = new PictureBox();
@@ -80,27 +77,6 @@ namespace BTLon.Models
             button.TextFormatNoPrefix = true;
             return button;
         }
-        //public static void collapseMenu(Panel panel,bool check)
-        //{
-        //    if (check == true)
-        //    {
-        //        if (panel.Width > 100)
-        //        {
-        //            setMenu(true);
-        //        }
-        //        else
-        //        {
-        //            setMenu(false);
-        //        }
-        //    }
-        //    else
-        //    {
-        //        if (panelMenu.Width == panelMenu.MinimumSize.Width)
-        //        {
-        //            setMenu(false);
-        //        }
-        //    }
-        //}
         public static void collapseChild(Panel panel, bool check, int height)
         {
             if (check == true)

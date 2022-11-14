@@ -18,30 +18,46 @@ namespace BTLon.Views.User
     public partial class UserEmploy : UserControl
     {
         DataProcess Process;
-        UserDetailEmploy employ;
-        UserDetailDepart depart;
+        Main main;
+        UserDetailEmploy DetailEmploy;
+        userListEmploy ListEmploy;
+        UserDetailDepart DetailDepart;
         UserDepart userDepart;
-        public UserEmploy()
+        UserControl userRemove1;
+        UserControl userRemove2;
+        DataGridView dgvNhanVien;
+        public UserEmploy(Main main)
         {
             InitializeComponent();
             Process = new DataProcess();
-            employ = new UserDetailEmploy(this.dgvNhanVien);
-            depart = new UserDetailDepart();
-            userDepart = new UserDepart(this.panelDetail,depart);
+            DetailDepart = new UserDetailDepart();
+            userDepart = new UserDepart(this.panelDetail, DetailDepart);
+            ListEmploy = new userListEmploy(this);
+            dgvNhanVien = ListEmploy.GetGridView();
+            DetailEmploy = new UserDetailEmploy(dgvNhanVien);
+            this.main = main;
         }
+        //Get
         public Panel GetPanel()
         {
             return this.panelDetail;
         }
+        //set
+        public void SetComboBox(ComboBox combo)
+        {
+            this.cbPB = combo;
+        }
+        //code
         private void UserEmploy_Load(object sender, EventArgs e)
         {
             setTooltip(toolTipSave, btnSave, "Save");
             setTooltip(toolTipEdit, btnEdit, "Edit");
             setTooltip(toolTipAdd, btnAdd, "Add");
             setTooltip(toolTipDelete,btnDelete, "Delete");
-            LoadData();
-            setUser();
-            addUserToPanelDetail(employ);
+            Models.ModelView.addUserToPanel(this.panelContent, null, ListEmploy, DockStyle.Fill);
+            Models.ModelView.addUserToPanel(this.panelDetail,null, DetailEmploy, DockStyle.Fill);
+            userRemove1 = ListEmploy;
+            userRemove2 = DetailEmploy;
             setPanelDetail(164, 521);
             panelDetail.Visible = false;
         }
@@ -60,30 +76,18 @@ namespace BTLon.Views.User
             dgvNhanVien.AllowUserToAddRows = checkAllow;
             dgvNhanVien.ReadOnly = CheckRead;
         }
-        private void LoadData()
-        {
-            string sql = "select * from View1";
-            cbMaPB.DataSource = Process.DataReader("select MaPB from tblPhongBan");
-            cbMaPB.DisplayMember = "MaPB";
-            cbPB.DataSource = Process.DataReader("select MaPB from tblPhongBan");
-            cbPB.DisplayMember = "MaPB";
-            cbPB.Text = "Chọn phòng ban";
-            dgvNhanVien.DataSource = Process.DataSetReader(sql,"tblNhanVien").Tables[0];
-            dgvNhanVien.ReadOnly = true;
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             setEditPanelDetail(false, false);
-            depart.setEnable(true);
+            DetailDepart.setEnable(true);
             panelDetail.Visible = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Process.DataSetChange("tblNhanVien");
-            depart.UpDateDataBase();
-            depart.setEnable(false);
+            ListEmploy.UpdateData();   
+            DetailDepart.UpDateDataBase();
+            DetailDepart.setEnable(false);
             setEditPanelDetail(false, false);
         }
 
@@ -132,71 +136,24 @@ namespace BTLon.Views.User
                 }
             }
         }
-        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Image image = null;
-            try { 
-                string MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
-                string sql = "select Anh from tblNhanVien where MaNV = N'" +MaNV + "'";
-                DataTable dt = Process.DataReader(sql);
-                object oj = dt.Rows[0][0];
-                byte[] img = oj as byte[];
-                image = ModelView.ByteArrayToImage(img);
-                employ.setPictureBox(image);
-            }catch(Exception ex)
-            {
-                if(dgvNhanVien.CurrentRow.Cells[3].Value.ToString() == "Nam")
-                {
-                    image = ModelView.Images("avt.jpg");
-                    employ.setPictureBox(image);
-                }
-                else
-                {
-                    image = ModelView.Images("avtNu.jpg");
-                    employ.setPictureBox(image);
-                }
-            }
-        }
-
-        private void btnDeleImg_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                DataGridViewRow row = dgvNhanVien.CurrentRow;
-                string MaNV = row.Cells[0].Value.ToString();
-                string sql = "Update tblNhanVien set Anh = null where MaNV = N'" + MaNV + "'";
-                Process.DataChange(sql);
-                MessageBox.Show("upload successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            LoadData();
+            ListEmploy.LoadData();
             userDepart.LoadData();
             panelDetail.Visible = false;
             txtSeach.Texts = "Seach...";
-        }
-        private void addUserToPanelDetail(UserControl user)
-        {
-            panelDetail.Controls.Clear();
-            panelDetail.Controls.Add(user);
         }
         private void setMenuPB(bool visit)
         {
             cbPB.Visible = visit;
             btnAddPB.Visible = visit;
         }
-        private void setUser()
-        {
-           userDepart.Dock = DockStyle.Fill;
-           employ.Dock = DockStyle.Fill;
-           depart.Dock = DockStyle.Fill;
-        }
         private void btnAddPB_Click(object sender, EventArgs e)
         {
-            panelContent.Controls.Clear();
-            panelContent.Controls.Add(userDepart);
-            addUserToPanelDetail(depart);
+            Models.ModelView.addUserToPanel(this.panelContent,userRemove1,userDepart, DockStyle.Fill);
+            Models.ModelView.addUserToPanel(this.panelDetail,userRemove2, DetailDepart, DockStyle.Fill);
+            userRemove1 = userDepart;
+            userRemove2 = DetailDepart;
             setMenuPB(false);
             setPanelDetail(282, 521);
             panelDetail.Visible = false;
@@ -204,12 +161,33 @@ namespace BTLon.Views.User
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            panelContent.Controls.Clear();
-            panelContent.Controls.Add(dgvNhanVien);
-            setPanelDetail(164, 521);
-            addUserToPanelDetail(employ);
-            setMenuPB(true);
-            panelDetail.Visible = false;
+            if (panelContent.Contains(userDepart) && panelDetail.Contains(DetailDepart))
+            {
+                if (panelDetail.Visible == false)
+                {
+                    Models.ModelView.addUserToPanel(this.panelContent, userRemove1, ListEmploy, DockStyle.Fill);
+                    setPanelDetail(164, 521);
+                    userRemove1 = ListEmploy;
+                    Models.ModelView.addUserToPanel(this.panelDetail, userRemove2, DetailEmploy, DockStyle.Fill);
+                    userRemove2 = DetailEmploy;
+                    setMenuPB(true);
+                }
+                else
+                {
+                    panelDetail.Visible = false;
+                }
+            }else if(panelContent.Contains(ListEmploy) && panelDetail.Contains(DetailEmploy))
+            {
+                if(panelDetail.Visible == false)
+                {
+                    this.Controls.Clear();
+                    main.SetPanel();
+                }
+                else
+                {
+                    panelDetail.Visible = false;
+                }
+            }
         }
     }
 }

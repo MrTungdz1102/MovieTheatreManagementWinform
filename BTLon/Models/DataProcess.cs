@@ -75,6 +75,36 @@ namespace BTLon.Models
             da.Update(ds, nameTable);
             CloseConnect();
         }
+        public string DataFunction(string NameFunc,string value1, string value2)
+        {
+            OpenConnect();
+            string Money;
+            SqlCommand cmd = new SqlCommand(NameFunc,sqlConnect);
+
+            // Kiểu của Command là StoredProcedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Thêm tham số @p_Emp_Id và gán giá trị 100 cho nó.
+            cmd.Parameters.Add("@MaGhe", SqlDbType.NVarChar).Value = value1;
+            cmd.Parameters.Add("@MaLC", SqlDbType.NVarChar).Value = value2;
+            // Tạo một đối tượng Parameter, lưu trữ giá trị trả về của hàm.
+            SqlParameter resultParam = new SqlParameter("@TongTien", SqlDbType.Money);
+
+            //  
+            resultParam.Direction = ParameterDirection.ReturnValue;
+
+            cmd.Parameters.Add(resultParam);
+
+            // Gọi hàm.
+            cmd.ExecuteNonQuery();
+            if (resultParam.Value != DBNull.Value)
+            {
+                Money = (string)resultParam.Value;
+                return Money;
+            }
+            CloseConnect();
+            return "0";
+        }
         public void InsertImage(string MaNV, Image image)
         {
             byte[] img = ModelView.ImageToByteArray(image);
