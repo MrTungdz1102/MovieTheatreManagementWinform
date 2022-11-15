@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 37);
+            this.panel1.Size = new System.Drawing.Size(1216, 46);
             this.panel1.TabIndex = 8;
             // 
             // btnPhim
@@ -70,10 +71,10 @@
             this.btnPhim.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnPhim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhim.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPhim.Location = new System.Drawing.Point(86, 0);
-            this.btnPhim.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPhim.Location = new System.Drawing.Point(115, 0);
+            this.btnPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPhim.Name = "btnPhim";
-            this.btnPhim.Size = new System.Drawing.Size(122, 37);
+            this.btnPhim.Size = new System.Drawing.Size(163, 46);
             this.btnPhim.TabIndex = 12;
             this.btnPhim.Text = "Phim";
             this.btnPhim.Click += new System.EventHandler(this.btnPhim_Click);
@@ -93,8 +94,9 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageSize = new System.Drawing.Size(15, 15);
             this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(86, 37);
+            this.btnBack.Size = new System.Drawing.Size(115, 46);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -103,10 +105,10 @@
             // 
             this.panelContent.Controls.Add(this.panelPhim);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 37);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContent.Location = new System.Drawing.Point(0, 46);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(912, 484);
+            this.panelContent.Size = new System.Drawing.Size(1216, 595);
             this.panelContent.TabIndex = 13;
             // 
             // panelPhim
@@ -114,9 +116,10 @@
             this.panelPhim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelPhim.Controls.Add(this.btnComing);
             this.panelPhim.Controls.Add(this.btnShowing);
-            this.panelPhim.Location = new System.Drawing.Point(75, 0);
+            this.panelPhim.Location = new System.Drawing.Point(100, 0);
+            this.panelPhim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPhim.Name = "panelPhim";
-            this.panelPhim.Size = new System.Drawing.Size(149, 84);
+            this.panelPhim.Size = new System.Drawing.Size(199, 103);
             this.panelPhim.TabIndex = 3;
             this.panelPhim.Visible = false;
             // 
@@ -132,9 +135,10 @@
             this.btnComing.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnComing.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComing.ForeColor = System.Drawing.Color.Black;
-            this.btnComing.Location = new System.Drawing.Point(0, 37);
+            this.btnComing.Location = new System.Drawing.Point(0, 46);
+            this.btnComing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComing.Name = "btnComing";
-            this.btnComing.Size = new System.Drawing.Size(149, 44);
+            this.btnComing.Size = new System.Drawing.Size(199, 54);
             this.btnComing.TabIndex = 1;
             this.btnComing.Text = "Sắp chiếu";
             // 
@@ -152,21 +156,22 @@
             this.btnShowing.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowing.ForeColor = System.Drawing.Color.Black;
             this.btnShowing.Location = new System.Drawing.Point(0, 0);
+            this.btnShowing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowing.Name = "btnShowing";
-            this.btnShowing.Size = new System.Drawing.Size(149, 37);
+            this.btnShowing.Size = new System.Drawing.Size(199, 46);
             this.btnShowing.TabIndex = 0;
             this.btnShowing.Text = "  Đang chiếu";
             this.btnShowing.Click += new System.EventHandler(this.btnShowing_Click);
             // 
             // UserTicket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserTicket";
-            this.Size = new System.Drawing.Size(912, 521);
+            this.Size = new System.Drawing.Size(1216, 641);
             this.Load += new System.EventHandler(this.UserTicket_Load);
             this.panel1.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);

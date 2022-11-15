@@ -1,4 +1,5 @@
-﻿using BTLon.Models;
+﻿using BTLon.Controls;
+using BTLon.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace BTLon.Views.User
     public partial class UserBookTick : UserControl
     {
         DataProcess process = new DataProcess();
-        double SumTienGhe = 0;
+        decimal SumTienGhe = 0;
+        List<DetailTicket> SoGheDaChon = new List<DetailTicket>();
         public UserBookTick()
         {
             InitializeComponent();
@@ -23,11 +25,11 @@ namespace BTLon.Views.User
         private void UserBookTick_Load(object sender, EventArgs e)
         {
             lblTenRap.Text = " CGV vincom \r\n Center Bà Triệu";
-            //lblTenPhim.MaximumSize = grbDetailPhim.Size;
         }
-        public void SetLabelPC(string text)
+        public void SetLabelPC(string text,string tag)
         {
             this.lblPC.Text = text;
+            this.lblPC.Tag = tag;
         }
         public void SetLabelPhim(string text)
         {
@@ -37,10 +39,9 @@ namespace BTLon.Views.User
         {
             this.ptbPhim.Image = image;
         }
-        public void SetLabelTGC(string text,string tag)
+        public void SetLabelTGC(string text)
         {
             this.lblThoiGianChieu.Text = text;
-            this.lblThoiGianChieu.Tag = tag;
         }
         public void SetLabelNgayChieu(string text)
         {
@@ -50,18 +51,53 @@ namespace BTLon.Views.User
         private void book_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+            string[] soPC = lblPC.Text.ToString().Split(' ');
+            string SoGhe = button.Tag.ToString() + soPC[2] + "-" + button.Text;
             if (button.BackColor == Color.White)
             {
+                DetailTicket detail = new DetailTicket();
                 button.BackColor = Color.Brown;
-                string TenGhe = button.Tag.ToString();
-                //SumTienGhe += process.DataFunction("TienVe", button.Tag.ToString(), lblThoiGianChieu.Tag.ToString());
-                SumTienGhe += Double.Parse(process.DataFunction("TienVe", "A1-5", "LC01"));
-                this.lblSum.Text +="  " + SumTienGhe.ToString();
+                detail.MaGhe1 = SoGhe;
+                detail.GiaTien1 = process.DataFunction(SoGhe, lblPC.Tag.ToString());
+                SumTienGhe += process.DataFunction(SoGhe, lblPC.Tag.ToString());
+                this.lblSum.Text = SumTienGhe.ToString();
+                SoGheDaChon.Add(detail);
             }
             else
             {
                 button.BackColor = Color.White;
+                SumTienGhe -= process.DataFunction(SoGhe, lblPC.Tag.ToString());
+                if (SumTienGhe == 0)
+                {
+                    this.lblSum.Text = "";
+                }
+                else
+                {
+                    this.lblSum.Text = SumTienGhe.ToString();
+                }
+                foreach(DetailTicket detail in SoGheDaChon)
+                {
+                    if(detail.MaGhe1 == SoGhe)
+                    {
+                        SoGheDaChon.Remove(detail);
+                        break;
+                    }
+                }
             }
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            ModelView.InsertData("V", SoGheDaChon, lblPC.Tag.ToString());
+            //DataTable data = process.DataReader("select count(MaVe) from tblVe");
+            //int i = int.Parse(data.Rows[0][0].ToString());
+            //DateTime dateTime = DateTime.Now;
+            //string NgayBan = dateTime.ToString("yyyy/MM/dd") + " " + dateTime.Hour.ToString() + ":" + dateTime.Minute.ToString() + ":" + dateTime.Second.ToString();
+            //MessageBox.Show("V" + data.Rows[0][0].ToString() + "," + SoGheDaChon.Count.ToString() + "," + NgayBan + "," + i.ToString() +"," + lblPC.Tag.ToString());
+            //foreach(DetailTicket detail in SoGheDaChon)
+            //{
+            //    i++;
+            //    MessageBox.Show(detail.MaGhe1+","+detail.GiaTien1.ToString()+","+i.ToString());
+            //}
         }
     }
 }

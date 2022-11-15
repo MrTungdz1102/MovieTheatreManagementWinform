@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
 using MessageBox = System.Windows.Forms.MessageBox;
+using System.Runtime.Remoting.Contexts;
 
 namespace BTLon.Models
 {
@@ -75,35 +76,15 @@ namespace BTLon.Models
             da.Update(ds, nameTable);
             CloseConnect();
         }
-        public string DataFunction(string NameFunc,string value1, string value2)
+        public decimal DataFunction(string value1, string value2)
         {
             OpenConnect();
-            string Money;
-            SqlCommand cmd = new SqlCommand(NameFunc,sqlConnect);
-
-            // Kiểu của Command là StoredProcedure
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            // Thêm tham số @p_Emp_Id và gán giá trị 100 cho nó.
-            cmd.Parameters.Add("@MaGhe", SqlDbType.NVarChar).Value = value1;
-            cmd.Parameters.Add("@MaLC", SqlDbType.NVarChar).Value = value2;
-            // Tạo một đối tượng Parameter, lưu trữ giá trị trả về của hàm.
-            SqlParameter resultParam = new SqlParameter("@TongTien", SqlDbType.Money);
-
-            //  
-            resultParam.Direction = ParameterDirection.ReturnValue;
-
-            cmd.Parameters.Add(resultParam);
-
-            // Gọi hàm.
-            cmd.ExecuteNonQuery();
-            if (resultParam.Value != DBNull.Value)
-            {
-                Money = (string)resultParam.Value;
-                return Money;
-            }
-            CloseConnect();
-            return "0";
+            string query = @"SELECT dbo.TienVe(@MaGhe,@MaLC)";
+            SqlCommand cmd = new SqlCommand(query, sqlConnect);
+            cmd.Parameters.Add("@MaGhe", value1);
+            cmd.Parameters.Add("@MaLC", value2);
+            decimal functionResult = (decimal)cmd.ExecuteScalar();
+            return functionResult;
         }
         public void InsertImage(string MaNV, Image image)
         {
@@ -113,6 +94,24 @@ namespace BTLon.Models
             SqlCommand sqlcomma = new SqlCommand(sql, sqlConnect);
             sqlcomma.Parameters.Add("@img", img);
             sqlcomma.ExecuteNonQuery();
+            CloseConnect();
+        }
+        public void UseProc(string MaVe, string MaLC, string MaGhe, string MaKH, string MaNV, decimal GiaVe)
+        {
+            OpenConnect();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "InsertData";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = sqlConnect;
+            //khai báo các thông tin của tham số truyền vào
+            cmd.Parameters.Add("@MaVe", SqlDbType.NVarChar).Value = MaVe ;
+            cmd.Parameters.Add("@MaLC", SqlDbType.NVarChar).Value = MaLC;
+            cmd.Parameters.Add("@MaGhe", SqlDbType.NVarChar).Value = MaGhe;
+            cmd.Parameters.Add("@NgayBan", SqlDbType.DateTime).Value = DateTime.Now;
+            cmd.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = MaKH;
+            cmd.Parameters.Add("@MaNV", SqlDbType.NVarChar).Value = MaNV;
+            cmd.Parameters.Add("@GiaVe", SqlDbType.Decimal).Value = GiaVe;
+            cmd.ExecuteNonQuery();
             CloseConnect();
         }
     }

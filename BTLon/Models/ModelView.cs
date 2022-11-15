@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using BTLon.Controls;
+using BTLon.Views;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -66,14 +68,14 @@ namespace BTLon.Models
             pan.BorderStyle = border;
             return pan;
         }
-        public static Guna2GradientButton GetButton(DockStyle style, int BorderRadius, Color color)
+        public static Guna2GradientButton GetButton(DockStyle style, int BorderRadius, Color color,string text)
         {
             Guna2GradientButton button = new Guna2GradientButton();
             button.Dock = style;
             button.FillColor = color;
             button.FillColor2 = color;
             button.BorderRadius = BorderRadius;
-            button.Text = "Đặt vé";;
+            button.Text = text;
             button.TextFormatNoPrefix = true;
             return button;
         }
@@ -94,6 +96,21 @@ namespace BTLon.Models
             else
             {
                 panel.Visible = false;
+            }
+        }
+        //Hàm này sẽ tự động thêm dữ liệu khi người dùng ấn next bên book tick
+        public static void InsertData(string form, List<DetailTicket> details, string MaLC)
+        {
+            DataProcess process = new DataProcess();
+            DateTime dateTime = DateTime.Now;
+            string NgayBan = dateTime.ToString("yyyy/MM/dd") + " "+ dateTime.Hour.ToString() +":" + dateTime.Minute.ToString()+ ":" + dateTime.Second.ToString();
+            DataTable data = process.DataReader("select count(MaVe) from tblVe");
+            int i = int.Parse(data.Rows[0][0].ToString());
+            foreach(DetailTicket ticket in details) 
+            {
+                i++;
+                string MaVe = form + i.ToString(); //Tự sinh ra khóa chính
+                process.UseProc(MaVe, MaLC, ticket.MaGhe1, "KH001", "NV01", ticket.GiaTien1);
             }
         }
     }

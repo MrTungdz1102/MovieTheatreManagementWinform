@@ -53,6 +53,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DetailTicket.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ModelView.cs" />
     <Compile Include="Models\DataProcess.cs" />
     <Compile Include="Models\RandomCode.cs" />
@@ -83,6 +90,12 @@
     </Compile>
     <Compile Include="Views\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserBill.Designer.cs">
+      <DependentUpon>UserBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\User\UserBookTick.cs">
       <SubType>UserControl</SubType>
@@ -126,12 +139,21 @@
     <Compile Include="Views\User\UserListFilm.Designer.cs">
       <DependentUpon>UserListFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserShowTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserShowTimes.Designer.cs">
+      <DependentUpon>UserShowTimes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserTicket.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\User\UserTicket.Designer.cs">
       <DependentUpon>UserTicket.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -145,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserBill.resx">
+      <DependentUpon>UserBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserBookTick.resx">
       <DependentUpon>UserBookTick.cs</DependentUpon>
@@ -166,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserListFilm.resx">
       <DependentUpon>UserListFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserShowTimes.resx">
+      <DependentUpon>UserShowTimes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserTicket.resx">
       <DependentUpon>UserTicket.cs</DependentUpon>
