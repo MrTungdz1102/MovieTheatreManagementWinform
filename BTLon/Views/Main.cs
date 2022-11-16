@@ -186,5 +186,10 @@ namespace BTLon.Views
             //UserTicket userTicket = new UserTicket();
             //LoadUserControl(userTicket);
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

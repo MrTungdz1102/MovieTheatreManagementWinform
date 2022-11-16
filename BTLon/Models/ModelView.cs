@@ -113,5 +113,5 @@ namespace BTLon.Models
                 process.UseProc(MaVe, MaLC, ticket.MaGhe1, "KH001", "NV01", ticket.GiaTien1);
             }
         }
-    }
+     }
 }
