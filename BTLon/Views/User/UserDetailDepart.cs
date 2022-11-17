@@ -56,5 +56,10 @@ namespace BTLon.Views.User
             MessageBox.Show("Update successfully!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Process.DataChange(update);
         }
+
+        private void lbMaPB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

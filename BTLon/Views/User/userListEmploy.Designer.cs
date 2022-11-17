@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.txtMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbMaPB = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.txtTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbMaPB = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.txtMaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +80,7 @@
             this.dgvNhanVien.EnableHeadersVisualStyles = false;
             this.dgvNhanVien.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
-            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -99,24 +99,41 @@
             this.dgvNhanVien.TabIndex = 8;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
-            // txtMaNV
+            // txtSDT
             // 
-            this.txtMaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtMaNV.DataPropertyName = "MaNV";
-            this.txtMaNV.HeaderText = "Mã nhân viên";
-            this.txtMaNV.MinimumWidth = 6;
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.ReadOnly = true;
-            this.txtMaNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.txtSDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtSDT.DataPropertyName = "SDT";
+            this.txtSDT.HeaderText = "SĐT";
+            this.txtSDT.MinimumWidth = 6;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // cbMaPB
+            // txtDiaChi
             // 
-            this.cbMaPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cbMaPB.DataPropertyName = "MaPB";
-            this.cbMaPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbMaPB.HeaderText = "Mã phòng ban";
-            this.cbMaPB.MinimumWidth = 6;
-            this.cbMaPB.Name = "cbMaPB";
+            this.txtDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtDiaChi.DataPropertyName = "DiaChi";
+            this.txtDiaChi.HeaderText = "Địa chỉ";
+            this.txtDiaChi.MinimumWidth = 6;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtNgaySinh.DataPropertyName = "NgaySinh";
+            this.txtNgaySinh.HeaderText = "Ngày sinh";
+            this.txtNgaySinh.MinimumWidth = 6;
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbGioiTinh.DataPropertyName = "GioiTinh";
+            this.cbGioiTinh.HeaderText = "Giới tính";
+            this.cbGioiTinh.MinimumWidth = 6;
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // txtTenNV
             // 
@@ -128,48 +145,31 @@
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // cbGioiTinh
+            // cbMaPB
             // 
-            this.cbGioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cbGioiTinh.DataPropertyName = "GioiTinh";
-            this.cbGioiTinh.HeaderText = "Giới tính";
-            this.cbGioiTinh.MinimumWidth = 6;
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cbMaPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbMaPB.DataPropertyName = "MaPB";
+            this.cbMaPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMaPB.HeaderText = "Mã phòng ban";
+            this.cbMaPB.MinimumWidth = 6;
+            this.cbMaPB.Name = "cbMaPB";
             // 
-            // txtNgaySinh
+            // txtMaNV
             // 
-            this.txtNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtNgaySinh.DataPropertyName = "NgaySinh";
-            this.txtNgaySinh.HeaderText = "Ngày sinh";
-            this.txtNgaySinh.MinimumWidth = 6;
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtDiaChi.DataPropertyName = "DiaChi";
-            this.txtDiaChi.HeaderText = "Địa chỉ";
-            this.txtDiaChi.MinimumWidth = 6;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtSDT.DataPropertyName = "SDT";
-            this.txtSDT.HeaderText = "SĐT";
-            this.txtSDT.MinimumWidth = 6;
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.txtMaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtMaNV.DataPropertyName = "MaNV";
+            this.txtMaNV.HeaderText = "Mã sản phẩm";
+            this.txtMaNV.MinimumWidth = 6;
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
+            this.txtMaNV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // userListEmploy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvNhanVien);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "userListEmploy";
             this.Size = new System.Drawing.Size(1216, 641);
             this.Load += new System.EventHandler(this.userListEmploy_Load);

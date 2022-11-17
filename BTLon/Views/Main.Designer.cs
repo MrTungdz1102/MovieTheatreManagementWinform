@@ -57,6 +57,7 @@
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.btnFD = new Guna.UI2.WinForms.Guna2Button();
             this.panelTitleBar.SuspendLayout();
             this.panelViewPro.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,12 +79,11 @@
             this.panelTitleBar.Controls.Add(this.btnMax);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(146, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitleBar.Location = new System.Drawing.Point(195, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(916, 24);
+            this.panelTitleBar.Size = new System.Drawing.Size(1221, 30);
             this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
             // 
             // btnMini
             // 
@@ -101,11 +101,11 @@
             this.btnMini.ForeColor = System.Drawing.Color.White;
             this.btnMini.Image = ((System.Drawing.Image)(resources.GetObject("btnMini.Image")));
             this.btnMini.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMini.Location = new System.Drawing.Point(855, 0);
-            this.btnMini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMini.Location = new System.Drawing.Point(1140, 0);
+            this.btnMini.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMini.Name = "btnMini";
             this.btnMini.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMini.Size = new System.Drawing.Size(18, 20);
+            this.btnMini.Size = new System.Drawing.Size(24, 25);
             this.btnMini.TabIndex = 8;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
@@ -125,11 +125,11 @@
             this.btnMax.ForeColor = System.Drawing.Color.White;
             this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
             this.btnMax.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnMax.Location = new System.Drawing.Point(876, 4);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMax.Location = new System.Drawing.Point(1168, 5);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMax.Name = "btnMax";
             this.btnMax.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMax.Size = new System.Drawing.Size(18, 20);
+            this.btnMax.Size = new System.Drawing.Size(24, 25);
             this.btnMax.TabIndex = 7;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
@@ -148,11 +148,11 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(897, 4);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(1196, 5);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Size = new System.Drawing.Size(18, 20);
+            this.btnClose.Size = new System.Drawing.Size(24, 25);
             this.btnClose.TabIndex = 6;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -162,10 +162,10 @@
             this.panelViewPro.Controls.Add(this.panel1);
             this.panelViewPro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelViewPro.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelViewPro.Location = new System.Drawing.Point(146, 24);
-            this.panelViewPro.Margin = new System.Windows.Forms.Padding(2);
+            this.panelViewPro.Location = new System.Drawing.Point(195, 30);
+            this.panelViewPro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelViewPro.Name = "panelViewPro";
-            this.panelViewPro.Size = new System.Drawing.Size(916, 42);
+            this.panelViewPro.Size = new System.Drawing.Size(1221, 52);
             this.panelViewPro.TabIndex = 2;
             // 
             // panel1
@@ -174,9 +174,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ptbAvt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(766, 0);
+            this.panel1.Location = new System.Drawing.Point(1021, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 42);
+            this.panel1.Size = new System.Drawing.Size(200, 52);
             this.panel1.TabIndex = 3;
             // 
             // btnProfile
@@ -192,9 +193,10 @@
             this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
-            this.btnProfile.Location = new System.Drawing.Point(0, 14);
+            this.btnProfile.Location = new System.Drawing.Point(0, 17);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(19, 22);
+            this.btnProfile.Size = new System.Drawing.Size(25, 27);
             this.btnProfile.TabIndex = 2;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
@@ -203,9 +205,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 13);
+            this.label1.Location = new System.Drawing.Point(91, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
+            this.label1.Size = new System.Drawing.Size(97, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "LongNT";
             // 
@@ -219,9 +222,10 @@
             this.ptbAvt.BorderSize = 2;
             this.ptbAvt.GradientAngle = 50F;
             this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
-            this.ptbAvt.Location = new System.Drawing.Point(25, 2);
+            this.ptbAvt.Location = new System.Drawing.Point(33, 2);
+            this.ptbAvt.Margin = new System.Windows.Forms.Padding(4);
             this.ptbAvt.Name = "ptbAvt";
-            this.ptbAvt.Size = new System.Drawing.Size(37, 37);
+            this.ptbAvt.Size = new System.Drawing.Size(49, 49);
             this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAvt.TabIndex = 0;
             this.ptbAvt.TabStop = false;
@@ -232,9 +236,9 @@
             this.panelTitleMenu.Controls.Add(this.pictureBox1);
             this.panelTitleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitleMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleMenu.Name = "panelTitleMenu";
-            this.panelTitleMenu.Size = new System.Drawing.Size(146, 66);
+            this.panelTitleMenu.Size = new System.Drawing.Size(195, 81);
             this.panelTitleMenu.TabIndex = 0;
             // 
             // btnMenu
@@ -250,19 +254,20 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageSize = new System.Drawing.Size(22, 25);
-            this.btnMenu.Location = new System.Drawing.Point(11, 24);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenu.Location = new System.Drawing.Point(15, 30);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(34, 31);
+            this.btnMenu.Size = new System.Drawing.Size(45, 38);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -271,10 +276,10 @@
             // 
             this.panel8.Controls.Add(this.btnExit);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 586);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(0, 721);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(146, 37);
+            this.panel8.Size = new System.Drawing.Size(195, 46);
             this.panel8.TabIndex = 10;
             // 
             // btnExit
@@ -294,10 +299,10 @@
             this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExit.ImageSize = new System.Drawing.Size(25, 25);
             this.btnExit.Location = new System.Drawing.Point(0, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedColor = System.Drawing.Color.Transparent;
-            this.btnExit.Size = new System.Drawing.Size(146, 37);
+            this.btnExit.Size = new System.Drawing.Size(195, 46);
             this.btnExit.TabIndex = 12;
             this.btnExit.Tag = "   Exit";
             this.btnExit.Text = "Exit";
@@ -314,11 +319,11 @@
             this.panelMenu.Controls.Add(this.panelTitleMenu);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMenu.MaximumSize = new System.Drawing.Size(146, 0);
-            this.panelMenu.MinimumSize = new System.Drawing.Size(52, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMenu.MaximumSize = new System.Drawing.Size(195, 0);
+            this.panelMenu.MinimumSize = new System.Drawing.Size(69, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(146, 623);
+            this.panelMenu.Size = new System.Drawing.Size(195, 767);
             this.panelMenu.TabIndex = 0;
             // 
             // panelSales
@@ -327,12 +332,12 @@
             this.panelSales.Controls.Add(this.btnBill);
             this.panelSales.Controls.Add(this.btnTicket);
             this.panelSales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSales.Location = new System.Drawing.Point(0, 254);
-            this.panelSales.Margin = new System.Windows.Forms.Padding(2);
-            this.panelSales.MaximumSize = new System.Drawing.Size(0, 77);
-            this.panelSales.MinimumSize = new System.Drawing.Size(0, 10);
+            this.panelSales.Location = new System.Drawing.Point(0, 364);
+            this.panelSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSales.MaximumSize = new System.Drawing.Size(0, 95);
+            this.panelSales.MinimumSize = new System.Drawing.Size(0, 12);
             this.panelSales.Name = "panelSales";
-            this.panelSales.Size = new System.Drawing.Size(146, 77);
+            this.panelSales.Size = new System.Drawing.Size(195, 95);
             this.panelSales.TabIndex = 15;
             this.panelSales.Visible = false;
             // 
@@ -346,10 +351,10 @@
             this.btnBill.FillColor = System.Drawing.Color.DimGray;
             this.btnBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Location = new System.Drawing.Point(0, 37);
-            this.btnBill.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBill.Location = new System.Drawing.Point(0, 46);
+            this.btnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(146, 37);
+            this.btnBill.Size = new System.Drawing.Size(195, 46);
             this.btnBill.TabIndex = 16;
             this.btnBill.Tag = "";
             this.btnBill.Text = "         Hóa đơn";
@@ -365,9 +370,9 @@
             this.btnTicket.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnTicket.ForeColor = System.Drawing.Color.White;
             this.btnTicket.Location = new System.Drawing.Point(0, 0);
-            this.btnTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTicket.Name = "btnTicket";
-            this.btnTicket.Size = new System.Drawing.Size(146, 37);
+            this.btnTicket.Size = new System.Drawing.Size(195, 46);
             this.btnTicket.TabIndex = 15;
             this.btnTicket.Tag = "Vé";
             this.btnTicket.Text = "Vé";
@@ -383,10 +388,10 @@
             this.btnSales.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSales.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnSales.ForeColor = System.Drawing.Color.White;
-            this.btnSales.Location = new System.Drawing.Point(0, 217);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSales.Location = new System.Drawing.Point(0, 318);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(146, 37);
+            this.btnSales.Size = new System.Drawing.Size(195, 46);
             this.btnSales.TabIndex = 14;
             this.btnSales.Tag = "   Bán hàng";
             this.btnSales.Text = "   Bán hàng";
@@ -395,14 +400,15 @@
             // panelManage
             // 
             this.panelManage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelManage.Controls.Add(this.btnFD);
             this.panelManage.Controls.Add(this.btnCustomer);
             this.panelManage.Controls.Add(this.btnEmploy);
             this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManage.Location = new System.Drawing.Point(0, 140);
-            this.panelManage.MaximumSize = new System.Drawing.Size(0, 77);
-            this.panelManage.MinimumSize = new System.Drawing.Size(0, 10);
+            this.panelManage.Location = new System.Drawing.Point(0, 173);
+            this.panelManage.Margin = new System.Windows.Forms.Padding(4);
+            this.panelManage.MinimumSize = new System.Drawing.Size(0, 12);
             this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(146, 77);
+            this.panelManage.Size = new System.Drawing.Size(195, 145);
             this.panelManage.TabIndex = 13;
             this.panelManage.Visible = false;
             // 
@@ -423,11 +429,11 @@
             this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.ImageSize = new System.Drawing.Size(25, 25);
             this.btnCustomer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 37);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 46);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.PressedColor = System.Drawing.Color.Transparent;
-            this.btnCustomer.Size = new System.Drawing.Size(146, 37);
+            this.btnCustomer.Size = new System.Drawing.Size(195, 47);
             this.btnCustomer.TabIndex = 14;
             this.btnCustomer.Tag = "";
             this.btnCustomer.Text = "        Khách hàng";
@@ -451,10 +457,10 @@
             this.btnEmploy.ImageSize = new System.Drawing.Size(25, 25);
             this.btnEmploy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnEmploy.Location = new System.Drawing.Point(0, 0);
-            this.btnEmploy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmploy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmploy.Name = "btnEmploy";
             this.btnEmploy.PressedColor = System.Drawing.Color.Transparent;
-            this.btnEmploy.Size = new System.Drawing.Size(146, 37);
+            this.btnEmploy.Size = new System.Drawing.Size(195, 46);
             this.btnEmploy.TabIndex = 13;
             this.btnEmploy.Tag = "";
             this.btnEmploy.Text = "     Nhân viên";
@@ -477,11 +483,11 @@
             this.btnManage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManage.ImageSize = new System.Drawing.Size(25, 25);
             this.btnManage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnManage.Location = new System.Drawing.Point(0, 103);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManage.Location = new System.Drawing.Point(0, 127);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManage.Name = "btnManage";
             this.btnManage.PressedColor = System.Drawing.Color.Transparent;
-            this.btnManage.Size = new System.Drawing.Size(146, 37);
+            this.btnManage.Size = new System.Drawing.Size(195, 46);
             this.btnManage.TabIndex = 12;
             this.btnManage.Tag = "Quản lý";
             this.btnManage.Text = "Quản lý";
@@ -504,11 +510,11 @@
             this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnHome.Location = new System.Drawing.Point(0, 66);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(0, 81);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.Transparent;
-            this.btnHome.Size = new System.Drawing.Size(146, 37);
+            this.btnHome.Size = new System.Drawing.Size(195, 46);
             this.btnHome.TabIndex = 11;
             this.btnHome.Tag = "   Trang chủ";
             this.btnHome.Text = "   Trang chủ";
@@ -520,9 +526,10 @@
             this.panelProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelProfile.Controls.Add(this.guna2GradientButton2);
             this.panelProfile.Controls.Add(this.guna2GradientButton1);
-            this.panelProfile.Location = new System.Drawing.Point(766, 0);
+            this.panelProfile.Location = new System.Drawing.Point(1021, 0);
+            this.panelProfile.Margin = new System.Windows.Forms.Padding(4);
             this.panelProfile.Name = "panelProfile";
-            this.panelProfile.Size = new System.Drawing.Size(149, 84);
+            this.panelProfile.Size = new System.Drawing.Size(199, 103);
             this.panelProfile.TabIndex = 0;
             // 
             // guna2GradientButton2
@@ -537,9 +544,10 @@
             this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2GradientButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(0, 37);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(0, 46);
+            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(149, 44);
+            this.guna2GradientButton2.Size = new System.Drawing.Size(199, 54);
             this.guna2GradientButton2.TabIndex = 1;
             this.guna2GradientButton2.Text = "Đăng xuất";
             // 
@@ -557,8 +565,9 @@
             this.guna2GradientButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
             this.guna2GradientButton1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(149, 37);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(199, 46);
             this.guna2GradientButton1.TabIndex = 0;
             this.guna2GradientButton1.Text = "Chỉnh sửa";
             // 
@@ -566,22 +575,50 @@
             // 
             this.panelContent.Controls.Add(this.panelProfile);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(146, 66);
+            this.panelContent.Location = new System.Drawing.Point(195, 82);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(4);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(916, 557);
+            this.panelContent.Size = new System.Drawing.Size(1221, 685);
             this.panelContent.TabIndex = 4;
+            // 
+            // btnFD
+            // 
+            this.btnFD.BackColor = System.Drawing.Color.White;
+            this.btnFD.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFD.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnFD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFD.FillColor = System.Drawing.Color.DimGray;
+            this.btnFD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFD.ForeColor = System.Drawing.Color.White;
+            this.btnFD.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnFD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFD.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnFD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFD.Location = new System.Drawing.Point(0, 93);
+            this.btnFD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFD.Name = "btnFD";
+            this.btnFD.PressedColor = System.Drawing.Color.Transparent;
+            this.btnFD.Size = new System.Drawing.Size(195, 47);
+            this.btnFD.TabIndex = 15;
+            this.btnFD.Tag = "";
+            this.btnFD.Text = "     Sản phẩm";
+            this.btnFD.Click += new System.EventHandler(this.btnFD_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 623);
+            this.ClientSize = new System.Drawing.Size(1416, 767);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelViewPro);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -632,5 +669,6 @@
         private System.Windows.Forms.Panel panelSales;
         private Guna.UI2.WinForms.Guna2Button btnBill;
         private Guna.UI2.WinForms.Guna2Button btnTicket;
+        private Guna.UI2.WinForms.Guna2Button btnFD;
     }
 }

@@ -20,6 +20,7 @@ namespace BTLon.Views
         UserEmploy userEmploy;
         UserTicket userTicket;
         UserControl userRemove;
+        FoodandDrink fd = new FoodandDrink();
         public Main()
         {
             InitializeComponent();
@@ -31,8 +32,9 @@ namespace BTLon.Views
             panelProfile.Visible = false;
             collapseMenu(true);
             panelProfile.Visible = false;
-            Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
-            userRemove = userTicket;
+            //Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
+            //userRemove = userTicket;
+
         }
         //Set
         public void SetPanel()
@@ -125,14 +127,14 @@ namespace BTLon.Views
                 }
             }
         }
-        private void collapseChild(Panel panel, bool check)
+        private void collapseChild(Panel panel, bool check, int height)
         {
             if (check == true)
             {
                 if (panel.Visible == false)
                 {
                     panel.Visible = true;
-                    panel.Height = 84;
+                    panel.Height = height;
                 }
                 else
                 {
@@ -147,18 +149,18 @@ namespace BTLon.Views
         private void btnMenu_Click(object sender, EventArgs e)
         {
             collapseMenu(true);
-            collapseChild(this.panelManage, false);
-            collapseChild(this.panelSales, false);
+            collapseChild(this.panelManage, false,84);
+            collapseChild(this.panelSales, false,84);
         }
         private void btnManage_Click(object sender, EventArgs e)
         {
             collapseMenu(false);
-            collapseChild(this.panelManage, true);
+            collapseChild(this.panelManage, true,126);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            collapseChild(this.panelProfile, true); 
+            collapseChild(this.panelProfile, true,84); 
         }
 
         private void btnEmploy_Click(object sender, EventArgs e)
@@ -178,7 +180,7 @@ namespace BTLon.Views
         private void btnSales_Click(object sender, EventArgs e)
         {
             collapseMenu(false);
-            collapseChild(this.panelSales, true);
+            collapseChild(this.panelSales, true,84);
         }
 
         private void btnTicket_Click(object sender, EventArgs e)
@@ -190,6 +192,11 @@ namespace BTLon.Views
         private void btnCustomer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFD_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(fd);
         }
     }
 }

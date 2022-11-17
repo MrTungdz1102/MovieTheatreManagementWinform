@@ -189,5 +189,10 @@ namespace BTLon.Views.User
                 }
             }
         }
+
+        private void txtSeach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
