@@ -143,7 +143,7 @@ namespace BTLon.Views.User
                 btnAdd.Enabled = false;
                 btnEdit.Enabled = false;
                 ShowDetail(true);
-                LoadData();
+                LoadData(); 
                 
             }
         }

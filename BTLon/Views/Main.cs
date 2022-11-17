@@ -20,7 +20,7 @@ namespace BTLon.Views
         UserEmploy userEmploy;
         UserTicket userTicket;
         UserControl userRemove;
-        FoodandDrink fd = new FoodandDrink();
+        
         public Main()
         {
             InitializeComponent();
@@ -32,8 +32,9 @@ namespace BTLon.Views
             panelProfile.Visible = false;
             collapseMenu(true);
             panelProfile.Visible = false;
-            //Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
-            //userRemove = userTicket;
+            Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
+            userRemove = userTicket;
+            
 
         }
         //Set
@@ -196,7 +197,7 @@ namespace BTLon.Views
 
         private void btnFD_Click(object sender, EventArgs e)
         {
-            LoadUserControl(fd);
+            //LoadUserControl(fd);
         }
     }
 }
