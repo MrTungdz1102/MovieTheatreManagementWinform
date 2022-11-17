@@ -49,6 +49,7 @@
             this.btnTicket = new Guna.UI2.WinForms.Guna2Button();
             this.btnSales = new Guna.UI2.WinForms.Guna2Button();
             this.panelManage = new System.Windows.Forms.Panel();
+            this.btnFD = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmploy = new Guna.UI2.WinForms.Guna2Button();
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,6 @@
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.btnFD = new Guna.UI2.WinForms.Guna2Button();
             this.panelTitleBar.SuspendLayout();
             this.panelViewPro.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -84,6 +84,7 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1221, 30);
             this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseMove);
             // 
             // btnMini
             // 
@@ -412,6 +413,33 @@
             this.panelManage.TabIndex = 13;
             this.panelManage.Visible = false;
             // 
+            // btnFD
+            // 
+            this.btnFD.BackColor = System.Drawing.Color.White;
+            this.btnFD.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFD.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnFD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFD.FillColor = System.Drawing.Color.DimGray;
+            this.btnFD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFD.ForeColor = System.Drawing.Color.White;
+            this.btnFD.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnFD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFD.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnFD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnFD.Location = new System.Drawing.Point(0, 93);
+            this.btnFD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFD.Name = "btnFD";
+            this.btnFD.PressedColor = System.Drawing.Color.Transparent;
+            this.btnFD.Size = new System.Drawing.Size(195, 47);
+            this.btnFD.TabIndex = 15;
+            this.btnFD.Tag = "";
+            this.btnFD.Text = "     Sản phẩm";
+            this.btnFD.Click += new System.EventHandler(this.btnFD_Click);
+            // 
             // btnCustomer
             // 
             this.btnCustomer.BackColor = System.Drawing.Color.White;
@@ -580,33 +608,6 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1221, 685);
             this.panelContent.TabIndex = 4;
-            // 
-            // btnFD
-            // 
-            this.btnFD.BackColor = System.Drawing.Color.White;
-            this.btnFD.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnFD.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnFD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFD.FillColor = System.Drawing.Color.DimGray;
-            this.btnFD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFD.ForeColor = System.Drawing.Color.White;
-            this.btnFD.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnFD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFD.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFD.Location = new System.Drawing.Point(0, 93);
-            this.btnFD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFD.Name = "btnFD";
-            this.btnFD.PressedColor = System.Drawing.Color.Transparent;
-            this.btnFD.Size = new System.Drawing.Size(195, 47);
-            this.btnFD.TabIndex = 15;
-            this.btnFD.Tag = "";
-            this.btnFD.Text = "     Sản phẩm";
-            this.btnFD.Click += new System.EventHandler(this.btnFD_Click);
             // 
             // Main
             // 

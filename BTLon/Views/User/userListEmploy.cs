@@ -71,27 +71,35 @@ namespace BTLon.Views.User
         }
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Image image = null;
             try
             {
+                Image image = null;
                 string MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
                 string sql = "select Anh from tblNhanVien where MaNV = N'" + MaNV + "'";
                 DataTable dt = Process.DataReader(sql);
                 object oj = dt.Rows[0][0];
                 byte[] img = oj as byte[];
                 image = ModelView.ByteArrayToImage(img);
+                PictureBox pictureBox = new PictureBox();
+                MessageBox.Show(dt.Rows.Count.ToString());
                 DetailEmploy.setPictureBox(image);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                if (dgvNhanVien.CurrentRow.Cells[3].Value.ToString() == "Nam")
+                Image image = null;
+                string MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                if (dgvNhanVien.CurrentRow.Cells[3].Value.ToString() == "False")
                 {
                     image = ModelView.Images("avt.jpg");
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Image = image;
                     DetailEmploy.setPictureBox(image);
                 }
                 else
                 {
                     image = ModelView.Images("avtNu.jpg");
+                    PictureBox pictureBox = new PictureBox();
+                    pictureBox.Image = image;
                     DetailEmploy.setPictureBox(image);
                 }
             }

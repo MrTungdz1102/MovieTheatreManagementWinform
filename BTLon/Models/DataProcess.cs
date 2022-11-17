@@ -10,12 +10,13 @@ using System.Windows;
 using System.Windows.Forms;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.Runtime.Remoting.Contexts;
+using System.Net.Configuration;
 
 namespace BTLon.Models
 {
     internal class DataProcess
     {
-        string strConnect = "Data Source=LAPTOP-9J5O4FV8\\MSSQLSERVER01;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+        string strConnect = "Data Source=DESKTOP-F087CPF\\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
         SqlConnection sqlConnect = null;
         SqlDataAdapter da = null;
         DataSet ds = null;
@@ -29,7 +30,8 @@ namespace BTLon.Models
                 {
                     sqlConnect.Open();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi kết nối", "Error", (MessageBoxButtons)MessageBoxButton.OK, MessageBoxIcon.Error);
             }
@@ -91,7 +93,7 @@ namespace BTLon.Models
             OpenConnect();
             string sql = "update tblNhanVien set Anh = @img where MaNV = N'" + MaNV + "'";
             SqlCommand sqlcomma = new SqlCommand(sql, sqlConnect);
-            sqlcomma.Parameters.Add("@img", img);
+            sqlcomma.Parameters.Add("@img", SqlDbType.Image).Value = img;
             sqlcomma.ExecuteNonQuery();
             CloseConnect();
         }
@@ -103,13 +105,43 @@ namespace BTLon.Models
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = sqlConnect;
             //khai báo các thông tin của tham số truyền vào
-            cmd.Parameters.Add("@MaVe", SqlDbType.NVarChar).Value = MaVe ;
+            cmd.Parameters.Add("@MaVe", SqlDbType.NVarChar).Value = MaVe;
             cmd.Parameters.Add("@MaLC", SqlDbType.NVarChar).Value = MaLC;
             cmd.Parameters.Add("@MaGhe", SqlDbType.NVarChar).Value = MaGhe;
             cmd.Parameters.Add("@NgayBan", SqlDbType.DateTime).Value = DateTime.Now;
             cmd.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = MaKH;
             cmd.Parameters.Add("@MaNV", SqlDbType.NVarChar).Value = MaNV;
             cmd.Parameters.Add("@GiaVe", SqlDbType.Decimal).Value = GiaVe;
+            cmd.ExecuteNonQuery();
+            CloseConnect();
+        }
+        public void UseProc1(string MaHD, string MaNV, string MaKH, decimal TongTien)
+        {
+            OpenConnect();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "InsertHDB";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = sqlConnect;
+            //khai báo các thông tin của tham số truyền vào
+            cmd.Parameters.Add("@MaHD", SqlDbType.NVarChar).Value = MaHD;
+            cmd.Parameters.Add("@MaNV", SqlDbType.NVarChar).Value = MaNV;
+            cmd.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = MaKH;
+            cmd.Parameters.Add("@NgayBan", SqlDbType.DateTime).Value = DateTime.Now;
+            cmd.Parameters.Add("@TongTien", SqlDbType.Money).Value = TongTien;
+            cmd.ExecuteNonQuery();
+            CloseConnect();
+        }
+        public void UseProc2(string MaHD, string MaSP, int SLMua)
+        {
+            OpenConnect();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "InsertCTHDB";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = sqlConnect;
+            //khai báo các thông tin của tham số truyền vào
+            cmd.Parameters.Add("@MaHD", SqlDbType.NVarChar).Value = MaHD;
+            cmd.Parameters.Add("@MaSP", SqlDbType.NVarChar).Value = MaSP;
+            cmd.Parameters.Add("@SLMua", SqlDbType.Int).Value = SLMua;
             cmd.ExecuteNonQuery();
             CloseConnect();
         }

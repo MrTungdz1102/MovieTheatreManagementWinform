@@ -20,7 +20,6 @@ namespace BTLon.Views
         UserEmploy userEmploy;
         UserTicket userTicket;
         UserControl userRemove;
-        
         public Main()
         {
             InitializeComponent();
@@ -34,7 +33,6 @@ namespace BTLon.Views
             panelProfile.Visible = false;
             Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
             userRemove = userTicket;
-            
 
         }
         //Set

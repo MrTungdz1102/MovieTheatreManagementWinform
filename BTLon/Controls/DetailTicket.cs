@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace BTLon.Controls
 {
-    internal class DetailTicket
+    public class DetailTicket
     {
-        string MaGhe;
-        decimal GiaTien;
-        public string MaGhe1 { get => MaGhe; set => MaGhe = value; }
-        public decimal GiaTien1 { get => GiaTien; set => GiaTien = value; }
+        public string MaGhe {get; set;}
+        public decimal GiaTien { get; set;}
     }
 }

@@ -19,8 +19,8 @@ namespace BTLon.Views.User
         int numberFoodAll;
         Decimal FoodSum;
         Decimal SumAll;
-        List<DetailTicket> SoGheDaChon;
-        List<DetailFoodSelected> foodSelecteds;
+        public List<DetailTicket> SoGheDaChon { get; set; }
+        public List<DetailFoodSelected> foodSelecteds { get; set; }
         public UserBookTick()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace BTLon.Views.User
             lblTenRap.Text = " CGV vincom \r\n Center Bà Triệu";
             AddFoodToCombo();
         }
-        public void SetLabelPC(string text,string tag)
+        public void SetLabelPC(string text, string tag)
         {
             this.lblPC.Text = text;
             this.lblPC.Tag = tag;
@@ -57,6 +57,30 @@ namespace BTLon.Views.User
         {
             this.lblNgayChieu.Text = text;
         }
+        public void SetConTrolsInPanelKH()
+        {
+            panelKH.Controls.Clear();
+        }
+        public string GetNC()
+        {
+            return lblNgayChieu.Text;
+        }
+        public string GetTGC()
+        {
+            return lblThoiGianChieu.Text;
+        }
+        public string GetPC()
+        {
+            return lblPC.Text;
+        }
+        public string GetTongTienVe()
+        {
+            return lblSum.Text;
+        }
+        public string GetTenPhim()
+        {
+            return lblTenPhim.Text;
+        }
         //Tính vé
         //Hàm này để bắt sự kiện người dùng chọn ghế
         private void book_click(object sender, EventArgs e)
@@ -68,10 +92,10 @@ namespace BTLon.Views.User
             {
                 DetailTicket detail = new DetailTicket();
                 button.BackColor = Color.Brown;
-                detail.MaGhe1 = SoGhe;
-                detail.GiaTien1 = process.DataFunction(SoGhe, lblPC.Tag.ToString());
+                detail.MaGhe = SoGhe;
+                detail.GiaTien = process.DataFunction(SoGhe, lblPC.Tag.ToString());
                 SumTienGhe += process.DataFunction(SoGhe, lblPC.Tag.ToString());
-                this.lblSum.Text = Math.Round(SumTienGhe,0).ToString();
+                this.lblSum.Text = Math.Round(SumTienGhe, 0).ToString();
                 SoGheDaChon.Add(detail);
             }
             else
@@ -86,9 +110,9 @@ namespace BTLon.Views.User
                 {
                     this.lblSum.Text = Math.Round(SumTienGhe, 0).ToString();
                 }
-                foreach(DetailTicket detail in SoGheDaChon)
+                foreach (DetailTicket detail in SoGheDaChon)
                 {
-                    if(detail.MaGhe1 == SoGhe)
+                    if (detail.MaGhe == SoGhe)
                     {
                         SoGheDaChon.Remove(detail);
                         break;
@@ -98,20 +122,40 @@ namespace BTLon.Views.User
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            ModelView.InsertData("V", SoGheDaChon, lblPC.Tag.ToString());
+            UserBill bill = new UserBill(this);
+            Models.ModelView.addUserToPanel(panelKH, null, bill, DockStyle.Fill);
+            //if (SoGheDaChon.Count > 0)
+            //{
+            //    ModelView.InsertData("V", "KH001", "NV01", lblPC.Tag.ToString(), SoGheDaChon);
+            //    if (foodSelecteds.Count > 0)
+            //    {
+            //        Decimal TongTien = Decimal.Parse(lblPriceCB.Text);
+            //        Models.ModelView.InsertData2("HD", "NV01", "KH001", TongTien, foodSelecteds);
+            //        MessageBox.Show("Thêm thành công!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chưa chọn ghế!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //foreach (DetailFoodSelected selected in foodSelecteds)
+            //{
+            //    MessageBox.Show(selected.codeFood + "," + selected.NameFood + "," + selected.Price.ToString() + "," + selected.size);
+            //}
         }
         //Tính hóa đơn
         private void AddFoodToCombo()
         {
-            string sql = "select TenSP, round(Gia,2) from tblDoAn_NuocUong";
+            string sql = "select TenSP, Gia, MaSP from tblDoAn_NuocUong";
             DataTable data = process.DataReader(sql);
             List<DetailFood> foodList = new List<DetailFood>();
-            for(int i = 0; i < data.Rows.Count; i++)
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                DetailFood food = new DetailFood() 
+                DetailFood food = new DetailFood()
                 {
                     NameFood = data.Rows[i][0].ToString(),
                     Price = data.Rows[i][1].ToString(),
+                    CodeFood = data.Rows[i][2].ToString()
                 };
                 foodList.Add(food);
             }
@@ -153,6 +197,7 @@ namespace BTLon.Views.User
                         break;
                     }
                 }
+                cbFood.Tag = food.CodeFood;
                 txtPrice.Text = Math.Round(Decimal.Parse(food.Price), 0).ToString();
             }
         }
@@ -170,7 +215,16 @@ namespace BTLon.Views.User
             Decimal PriceFood = Decimal.Parse(txtPrice.Text); //Lấy giá của từng sản phẩm
             setSumFood(PriceFood);
         }
-
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            foodSelecteds.Clear();
+            cbFoodSelected.DataSource = null;
+            txtNumberFood.Text = "0";
+            txtNumberSelected.Text = "";
+            lblPriceCB.Text = "";
+            numberFoodAll = 0;
+            SumAll = 0;
+        }
         private void btnSub_Click(object sender, EventArgs e)
         {
             Decimal PriceFood = Decimal.Parse(txtPrice.Text);
@@ -187,7 +241,7 @@ namespace BTLon.Views.User
                         selected.Price = FoodSum;
                         selected.size = numberFoodAll;
                         foodSelected = selected;
-                        if(numberFoodAll == 0)
+                        if (numberFoodAll == 0)
                         {
                             foodSelecteds.Remove(selected);
                             txtNumberSelected.Text = "";
@@ -217,7 +271,7 @@ namespace BTLon.Views.User
                 {
                     if (selected.NameFood == cbFood.Text)
                     {
-                        if(selected.size == int.Parse(txtNumberFood.Text))
+                        if (selected.size == int.Parse(txtNumberFood.Text))
                         {
                             return;
                         }
@@ -233,7 +287,8 @@ namespace BTLon.Views.User
                 {
                     NameFood = cbFood.Text,
                     Price = SumAll,
-                    size = number
+                    size = number,
+                    codeFood = cbFood.Tag.ToString()
                 };
                 foodSelecteds.Add(foodSelected);
                 AddFoodSelectedToCombo();
@@ -242,21 +297,11 @@ namespace BTLon.Views.User
         }
         private void GetControls()
         {
-            foreach(Control control in panelListButton.Controls)
+            foreach (Control control in panelListButton.Controls)
             {
                 Button button = (Button)control;
                 button.BackColor = Color.Aqua;
             }
-        }
-        private void btnDeleteAll_Click(object sender, EventArgs e)
-        {
-            foodSelecteds.Clear();
-            cbFoodSelected.DataSource = null;
-            txtNumberFood.Text = "0";
-            txtNumberSelected.Text = "";
-            lblPriceCB.Text = "";
-            numberFoodAll = 0;
-            SumAll = 0;
         }
     }
 }

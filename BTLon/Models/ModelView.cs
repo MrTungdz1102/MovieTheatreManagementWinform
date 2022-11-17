@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using Color = System.Drawing.Color;
 
 namespace BTLon.Models
@@ -33,7 +34,7 @@ namespace BTLon.Models
             MemoryStream ms = new MemoryStream(byteimg);
             return Image.FromStream(ms);
         }
-        public static void addUserToPanel(Panel panel,UserControl userRemove,UserControl userAdd, DockStyle style)
+        public static void addUserToPanel(Panel panel, UserControl userRemove, UserControl userAdd, DockStyle style)
         {
             if (userRemove != null)
             {
@@ -47,7 +48,7 @@ namespace BTLon.Models
                 panel.Controls.Add(userAdd);
             }
         }
-        public static PictureBox GetPictureBox(int with,int height, DockStyle style, PictureBoxSizeMode sizeMode,Image image)
+        public static PictureBox GetPictureBox(int with, int height, DockStyle style, PictureBoxSizeMode sizeMode, Image image)
         {
             PictureBox picture = new PictureBox();
             picture.Dock = style;
@@ -68,7 +69,7 @@ namespace BTLon.Models
             pan.BorderStyle = border;
             return pan;
         }
-        public static Guna2GradientButton GetButton(DockStyle style, int BorderRadius, Color color,string text)
+        public static Guna2GradientButton GetButton(DockStyle style, int BorderRadius, Color color, string text)
         {
             Guna2GradientButton button = new Guna2GradientButton();
             button.Dock = style;
@@ -99,19 +100,39 @@ namespace BTLon.Models
             }
         }
         //Hàm này sẽ tự động thêm dữ liệu khi người dùng ấn next bên book tick
-        public static void InsertData(string form, List<DetailTicket> details, string MaLC)
+        public static void InsertData(string form, string MaKH, string MaNV, string MaLC, List<DetailTicket> details)
         {
             DataProcess process = new DataProcess();
-            DateTime dateTime = DateTime.Now;
-            string NgayBan = dateTime.ToString("yyyy/MM/dd") + " "+ dateTime.Hour.ToString() +":" + dateTime.Minute.ToString()+ ":" + dateTime.Second.ToString();
             DataTable data = process.DataReader("select count(MaVe) from tblVe");
             int i = int.Parse(data.Rows[0][0].ToString());
-            foreach(DetailTicket ticket in details) 
+            foreach (DetailTicket ticket in details)
             {
                 i++;
                 string MaVe = form + i.ToString(); //Tự sinh ra khóa chính
-                process.UseProc(MaVe, MaLC, ticket.MaGhe1, "KH001", "NV01", ticket.GiaTien1);
+                process.UseProc(MaVe, MaLC, ticket.MaGhe, MaKH, MaNV, ticket.GiaTien);
             }
         }
-     }
+        //Hàm này để tự tạo hóa đơn
+        public static void InsertData2(string form, string MaNV, string MaKH, Decimal TongTien, List<DetailFoodSelected> selecteds)
+        {
+            DataProcess process = new DataProcess();
+            DateTime dateTime = DateTime.Now;
+            DataTable data = process.DataReader("select count(MaHD) from tblHoaDon");
+            int i = int.Parse(data.Rows[0][0].ToString());
+            string MaHD;
+            if (i < 9)
+            {
+                MaHD = form + "0" + (i + 1).ToString();
+            }
+            else
+            {
+                MaHD = form + (i + 1).ToString();
+            }
+            process.UseProc1(MaHD, MaNV, MaKH, TongTien);
+            foreach (DetailFoodSelected food in selecteds)
+            {
+                process.UseProc2(MaHD, food.codeFood, food.size);
+            }
+        }
+    }
 }
