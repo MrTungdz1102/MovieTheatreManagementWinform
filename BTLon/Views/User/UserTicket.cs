@@ -126,7 +126,7 @@ namespace BTLon.Views.User
         }
         private void btnShowing_Click(object sender, EventArgs e)
         {
-            string sql = "select * from Phim_PC2";
+            string sql = "select * from Phim_PC";
             film.SetPanel(701);
             film.SetLabel("Phim đang chiếu");
             loadUser(sql);

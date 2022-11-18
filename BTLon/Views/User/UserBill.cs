@@ -31,7 +31,6 @@ namespace BTLon.Views.User
             lblDate.Visible = check;
             dtpDate.Visible = check;
             btnConfirm.Visible = check;
-            btnDestroy.Visible = check;
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -44,8 +43,10 @@ namespace BTLon.Views.User
             setTextBoxAndButton(false);
             txtSDT.Visible = true;
             btnConfirm.Visible = true;
+            btnDestroy.Visible = true;
             this.txtSDT.Location = new Point(22, 78);
             this.btnConfirm.Location = new Point(118, 120);
+            this.btnDestroy.Location = new Point(16, 120);
         }
         private void setTextBoxAndButton(bool check)
         {

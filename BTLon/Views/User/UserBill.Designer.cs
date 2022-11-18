@@ -35,10 +35,10 @@
             this.btnConfirm = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
-            this.btnNew = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtSDT = new BTLon.Views.Custom.TextBoxCus();
             this.txtHoTen = new BTLon.Views.Custom.TextBoxCus();
+            this.btnNew = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             this.lblKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.lblKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblKH.Location = new System.Drawing.Point(14, 0);
+            this.lblKH.Location = new System.Drawing.Point(12, 0);
             this.lblKH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKH.Name = "lblKH";
             this.lblKH.Size = new System.Drawing.Size(192, 44);
@@ -71,7 +71,7 @@
             this.btnOld.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOld.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOld.Location = new System.Drawing.Point(149, 52);
-            this.btnOld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOld.Margin = new System.Windows.Forms.Padding(2);
             this.btnOld.Name = "btnOld";
             this.btnOld.Size = new System.Drawing.Size(55, 23);
             this.btnOld.TabIndex = 0;
@@ -97,7 +97,7 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(215, 257);
             this.guna2CustomGradientPanel1.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.btnDestroy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDestroy.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDestroy.Location = new System.Drawing.Point(16, 223);
-            this.btnDestroy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDestroy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDestroy.Name = "btnDestroy";
             this.btnDestroy.Size = new System.Drawing.Size(55, 23);
             this.btnDestroy.TabIndex = 14;
@@ -138,7 +138,7 @@
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
             this.btnConfirm.Location = new System.Drawing.Point(121, 223);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(83, 23);
             this.btnConfirm.TabIndex = 13;
@@ -152,7 +152,7 @@
             this.dtpDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDate.Location = new System.Drawing.Point(16, 188);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(188, 20);
             this.dtpDate.TabIndex = 12;
@@ -170,38 +170,6 @@
             this.lblDate.Size = new System.Drawing.Size(129, 15);
             this.lblDate.TabIndex = 9;
             this.lblDate.Text = "Ngày/Tháng/Năm sinh";
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnNew.BorderRadius = 5;
-            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNew.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNew.FillColor2 = System.Drawing.Color.Crimson;
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNew.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNew.Location = new System.Drawing.Point(16, 52);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(57, 22);
-            this.btnNew.TabIndex = 4;
-            this.btnNew.Text = "Mới";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Separator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 46);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(215, 1);
-            this.guna2Separator2.TabIndex = 3;
             // 
             // txtSDT
             // 
@@ -249,12 +217,44 @@
             this.txtHoTen.Click += new System.EventHandler(this.txtHoTen_Click);
             this.txtHoTen.Leave += new System.EventHandler(this.txtHoTen_Leave);
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNew.BorderRadius = 5;
+            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNew.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNew.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNew.FillColor2 = System.Drawing.Color.Crimson;
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNew.Location = new System.Drawing.Point(16, 52);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(57, 22);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "Mới";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Separator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 46);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(215, 1);
+            this.guna2Separator2.TabIndex = 3;
+            // 
             // UserBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserBill";
             this.Size = new System.Drawing.Size(215, 257);
             this.Load += new System.EventHandler(this.UserBill_Load);
