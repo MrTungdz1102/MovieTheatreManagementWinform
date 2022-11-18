@@ -26,7 +26,10 @@ namespace BTLon.Views.User
         {
             this.txtTenLP.Text = TenLP;
         }
-
+        public void setMoTa(string MoTa)
+        {
+            this.txtMoTa.Text = MoTa;
+        }
         public void setEnable(bool check)
         {
             txtTenLP.Enabled = check;
@@ -37,6 +40,11 @@ namespace BTLon.Views.User
             update += "where MaLP = N'" + txtMaLP.Text + "';";
             MessageBox.Show("Update successfully!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Process.DataChange(update);
+        }
+
+        private void panelDetail_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

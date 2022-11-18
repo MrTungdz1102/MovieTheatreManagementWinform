@@ -119,6 +119,7 @@
             this.Controls.Add(this.dgvLoaiPhim);
             this.Name = "UserTypeFilm";
             this.Size = new System.Drawing.Size(563, 281);
+            this.Load += new System.EventHandler(this.UserTypeFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhim)).EndInit();
             this.ResumeLayout(false);
 

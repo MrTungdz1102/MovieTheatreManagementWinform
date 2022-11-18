@@ -34,10 +34,11 @@
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cbLC = new System.Windows.Forms.ComboBox();
+            this.cbbLP = new System.Windows.Forms.ComboBox();
             this.btnAddPB = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSeach = new BTLon.Views.Custom.TextBoxCus();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -53,7 +54,6 @@
             this.toolTipAdd = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipSave = new System.Windows.Forms.ToolTip(this.components);
-            this.txtSeach = new BTLon.Views.Custom.TextBoxCus();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.cbLC);
+            this.panel5.Controls.Add(this.cbbLP);
             this.panel5.Controls.Add(this.btnAddPB);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(307, 0);
@@ -105,20 +105,21 @@
             this.panel5.Size = new System.Drawing.Size(225, 44);
             this.panel5.TabIndex = 15;
             // 
-            // cbLC
+            // cbbLP
             // 
-            this.cbLC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbLC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cbLC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLC.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.cbLC.FormattingEnabled = true;
-            this.cbLC.Location = new System.Drawing.Point(7, 10);
-            this.cbLC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbLC.Name = "cbLC";
-            this.cbLC.Size = new System.Drawing.Size(173, 28);
-            this.cbLC.TabIndex = 10;
-            this.cbLC.Text = "Chọn lịch chiếu";
+            this.cbbLP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbbLP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cbbLP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLP.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cbbLP.FormattingEnabled = true;
+            this.cbbLP.Location = new System.Drawing.Point(7, 10);
+            this.cbbLP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbbLP.Name = "cbbLP";
+            this.cbbLP.Size = new System.Drawing.Size(173, 28);
+            this.cbbLP.TabIndex = 10;
+            this.cbbLP.Text = "Chọn lịch chiếu";
+            this.cbbLP.SelectedIndexChanged += new System.EventHandler(this.cbbLP_SelectedIndexChanged);
             // 
             // btnAddPB
             // 
@@ -140,6 +141,7 @@
             this.btnAddPB.Size = new System.Drawing.Size(35, 25);
             this.btnAddPB.TabIndex = 12;
             this.btnAddPB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAddPB.Click += new System.EventHandler(this.btnAddPB_Click);
             // 
             // panel4
             // 
@@ -163,6 +165,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtSeach
+            // 
+            this.txtSeach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSeach.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtSeach.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSeach.BorderSize = 2;
+            this.txtSeach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeach.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSeach.Location = new System.Drawing.Point(67, 0);
+            this.txtSeach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeach.Multiline = false;
+            this.txtSeach.Name = "txtSeach";
+            this.txtSeach.Padding = new System.Windows.Forms.Padding(9);
+            this.txtSeach.PasswordChar = false;
+            this.txtSeach.Size = new System.Drawing.Size(240, 41);
+            this.txtSeach.TabIndex = 0;
+            this.txtSeach.Texts = "Seach...";
+            this.txtSeach.UnderlinedStyle = true;
+            this.txtSeach._TextChanged += new System.EventHandler(this.txtSeach__TextChanged);
+            this.txtSeach.Click += new System.EventHandler(this.txtSeach_Click);
+            this.txtSeach.Leave += new System.EventHandler(this.txtSeach_Leave);
             // 
             // panel3
             // 
@@ -193,6 +217,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(33, 22);
             this.btnDelete.TabIndex = 9;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefresh
             // 
@@ -215,6 +240,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(95, 25);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // panel1
             // 
@@ -250,6 +276,7 @@
             this.btnBack.Size = new System.Drawing.Size(80, 28);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
@@ -270,6 +297,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(32, 28);
             this.btnAdd.TabIndex = 7;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
@@ -290,6 +318,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(35, 28);
             this.btnSave.TabIndex = 5;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -310,6 +339,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(32, 28);
             this.btnEdit.TabIndex = 6;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // splitter1
             // 
@@ -334,25 +364,6 @@
             // openImage
             // 
             this.openImage.FileName = "openFileDialog1";
-            // 
-            // txtSeach
-            // 
-            this.txtSeach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtSeach.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtSeach.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSeach.BorderSize = 2;
-            this.txtSeach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeach.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSeach.Location = new System.Drawing.Point(67, 0);
-            this.txtSeach.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeach.Multiline = false;
-            this.txtSeach.Name = "txtSeach";
-            this.txtSeach.Padding = new System.Windows.Forms.Padding(9);
-            this.txtSeach.PasswordChar = false;
-            this.txtSeach.Size = new System.Drawing.Size(240, 41);
-            this.txtSeach.TabIndex = 0;
-            this.txtSeach.Texts = "Seach...";
-            this.txtSeach.UnderlinedStyle = true;
             // 
             // UserManageFilm
             // 
@@ -383,7 +394,7 @@
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox cbLC;
+        private System.Windows.Forms.ComboBox cbbLP;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddPB;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;

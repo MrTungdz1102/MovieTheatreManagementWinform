@@ -133,6 +133,7 @@
             this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAvt.TabIndex = 0;
             this.ptbAvt.TabStop = false;
+            this.ptbAvt.Click += new System.EventHandler(this.ptbAvt_Click);
             // 
             // openImage
             // 

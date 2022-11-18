@@ -26,6 +26,7 @@ namespace BTLon.Views
         Trend trend;
         UserTicketList ticketList;
         UserBillList userBilllist;
+        UserManageFilm manageFilm;
         public Main()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace BTLon.Views
             trend = new Trend();
             ticketList = new UserTicketList();
             userBilllist = new UserBillList();
+            manageFilm = new UserManageFilm();
         }
         private void Main_Load(object sender, EventArgs e)
         {
@@ -244,8 +246,16 @@ namespace BTLon.Views
 
         private void btnPhim_Click(object sender, EventArgs e)
         {
-            //collapseMenu(false);
-            //ModelView.collapseChild(this.panelStatistical, true, 126);
+            if (userRemove != manageFilm)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, manageFilm, DockStyle.Fill);
+                userRemove = ticketList;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, manageFilm, DockStyle.Fill);
+                userRemove = ticketList;
+            }
         }
 
         private void btnReport_Click(object sender, EventArgs e)

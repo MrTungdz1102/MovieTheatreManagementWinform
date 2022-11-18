@@ -21,7 +21,7 @@ namespace BTLon.Views.User
         {
             InitializeComponent();
             Process = new DataProcess();
-            DetailManageFilm = new UserDetailManageFilm();
+            DetailManageFilm = new UserDetailManageFilm(dgvPhim);
             this.userManageFilm = userManageFilm;
         }
        
@@ -91,5 +91,9 @@ namespace BTLon.Views.User
             }
         }
 
+        private void dgvPhim_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

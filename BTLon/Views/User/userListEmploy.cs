@@ -104,5 +104,10 @@ namespace BTLon.Views.User
                 }
             }
         }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

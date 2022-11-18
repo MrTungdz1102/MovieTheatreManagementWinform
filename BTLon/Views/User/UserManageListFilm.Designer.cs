@@ -102,6 +102,7 @@
             this.dgvPhim.Size = new System.Drawing.Size(1216, 641);
             this.dgvPhim.TabIndex = 9;
             this.dgvPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhim_CellClick);
+            this.dgvPhim.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhim_CellContentClick);
             // 
             // txtMaPhim
             // 

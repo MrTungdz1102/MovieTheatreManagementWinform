@@ -14,7 +14,7 @@ namespace BTLon.Views.User
     {
         DataGridView dgvPhim;
         Models.DataProcess Process;
-        public UserDetailManageFilm()
+        public UserDetailManageFilm(DataGridView dgvPhim)
         {
             InitializeComponent();
             this.dgvPhim = dgvPhim;
@@ -49,6 +49,11 @@ namespace BTLon.Views.User
                 Process.DataChange(sql);
                 MessageBox.Show("Delete successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void ptbAvt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,12 +33,16 @@
             this.txtTenLP = new System.Windows.Forms.TextBox();
             this.lbMaPB = new System.Windows.Forms.Label();
             this.txtMaLP = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelDetail.Controls.Add(this.label1);
+            this.panelDetail.Controls.Add(this.txtMoTa);
             this.panelDetail.Controls.Add(this.lbTenLP);
             this.panelDetail.Controls.Add(this.txtTenLP);
             this.panelDetail.Controls.Add(this.lbMaPB);
@@ -49,12 +53,13 @@
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(376, 641);
             this.panelDetail.TabIndex = 6;
+            this.panelDetail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDetail_Paint);
             // 
             // lbTenLP
             // 
             this.lbTenLP.AutoSize = true;
             this.lbTenLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenLP.Location = new System.Drawing.Point(123, 223);
+            this.lbTenLP.Location = new System.Drawing.Point(115, 187);
             this.lbTenLP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenLP.Name = "lbTenLP";
             this.lbTenLP.Size = new System.Drawing.Size(125, 24);
@@ -64,7 +69,7 @@
             // txtTenLP
             // 
             this.txtTenLP.Enabled = false;
-            this.txtTenLP.Location = new System.Drawing.Point(92, 251);
+            this.txtTenLP.Location = new System.Drawing.Point(92, 227);
             this.txtTenLP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenLP.Multiline = true;
             this.txtTenLP.Name = "txtTenLP";
@@ -96,6 +101,27 @@
             this.txtMaLP.Size = new System.Drawing.Size(203, 29);
             this.txtMaLP.TabIndex = 0;
             // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Enabled = false;
+            this.txtMoTa.Location = new System.Drawing.Point(87, 308);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(203, 25);
+            this.txtMoTa.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(141, 269);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 24);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mô tả";
+            // 
             // UserDetailTypeFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -116,5 +142,7 @@
         private System.Windows.Forms.TextBox txtTenLP;
         private System.Windows.Forms.Label lbMaPB;
         private System.Windows.Forms.TextBox txtMaLP;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMoTa;
     }
 }
