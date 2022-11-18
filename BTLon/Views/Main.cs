@@ -20,19 +20,31 @@ namespace BTLon.Views
         UserEmploy userEmploy;
         UserTicket userTicket;
         UserControl userRemove;
+        FoodandDrink foodanddrink;
+        Revenue revenue;
+        Rank rank;
+        Trend trend;
+        UserTicketList ticketList;
+        UserBillList userBilllist;
         public Main()
         {
             InitializeComponent();
             userEmploy = new UserEmploy(this);
             userTicket = new UserTicket();
+            foodanddrink = new FoodandDrink();
+            revenue = new Revenue();
+            rank = new Rank();
+            trend = new Trend();
+            ticketList = new UserTicketList();
+            userBilllist = new UserBillList();
         }
         private void Main_Load(object sender, EventArgs e)
         {
             panelProfile.Visible = false;
             collapseMenu(true);
             panelProfile.Visible = false;
-            Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
-            userRemove = userTicket;
+            
+            //userRemove = userTicket;
 
         }
         //Set
@@ -48,12 +60,6 @@ namespace BTLon.Views
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
-        }
-        private void LoadUserControl(UserControl us)
-        {
-            us.Dock = DockStyle.Fill;
-            panelContent.Controls.Clear();
-            panelContent.Controls.Add(us);
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -126,40 +132,20 @@ namespace BTLon.Views
                 }
             }
         }
-        private void collapseChild(Panel panel, bool check, int height)
-        {
-            if (check == true)
-            {
-                if (panel.Visible == false)
-                {
-                    panel.Visible = true;
-                    panel.Height = height;
-                }
-                else
-                {
-                    panel.Visible = false;
-                }
-            }
-            else
-            {
-                panel.Visible = false;
-            }
-        }
         private void btnMenu_Click(object sender, EventArgs e)
         {
             collapseMenu(true);
-            collapseChild(this.panelManage, false,84);
-            collapseChild(this.panelSales, false,84);
+            ModelView.collapseChild(this.panelManage, false,84);
         }
         private void btnManage_Click(object sender, EventArgs e)
         {
             collapseMenu(false);
-            collapseChild(this.panelManage, true,126);
+            ModelView.collapseChild(this.panelManage, true, 210);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            collapseChild(this.panelProfile, true,84); 
+            ModelView.collapseChild(this.panelProfile, true,84); 
         }
 
         private void btnEmploy_Click(object sender, EventArgs e)
@@ -178,14 +164,16 @@ namespace BTLon.Views
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            collapseMenu(false);
-            collapseChild(this.panelSales, true,84);
-        }
-
-        private void btnTicket_Click(object sender, EventArgs e)
-        {
-            //UserTicket userTicket = new UserTicket();
-            //LoadUserControl(userTicket);
+            if (userRemove != userTicket)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, userTicket, DockStyle.Fill);
+                userRemove = userTicket;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
+                userRemove = userTicket;
+            }
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
@@ -195,7 +183,103 @@ namespace BTLon.Views
 
         private void btnFD_Click(object sender, EventArgs e)
         {
-            //LoadUserControl(fd);
+            if (userRemove != foodanddrink)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, foodanddrink, DockStyle.Fill);
+                userRemove = foodanddrink;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, foodanddrink, DockStyle.Fill);
+                userRemove = foodanddrink;
+            }
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            if (userRemove != revenue)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, revenue, DockStyle.Fill);
+                userRemove = revenue;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, revenue, DockStyle.Fill);
+                userRemove = revenue;
+            }
+        }
+        private void btnRank_Click(object sender, EventArgs e)
+        {
+            if (userRemove != rank)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, rank, DockStyle.Fill);
+                userRemove = rank;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, rank, DockStyle.Fill);
+                userRemove = rank;
+            }
+        }
+
+        private void btnTrend_Click(object sender, EventArgs e)
+        {
+            if (userRemove != trend)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove,trend, DockStyle.Fill);
+                userRemove = trend;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, trend, DockStyle.Fill);
+                userRemove = trend;
+            }
+        }
+
+        private void btnStatistical_Click(object sender, EventArgs e)
+        {
+            collapseMenu(false);
+            ModelView.collapseChild(this.panelStatistical, true, 126);
+        }
+
+        private void btnPhim_Click(object sender, EventArgs e)
+        {
+            //collapseMenu(false);
+            //ModelView.collapseChild(this.panelStatistical, true, 126);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            collapseMenu(false);
+            ModelView.collapseChild(this.panelReport, true, 84);
+        }
+
+        private void btnTicket_Click_1(object sender, EventArgs e)
+        {
+            if (userRemove != ticketList)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, ticketList, DockStyle.Fill);
+                userRemove = ticketList;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, ticketList, DockStyle.Fill);
+                userRemove = ticketList;
+            }
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            if (userRemove != userBilllist)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove,userBilllist , DockStyle.Fill);
+                userRemove = userBilllist;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, userBilllist, DockStyle.Fill);
+                userRemove = userBilllist;
+            }
         }
     }
 }

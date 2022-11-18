@@ -77,7 +77,7 @@
             // 
             // cbbNam
             // 
-            this.cbbNam.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.cbbNam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cbbNam.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNam.FormattingEnabled = true;
             this.cbbNam.Location = new System.Drawing.Point(142, 24);
@@ -89,7 +89,7 @@
             // 
             // cbbThongKe
             // 
-            this.cbbThongKe.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.cbbThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cbbThongKe.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbThongKe.FormattingEnabled = true;
             this.cbbThongKe.Location = new System.Drawing.Point(3, 24);
@@ -101,7 +101,7 @@
             // 
             // cbbThang
             // 
-            this.cbbThang.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.cbbThang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cbbThang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Location = new System.Drawing.Point(275, 24);
@@ -452,7 +452,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.chartRevenue1);
             this.Controls.Add(this.chartRevenue);
             this.Controls.Add(this.panel11);

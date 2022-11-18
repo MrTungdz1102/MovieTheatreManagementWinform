@@ -37,19 +37,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
             this.panelTitleMenu = new System.Windows.Forms.Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelSales = new System.Windows.Forms.Panel();
+            this.panelReport = new System.Windows.Forms.Panel();
             this.btnBill = new Guna.UI2.WinForms.Guna2Button();
             this.btnTicket = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
+            this.panelStatistical = new System.Windows.Forms.Panel();
+            this.btnTrend = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRank = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRevenue = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStatistical = new Guna.UI2.WinForms.Guna2Button();
             this.btnSales = new Guna.UI2.WinForms.Guna2Button();
             this.panelManage = new System.Windows.Forms.Panel();
             this.btnFD = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPhim = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLichChieu = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnEmploy = new Guna.UI2.WinForms.Guna2Button();
             this.btnManage = new Guna.UI2.WinForms.Guna2Button();
@@ -58,18 +65,20 @@
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
             this.panelTitleBar.SuspendLayout();
             this.panelViewPro.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.panelTitleMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.panelSales.SuspendLayout();
+            this.panelReport.SuspendLayout();
+            this.panelStatistical.SuspendLayout();
             this.panelManage.SuspendLayout();
             this.panelProfile.SuspendLayout();
             this.panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -213,24 +222,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "LongNT";
             // 
-            // ptbAvt
-            // 
-            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
-            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.ptbAvt.BorderSize = 2;
-            this.ptbAvt.GradientAngle = 50F;
-            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
-            this.ptbAvt.Location = new System.Drawing.Point(33, 2);
-            this.ptbAvt.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvt.Name = "ptbAvt";
-            this.ptbAvt.Size = new System.Drawing.Size(49, 49);
-            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbAvt.TabIndex = 0;
-            this.ptbAvt.TabStop = false;
-            // 
             // panelTitleMenu
             // 
             this.panelTitleMenu.Controls.Add(this.btnMenu);
@@ -311,7 +302,10 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelMenu.Controls.Add(this.panelSales);
+            this.panelMenu.Controls.Add(this.panelReport);
+            this.panelMenu.Controls.Add(this.btnReport);
+            this.panelMenu.Controls.Add(this.panelStatistical);
+            this.panelMenu.Controls.Add(this.btnStatistical);
             this.panelMenu.Controls.Add(this.btnSales);
             this.panelMenu.Controls.Add(this.panelManage);
             this.panelMenu.Controls.Add(this.btnManage);
@@ -327,20 +321,17 @@
             this.panelMenu.Size = new System.Drawing.Size(195, 767);
             this.panelMenu.TabIndex = 0;
             // 
-            // panelSales
+            // panelReport
             // 
-            this.panelSales.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelSales.Controls.Add(this.btnBill);
-            this.panelSales.Controls.Add(this.btnTicket);
-            this.panelSales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSales.Location = new System.Drawing.Point(0, 364);
-            this.panelSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelSales.MaximumSize = new System.Drawing.Size(0, 95);
-            this.panelSales.MinimumSize = new System.Drawing.Size(0, 12);
-            this.panelSales.Name = "panelSales";
-            this.panelSales.Size = new System.Drawing.Size(195, 95);
-            this.panelSales.TabIndex = 15;
-            this.panelSales.Visible = false;
+            this.panelReport.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelReport.Controls.Add(this.btnBill);
+            this.panelReport.Controls.Add(this.btnTicket);
+            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReport.Location = new System.Drawing.Point(0, 335);
+            this.panelReport.Name = "panelReport";
+            this.panelReport.Size = new System.Drawing.Size(195, 97);
+            this.panelReport.TabIndex = 19;
+            this.panelReport.Visible = false;
             // 
             // btnBill
             // 
@@ -356,9 +347,10 @@
             this.btnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(195, 46);
-            this.btnBill.TabIndex = 16;
-            this.btnBill.Tag = "";
-            this.btnBill.Text = "         Hóa đơn";
+            this.btnBill.TabIndex = 20;
+            this.btnBill.Tag = "   Bán hàng";
+            this.btnBill.Text = "   Hóa đơn";
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnTicket
             // 
@@ -374,10 +366,144 @@
             this.btnTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTicket.Name = "btnTicket";
             this.btnTicket.Size = new System.Drawing.Size(195, 46);
-            this.btnTicket.TabIndex = 15;
-            this.btnTicket.Tag = "Vé";
+            this.btnTicket.TabIndex = 19;
+            this.btnTicket.Tag = "   Bán hàng";
             this.btnTicket.Text = "Vé";
-            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click_1);
+            // 
+            // btnReport
+            // 
+            this.btnReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(0, 289);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(195, 46);
+            this.btnReport.TabIndex = 18;
+            this.btnReport.Tag = "   Bán hàng";
+            this.btnReport.Text = "   Báo cáo";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // panelStatistical
+            // 
+            this.panelStatistical.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelStatistical.Controls.Add(this.btnTrend);
+            this.panelStatistical.Controls.Add(this.btnRank);
+            this.panelStatistical.Controls.Add(this.btnRevenue);
+            this.panelStatistical.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStatistical.Location = new System.Drawing.Point(0, 277);
+            this.panelStatistical.Margin = new System.Windows.Forms.Padding(4);
+            this.panelStatistical.MinimumSize = new System.Drawing.Size(0, 12);
+            this.panelStatistical.Name = "panelStatistical";
+            this.panelStatistical.Size = new System.Drawing.Size(195, 12);
+            this.panelStatistical.TabIndex = 17;
+            this.panelStatistical.Visible = false;
+            // 
+            // btnTrend
+            // 
+            this.btnTrend.BackColor = System.Drawing.Color.White;
+            this.btnTrend.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnTrend.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnTrend.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrend.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrend.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTrend.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTrend.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTrend.FillColor = System.Drawing.Color.DimGray;
+            this.btnTrend.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrend.ForeColor = System.Drawing.Color.White;
+            this.btnTrend.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnTrend.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTrend.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnTrend.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTrend.Location = new System.Drawing.Point(0, 93);
+            this.btnTrend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTrend.Name = "btnTrend";
+            this.btnTrend.PressedColor = System.Drawing.Color.Transparent;
+            this.btnTrend.Size = new System.Drawing.Size(195, 52);
+            this.btnTrend.TabIndex = 15;
+            this.btnTrend.Tag = "";
+            this.btnTrend.Text = "     Xu hướng";
+            this.btnTrend.Click += new System.EventHandler(this.btnTrend_Click);
+            // 
+            // btnRank
+            // 
+            this.btnRank.BackColor = System.Drawing.Color.White;
+            this.btnRank.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnRank.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRank.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRank.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRank.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRank.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRank.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRank.FillColor = System.Drawing.Color.DimGray;
+            this.btnRank.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRank.ForeColor = System.Drawing.Color.White;
+            this.btnRank.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRank.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRank.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRank.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRank.Location = new System.Drawing.Point(0, 46);
+            this.btnRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRank.Name = "btnRank";
+            this.btnRank.PressedColor = System.Drawing.Color.Transparent;
+            this.btnRank.Size = new System.Drawing.Size(195, 47);
+            this.btnRank.TabIndex = 14;
+            this.btnRank.Tag = "";
+            this.btnRank.Text = "    Xếp hạng";
+            this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
+            // 
+            // btnRevenue
+            // 
+            this.btnRevenue.BackColor = System.Drawing.Color.White;
+            this.btnRevenue.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnRevenue.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRevenue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRevenue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRevenue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRevenue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRevenue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRevenue.FillColor = System.Drawing.Color.DimGray;
+            this.btnRevenue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenue.ForeColor = System.Drawing.Color.White;
+            this.btnRevenue.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRevenue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRevenue.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRevenue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRevenue.Location = new System.Drawing.Point(0, 0);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.PressedColor = System.Drawing.Color.Transparent;
+            this.btnRevenue.Size = new System.Drawing.Size(195, 46);
+            this.btnRevenue.TabIndex = 13;
+            this.btnRevenue.Tag = "";
+            this.btnRevenue.Text = "     Doanh thu";
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
+            // 
+            // btnStatistical
+            // 
+            this.btnStatistical.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistical.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStatistical.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStatistical.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStatistical.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStatistical.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnStatistical.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnStatistical.ForeColor = System.Drawing.Color.White;
+            this.btnStatistical.Location = new System.Drawing.Point(0, 231);
+            this.btnStatistical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.Size = new System.Drawing.Size(195, 46);
+            this.btnStatistical.TabIndex = 16;
+            this.btnStatistical.Tag = "   Bán hàng";
+            this.btnStatistical.Text = "   Thống kê";
+            this.btnStatistical.Click += new System.EventHandler(this.btnStatistical_Click);
             // 
             // btnSales
             // 
@@ -389,7 +515,7 @@
             this.btnSales.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSales.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnSales.ForeColor = System.Drawing.Color.White;
-            this.btnSales.Location = new System.Drawing.Point(0, 318);
+            this.btnSales.Location = new System.Drawing.Point(0, 185);
             this.btnSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(195, 46);
@@ -402,6 +528,8 @@
             // 
             this.panelManage.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelManage.Controls.Add(this.btnFD);
+            this.panelManage.Controls.Add(this.btnPhim);
+            this.panelManage.Controls.Add(this.btnLichChieu);
             this.panelManage.Controls.Add(this.btnCustomer);
             this.panelManage.Controls.Add(this.btnEmploy);
             this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
@@ -409,7 +537,7 @@
             this.panelManage.Margin = new System.Windows.Forms.Padding(4);
             this.panelManage.MinimumSize = new System.Drawing.Size(0, 12);
             this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(195, 145);
+            this.panelManage.Size = new System.Drawing.Size(195, 12);
             this.panelManage.TabIndex = 13;
             this.panelManage.Visible = false;
             // 
@@ -430,15 +558,68 @@
             this.btnFD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFD.ImageSize = new System.Drawing.Size(25, 25);
             this.btnFD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFD.Location = new System.Drawing.Point(0, 93);
+            this.btnFD.Location = new System.Drawing.Point(0, 197);
             this.btnFD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFD.Name = "btnFD";
             this.btnFD.PressedColor = System.Drawing.Color.Transparent;
-            this.btnFD.Size = new System.Drawing.Size(195, 47);
-            this.btnFD.TabIndex = 15;
-            this.btnFD.Tag = "";
+            this.btnFD.Size = new System.Drawing.Size(195, 52);
+            this.btnFD.TabIndex = 17;
+            this.btnFD.Tag = "     Sản phẩm";
             this.btnFD.Text = "     Sản phẩm";
-            this.btnFD.Click += new System.EventHandler(this.btnFD_Click);
+            // 
+            // btnPhim
+            // 
+            this.btnPhim.BackColor = System.Drawing.Color.White;
+            this.btnPhim.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnPhim.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPhim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPhim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPhim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPhim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPhim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPhim.FillColor = System.Drawing.Color.DimGray;
+            this.btnPhim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhim.ForeColor = System.Drawing.Color.White;
+            this.btnPhim.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPhim.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPhim.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPhim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPhim.Location = new System.Drawing.Point(0, 145);
+            this.btnPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPhim.Name = "btnPhim";
+            this.btnPhim.PressedColor = System.Drawing.Color.Transparent;
+            this.btnPhim.Size = new System.Drawing.Size(195, 52);
+            this.btnPhim.TabIndex = 16;
+            this.btnPhim.Tag = "Phim";
+            this.btnPhim.Text = "Phim";
+            this.btnPhim.Click += new System.EventHandler(this.btnPhim_Click);
+            // 
+            // btnLichChieu
+            // 
+            this.btnLichChieu.BackColor = System.Drawing.Color.White;
+            this.btnLichChieu.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLichChieu.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLichChieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichChieu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichChieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichChieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichChieu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLichChieu.FillColor = System.Drawing.Color.DimGray;
+            this.btnLichChieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichChieu.ForeColor = System.Drawing.Color.White;
+            this.btnLichChieu.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLichChieu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLichChieu.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLichChieu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnLichChieu.Location = new System.Drawing.Point(0, 93);
+            this.btnLichChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLichChieu.Name = "btnLichChieu";
+            this.btnLichChieu.PressedColor = System.Drawing.Color.Transparent;
+            this.btnLichChieu.Size = new System.Drawing.Size(195, 52);
+            this.btnLichChieu.TabIndex = 15;
+            this.btnLichChieu.Tag = "     Lịch chiếu";
+            this.btnLichChieu.Text = "     Lịch chiếu";
+            this.btnLichChieu.Click += new System.EventHandler(this.btnFD_Click);
             // 
             // btnCustomer
             // 
@@ -463,7 +644,7 @@
             this.btnCustomer.PressedColor = System.Drawing.Color.Transparent;
             this.btnCustomer.Size = new System.Drawing.Size(195, 47);
             this.btnCustomer.TabIndex = 14;
-            this.btnCustomer.Tag = "";
+            this.btnCustomer.Tag = "        Khách hàng";
             this.btnCustomer.Text = "        Khách hàng";
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
@@ -490,7 +671,7 @@
             this.btnEmploy.PressedColor = System.Drawing.Color.Transparent;
             this.btnEmploy.Size = new System.Drawing.Size(195, 46);
             this.btnEmploy.TabIndex = 13;
-            this.btnEmploy.Tag = "";
+            this.btnEmploy.Tag = "     Nhân viên";
             this.btnEmploy.Text = "     Nhân viên";
             this.btnEmploy.Click += new System.EventHandler(this.btnEmploy_Click);
             // 
@@ -609,6 +790,24 @@
             this.panelContent.Size = new System.Drawing.Size(1221, 685);
             this.panelContent.TabIndex = 4;
             // 
+            // ptbAvt
+            // 
+            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
+            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.ptbAvt.BorderSize = 2;
+            this.ptbAvt.GradientAngle = 50F;
+            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
+            this.ptbAvt.Location = new System.Drawing.Point(33, 2);
+            this.ptbAvt.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvt.Name = "ptbAvt";
+            this.ptbAvt.Size = new System.Drawing.Size(49, 49);
+            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAvt.TabIndex = 0;
+            this.ptbAvt.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -627,15 +826,16 @@
             this.panelViewPro.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.panelTitleMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panelSales.ResumeLayout(false);
+            this.panelReport.ResumeLayout(false);
+            this.panelStatistical.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -667,9 +867,17 @@
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button btnEmploy;
         private Guna.UI2.WinForms.Guna2Button btnSales;
-        private System.Windows.Forms.Panel panelSales;
+        private Guna.UI2.WinForms.Guna2Button btnLichChieu;
+        private Guna.UI2.WinForms.Guna2Button btnStatistical;
+        private System.Windows.Forms.Panel panelStatistical;
+        private Guna.UI2.WinForms.Guna2Button btnTrend;
+        private Guna.UI2.WinForms.Guna2Button btnRank;
+        private Guna.UI2.WinForms.Guna2Button btnRevenue;
+        private Guna.UI2.WinForms.Guna2Button btnFD;
+        private Guna.UI2.WinForms.Guna2Button btnPhim;
+        private Guna.UI2.WinForms.Guna2Button btnReport;
+        private System.Windows.Forms.Panel panelReport;
         private Guna.UI2.WinForms.Guna2Button btnBill;
         private Guna.UI2.WinForms.Guna2Button btnTicket;
-        private Guna.UI2.WinForms.Guna2Button btnFD;
     }
 }

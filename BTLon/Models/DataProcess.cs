@@ -16,7 +16,7 @@ namespace BTLon.Models
 {
     internal class DataProcess
     {
-        string strConnect = "Data Source=DESKTOP-F087CPF\\SQLEXPRESS;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
+        string strConnect = "Data Source=LAPTOP-9J5O4FV8\\MSSQLSERVER01;Initial Catalog=QuanLyRapChieuPhim;Integrated Security=True";
         SqlConnection sqlConnect = null;
         SqlDataAdapter da = null;
         DataSet ds = null;

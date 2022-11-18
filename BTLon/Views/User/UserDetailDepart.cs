@@ -61,5 +61,10 @@ namespace BTLon.Views.User
         {
 
         }
+
+        private void panelDetail_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

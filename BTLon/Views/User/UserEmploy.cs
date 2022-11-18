@@ -45,7 +45,7 @@ namespace BTLon.Views.User
         //set
         public void SetComboBox(ComboBox combo)
         {
-            this.cbPB = combo;
+            this.cbLP = combo;
         }
         //code
         private void UserEmploy_Load(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace BTLon.Views.User
         }
         private void cbPB_SelectedValueChanged(object sender, EventArgs e)
         {
-            string sql = "select * from View1 where MaPB = N'" + cbPB.Text + "'";
+            string sql = "select * from View1 where MaPB = N'" + cbLP.Text + "'";
             dgvNhanVien.DataSource = Process.DataReader(sql);
             dgvNhanVien.ReadOnly = true;
         }
@@ -145,7 +145,7 @@ namespace BTLon.Views.User
         }
         private void setMenuPB(bool visit)
         {
-            cbPB.Visible = visit;
+            cbLP.Visible = visit;
             btnAddPB.Visible = visit;
         }
         private void btnAddPB_Click(object sender, EventArgs e)
@@ -190,9 +190,6 @@ namespace BTLon.Views.User
             }
         }
 
-        private void txtSeach_Load(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

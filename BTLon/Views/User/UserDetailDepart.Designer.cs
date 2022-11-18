@@ -49,10 +49,11 @@
             this.panelDetail.Controls.Add(this.txtMaPB);
             this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDetail.Location = new System.Drawing.Point(0, 0);
-            this.panelDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDetail.Margin = new System.Windows.Forms.Padding(4);
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(376, 641);
             this.panelDetail.TabIndex = 5;
+            this.panelDetail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDetail_Paint);
             // 
             // label1
             // 
@@ -72,7 +73,7 @@
             this.cbQuanLy.Enabled = false;
             this.cbQuanLy.FormattingEnabled = true;
             this.cbQuanLy.Location = new System.Drawing.Point(200, 241);
-            this.cbQuanLy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbQuanLy.Margin = new System.Windows.Forms.Padding(4);
             this.cbQuanLy.Name = "cbQuanLy";
             this.cbQuanLy.Size = new System.Drawing.Size(160, 24);
             this.cbQuanLy.TabIndex = 4;
@@ -92,7 +93,7 @@
             // 
             this.txtTenPB.Enabled = false;
             this.txtTenPB.Location = new System.Drawing.Point(23, 241);
-            this.txtTenPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenPB.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenPB.Multiline = true;
             this.txtTenPB.Name = "txtTenPB";
             this.txtTenPB.Size = new System.Drawing.Size(168, 25);
@@ -118,7 +119,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaPB.Enabled = false;
             this.txtMaPB.Location = new System.Drawing.Point(92, 142);
-            this.txtMaPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaPB.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPB.Multiline = true;
             this.txtMaPB.Name = "txtMaPB";
             this.txtMaPB.Size = new System.Drawing.Size(203, 29);
@@ -129,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelDetail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserDetailDepart";
             this.Size = new System.Drawing.Size(376, 641);
             this.Load += new System.EventHandler(this.UserDetailDepart_Load);

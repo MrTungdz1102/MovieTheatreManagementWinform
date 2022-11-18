@@ -34,7 +34,6 @@ namespace BTLon.Views
         }
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.HasMorePages = true;
             Rectangle rectangle = e.PageBounds;
             e.Graphics.DrawImage(Bitmap, (rectangle.Width / 2) - (this.panelBillAndTick.Width / 2), this.panelTick.Location.Y);
         }

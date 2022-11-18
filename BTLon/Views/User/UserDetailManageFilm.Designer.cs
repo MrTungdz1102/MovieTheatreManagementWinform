@@ -1,6 +1,6 @@
 ﻿namespace BTLon.Views.User
 {
-    partial class UserDetailEmploy
+    partial class UserDetailManageFilm
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDetailEmploy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDetailManageFilm));
             this.panelDetail = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUp = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -52,7 +52,7 @@
             this.panelDetail.Margin = new System.Windows.Forms.Padding(4);
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(219, 641);
-            this.panelDetail.TabIndex = 4;
+            this.panelDetail.TabIndex = 5;
             // 
             // panel1
             // 
@@ -138,13 +138,12 @@
             // 
             this.openImage.FileName = "openFileDialog1";
             // 
-            // UserDetailEmploy
+            // UserDetailManageFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelDetail);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UserDetailEmploy";
+            this.Name = "UserDetailManageFilm";
             this.Size = new System.Drawing.Size(219, 641);
             this.panelDetail.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -156,11 +155,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDetail;
-        private System.Windows.Forms.PictureBox ptbAvt;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDele;
-        private Guna.UI2.WinForms.Guna2GradientButton btnUp;
-        private System.Windows.Forms.OpenFileDialog openImage;
-        private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUp;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDele;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.PictureBox ptbAvt;
+        private System.Windows.Forms.OpenFileDialog openImage;
     }
 }

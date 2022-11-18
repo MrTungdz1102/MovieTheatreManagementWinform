@@ -36,6 +36,10 @@
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -123,6 +127,12 @@
     <Compile Include="Views\User\UserBill.Designer.cs">
       <DependentUpon>UserBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserBillList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserBillList.Designer.cs">
+      <DependentUpon>UserBillList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserBookTick.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +157,18 @@
     <Compile Include="Views\User\UserDetailEmploy.Designer.cs">
       <DependentUpon>UserDetailEmploy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserDetailManageFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserDetailManageFilm.Designer.cs">
+      <DependentUpon>UserDetailManageFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserDetailTypeFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserDetailTypeFilm.Designer.cs">
+      <DependentUpon>UserDetailTypeFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserEmploy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -165,6 +187,18 @@
     <Compile Include="Views\User\UserListFilm.Designer.cs">
       <DependentUpon>UserListFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserManageFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserManageFilm.Designer.cs">
+      <DependentUpon>UserManageFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserManageListFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserManageListFilm.Designer.cs">
+      <DependentUpon>UserManageListFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\UserShowTimes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +210,18 @@
     </Compile>
     <Compile Include="Views\User\UserTicket.Designer.cs">
       <DependentUpon>UserTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserTicketList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserTicketList.Designer.cs">
+      <DependentUpon>UserTicketList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserTypeFilm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserTypeFilm.Designer.cs">
+      <DependentUpon>UserTypeFilm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +255,9 @@
     <EmbeddedResource Include="Views\User\UserBill.resx">
       <DependentUpon>UserBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserBillList.resx">
+      <DependentUpon>UserBillList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserBookTick.resx">
       <DependentUpon>UserBookTick.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +270,12 @@
     <EmbeddedResource Include="Views\User\UserDetailEmploy.resx">
       <DependentUpon>UserDetailEmploy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserDetailManageFilm.resx">
+      <DependentUpon>UserDetailManageFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserDetailTypeFilm.resx">
+      <DependentUpon>UserDetailTypeFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserEmploy.resx">
       <DependentUpon>UserEmploy.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,11 +285,23 @@
     <EmbeddedResource Include="Views\User\UserListFilm.resx">
       <DependentUpon>UserListFilm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserManageFilm.resx">
+      <DependentUpon>UserManageFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserManageListFilm.resx">
+      <DependentUpon>UserManageListFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserShowTimes.resx">
       <DependentUpon>UserShowTimes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserTicket.resx">
       <DependentUpon>UserTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserTicketList.resx">
+      <DependentUpon>UserTicketList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserTypeFilm.resx">
+      <DependentUpon>UserTypeFilm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
