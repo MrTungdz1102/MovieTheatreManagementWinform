@@ -48,12 +48,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtSeach = new BTLon.Views.Custom.TextBoxCus();
             this.panel3 = new System.Windows.Forms.Panel();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.panelContent = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.panelDetail = new System.Windows.Forms.Panel();
-            this.txtSeach = new BTLon.Views.Custom.TextBoxCus();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,7 +77,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageSize = new System.Drawing.Size(15, 15);
             this.btnSave.Location = new System.Drawing.Point(928, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(33, 28);
             this.btnSave.TabIndex = 5;
@@ -88,12 +88,13 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(28, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnAddPB
             // 
@@ -110,7 +111,7 @@
             this.btnAddPB.ForeColor = System.Drawing.Color.White;
             this.btnAddPB.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPB.Image")));
             this.btnAddPB.Location = new System.Drawing.Point(188, 12);
-            this.btnAddPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddPB.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPB.Name = "btnAddPB";
             this.btnAddPB.Size = new System.Drawing.Size(35, 25);
             this.btnAddPB.TabIndex = 12;
@@ -133,7 +134,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(13, 16);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(95, 25);
             this.btnRefresh.TabIndex = 11;
@@ -191,7 +192,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageSize = new System.Drawing.Size(15, 15);
             this.btnAdd.Location = new System.Drawing.Point(896, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(32, 28);
             this.btnAdd.TabIndex = 7;
@@ -210,7 +211,7 @@
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(993, 28);
             this.panel1.TabIndex = 9;
@@ -230,7 +231,7 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageSize = new System.Drawing.Size(15, 15);
             this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(80, 28);
             this.btnBack.TabIndex = 8;
@@ -252,7 +253,7 @@
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageSize = new System.Drawing.Size(15, 15);
             this.btnEdit.Location = new System.Drawing.Point(961, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(32, 28);
             this.btnEdit.TabIndex = 6;
@@ -266,7 +267,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(993, 44);
             this.panel2.TabIndex = 10;
@@ -277,7 +278,7 @@
             this.panel5.Controls.Add(this.btnAddPB);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(307, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(225, 44);
             this.panel5.TabIndex = 15;
@@ -288,61 +289,10 @@
             this.panel4.Controls.Add(this.txtSeach);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(307, 44);
             this.panel4.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnDelete);
-            this.panel3.Controls.Add(this.btnRefresh);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(850, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(143, 44);
-            this.panel3.TabIndex = 13;
-            // 
-            // splitter2
-            // 
-            this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter2.Location = new System.Drawing.Point(0, 72);
-            this.splitter2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(993, 4);
-            this.splitter2.TabIndex = 11;
-            this.splitter2.TabStop = false;
-            // 
-            // panelContent
-            // 
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(0, 76);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(993, 565);
-            this.panelContent.TabIndex = 12;
-            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(993, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(4, 641);
-            this.splitter1.TabIndex = 5;
-            this.splitter1.TabStop = false;
-            // 
-            // panelDetail
-            // 
-            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelDetail.Location = new System.Drawing.Point(997, 0);
-            this.panelDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(219, 641);
-            this.panelDetail.TabIndex = 3;
             // 
             // txtSeach
             // 
@@ -365,6 +315,57 @@
             this.txtSeach._TextChanged += new System.EventHandler(this.txtSeach__TextChanged);
             this.txtSeach.Click += new System.EventHandler(this.txtSeach_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnDelete);
+            this.panel3.Controls.Add(this.btnRefresh);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(850, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(143, 44);
+            this.panel3.TabIndex = 13;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter2.Location = new System.Drawing.Point(0, 72);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(4);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(993, 4);
+            this.splitter2.TabIndex = 11;
+            this.splitter2.TabStop = false;
+            // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(0, 76);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(993, 565);
+            this.panelContent.TabIndex = 12;
+            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.splitter1.Location = new System.Drawing.Point(993, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(4, 641);
+            this.splitter1.TabIndex = 5;
+            this.splitter1.TabStop = false;
+            // 
+            // panelDetail
+            // 
+            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelDetail.Location = new System.Drawing.Point(997, 0);
+            this.panelDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(219, 641);
+            this.panelDetail.TabIndex = 3;
+            // 
             // UserEmploy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,7 +376,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panelDetail);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserEmploy";
             this.Size = new System.Drawing.Size(1216, 641);
             this.Load += new System.EventHandler(this.UserEmploy_Load);

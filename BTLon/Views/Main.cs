@@ -240,7 +240,8 @@ namespace BTLon.Views
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-         //  LoadUserControl(new UserAccount());
+            //  LoadUserControl(new UserAccount());
+            LoadUserControl(new UserKhachHang());
         }
 
         private void lblTenTK_Click(object sender, EventArgs e)

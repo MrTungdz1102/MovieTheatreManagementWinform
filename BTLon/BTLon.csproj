@@ -155,6 +155,12 @@
     <Compile Include="Views\User\UserEmploy.Designer.cs">
       <DependentUpon>UserEmploy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\UserKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserKhachHang.Designer.cs">
+      <DependentUpon>UserKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\userListEmploy.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\UserEmploy.resx">
       <DependentUpon>UserEmploy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserKhachHang.resx">
+      <DependentUpon>UserKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\userListEmploy.resx">
       <DependentUpon>userListEmploy.cs</DependentUpon>
