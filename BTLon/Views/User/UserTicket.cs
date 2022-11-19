@@ -21,8 +21,9 @@ namespace BTLon.Views.User
         UserBookTick bookTick;
         UserShowTimes times;
         UserControl userRemove;
+        Main main;
         List<PictureBox> pictureBoxes;
-        public UserTicket()
+        public UserTicket(Main main)
         {
             InitializeComponent();
             Process = new Models.DataProcess();
@@ -30,6 +31,7 @@ namespace BTLon.Views.User
             bookTick = new UserBookTick();
             times = new UserShowTimes();
             pictureBoxes = new List<PictureBox>();
+            this.main = main;
         }
         //set
         public void setUserRemove(UserControl user)
@@ -122,6 +124,10 @@ namespace BTLon.Views.User
             {
                 Models.ModelView.addUserToPanel(this.panelContent, userRemove, film, DockStyle.Fill);
                 userRemove = film;
+            }
+            else
+            {
+                main.SetPanel();
             }
         }
         private void btnShowing_Click(object sender, EventArgs e)

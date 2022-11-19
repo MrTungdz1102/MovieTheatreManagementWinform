@@ -24,21 +24,18 @@ namespace BTLon.Views
         {
             InitializeComponent();
             userEmploy = new UserEmploy(this);
-            userTicket = new UserTicket();
+            userTicket = new UserTicket(this);
         }
         private void Main_Load(object sender, EventArgs e)
         {
             panelProfile.Visible = false;
             collapseMenu(true);
             panelProfile.Visible = false;
-            Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
-            userRemove = userTicket;
-
         }
         //Set
         public void SetPanel()
         {
-            this.panelContent.Controls.Clear();
+            this.panelContent.Controls.Remove(userRemove);
         } 
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -149,7 +146,6 @@ namespace BTLon.Views
         {
             collapseMenu(true);
             collapseChild(this.panelManage, false,84);
-            collapseChild(this.panelSales, false,84);
         }
         private void btnManage_Click(object sender, EventArgs e)
         {
@@ -178,8 +174,16 @@ namespace BTLon.Views
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            collapseMenu(false);
-            collapseChild(this.panelSales, true,84);
+            if (userRemove != userTicket)
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
+                userRemove = userTicket;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, userEmploy, DockStyle.Fill);
+                userRemove = userTicket;
+            }
         }
 
         private void btnTicket_Click(object sender, EventArgs e)

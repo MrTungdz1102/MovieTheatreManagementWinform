@@ -180,7 +180,6 @@ namespace BTLon.Views.User
             {
                 if(panelDetail.Visible == false)
                 {
-                    this.Controls.Clear();
                     main.SetPanel();
                 }
                 else

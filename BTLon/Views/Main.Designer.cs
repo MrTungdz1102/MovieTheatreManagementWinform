@@ -44,9 +44,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelSales = new System.Windows.Forms.Panel();
-            this.btnBill = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTicket = new Guna.UI2.WinForms.Guna2Button();
             this.btnSales = new Guna.UI2.WinForms.Guna2Button();
             this.panelManage = new System.Windows.Forms.Panel();
             this.btnFD = new Guna.UI2.WinForms.Guna2Button();
@@ -66,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.panelSales.SuspendLayout();
             this.panelManage.SuspendLayout();
             this.panelProfile.SuspendLayout();
             this.panelContent.SuspendLayout();
@@ -311,7 +307,6 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelMenu.Controls.Add(this.panelSales);
             this.panelMenu.Controls.Add(this.btnSales);
             this.panelMenu.Controls.Add(this.panelManage);
             this.panelMenu.Controls.Add(this.btnManage);
@@ -326,58 +321,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(195, 767);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelSales
-            // 
-            this.panelSales.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelSales.Controls.Add(this.btnBill);
-            this.panelSales.Controls.Add(this.btnTicket);
-            this.panelSales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSales.Location = new System.Drawing.Point(0, 364);
-            this.panelSales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelSales.MaximumSize = new System.Drawing.Size(0, 95);
-            this.panelSales.MinimumSize = new System.Drawing.Size(0, 12);
-            this.panelSales.Name = "panelSales";
-            this.panelSales.Size = new System.Drawing.Size(195, 95);
-            this.panelSales.TabIndex = 15;
-            this.panelSales.Visible = false;
-            // 
-            // btnBill
-            // 
-            this.btnBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBill.FillColor = System.Drawing.Color.DimGray;
-            this.btnBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Location = new System.Drawing.Point(0, 46);
-            this.btnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(195, 46);
-            this.btnBill.TabIndex = 16;
-            this.btnBill.Tag = "";
-            this.btnBill.Text = "         Hóa đơn";
-            // 
-            // btnTicket
-            // 
-            this.btnTicket.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTicket.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTicket.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTicket.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTicket.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTicket.FillColor = System.Drawing.Color.DimGray;
-            this.btnTicket.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTicket.ForeColor = System.Drawing.Color.White;
-            this.btnTicket.Location = new System.Drawing.Point(0, 0);
-            this.btnTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTicket.Name = "btnTicket";
-            this.btnTicket.Size = new System.Drawing.Size(195, 46);
-            this.btnTicket.TabIndex = 15;
-            this.btnTicket.Tag = "Vé";
-            this.btnTicket.Text = "Vé";
-            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // btnSales
             // 
@@ -632,7 +575,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panelSales.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
@@ -667,9 +609,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
         private Guna.UI2.WinForms.Guna2Button btnEmploy;
         private Guna.UI2.WinForms.Guna2Button btnSales;
-        private System.Windows.Forms.Panel panelSales;
-        private Guna.UI2.WinForms.Guna2Button btnBill;
-        private Guna.UI2.WinForms.Guna2Button btnTicket;
         private Guna.UI2.WinForms.Guna2Button btnFD;
     }
 }

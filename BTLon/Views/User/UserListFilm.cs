@@ -32,5 +32,9 @@ namespace BTLon.Views.User
         {
             this.lblPhim.Text = text;
         }
+        public Label GetlblPhim()
+        {
+            return this.lblPhim;
+        }
     }
 }
