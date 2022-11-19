@@ -36,6 +36,14 @@
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Excel.14.0.4760.1000\lib\net20\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -93,6 +101,12 @@
     <Compile Include="Views\printBill.Designer.cs">
       <DependentUpon>printBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User\BillList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\BillList.Designer.cs">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\User\FoodandDrink.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +124,12 @@
     </Compile>
     <Compile Include="Views\User\Revenue.Designer.cs">
       <DependentUpon>Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\TicketList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User\TicketList.Designer.cs">
+      <DependentUpon>TicketList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\User\Trend.cs">
       <SubType>UserControl</SubType>
@@ -194,6 +214,9 @@
     <EmbeddedResource Include="Views\printBill.resx">
       <DependentUpon>printBill.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\BillList.resx">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\User\FoodandDrink.resx">
       <DependentUpon>FoodandDrink.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\Revenue.resx">
       <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\TicketList.resx">
+      <DependentUpon>TicketList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User\Trend.resx">
       <DependentUpon>Trend.cs</DependentUpon>

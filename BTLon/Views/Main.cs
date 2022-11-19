@@ -33,6 +33,7 @@ namespace BTLon.Views
             panelProfile.Visible = false;
             Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
             userRemove = userTicket;
+            
 
         }
         //Set
@@ -196,6 +197,11 @@ namespace BTLon.Views
         private void btnFD_Click(object sender, EventArgs e)
         {
             //LoadUserControl(fd);
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
