@@ -44,7 +44,8 @@ namespace BTLon.Views
             panelProfile.Visible = false;
             Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
             userRemove = userTicket;
-            lblTenTK.Text =  Login.tk;
+            lblTenTK.Text =  Login.tk ;
+            lblTenTK.Tag = Login.manv;
         }
         //Set
         public void SetPanel()

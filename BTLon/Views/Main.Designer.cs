@@ -207,7 +207,7 @@
             this.lblTenTK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenTK.AutoSize = true;
             this.lblTenTK.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTK.Location = new System.Drawing.Point(91, 16);
+            this.lblTenTK.Location = new System.Drawing.Point(90, 18);
             this.lblTenTK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(97, 26);
