@@ -162,11 +162,13 @@ namespace BTLon.Views
         {
             if (userRemove != userEmploy)
             {
+                userEmploy = new UserEmploy(this);
                 Models.ModelView.addUserToPanel(panelContent, userRemove, userEmploy, DockStyle.Fill);
                 userRemove = userEmploy;
             }
             else
             {
+                userEmploy = new UserEmploy(this);
                 Models.ModelView.addUserToPanel(panelContent, null, userEmploy, DockStyle.Fill);
                 userRemove = userEmploy;
             }
@@ -176,12 +178,14 @@ namespace BTLon.Views
         {
             if (userRemove != userTicket)
             {
-                Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
+                userTicket = new UserTicket(this);
+                Models.ModelView.addUserToPanel(panelContent, userRemove, userTicket, DockStyle.Fill);
                 userRemove = userTicket;
             }
             else
             {
-                Models.ModelView.addUserToPanel(panelContent, null, userEmploy, DockStyle.Fill);
+                userTicket = new UserTicket(this);
+                Models.ModelView.addUserToPanel(panelContent, null, userTicket, DockStyle.Fill);
                 userRemove = userTicket;
             }
         }

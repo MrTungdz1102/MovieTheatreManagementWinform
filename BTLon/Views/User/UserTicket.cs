@@ -117,13 +117,28 @@ namespace BTLon.Views.User
         {
             if (panelContent.Contains(bookTick))
             {
+                string sql = "select * from Phim_PC_Hot";
+                DataTable dt = Process.DataReader(sql);
+                addListPicture(film.getflPanel(), dt);
+                film.GetlblPhim().Text = "Phim đang hot";
                 Models.ModelView.addUserToPanel(this.panelContent, userRemove, film, DockStyle.Fill);
                 userRemove = film;
             }
             else if (panelContent.Contains(times))
             {
+                string sql = "select * from Phim_PC_Hot";
+                DataTable dt = Process.DataReader(sql);
+                addListPicture(film.getflPanel(), dt);
+                film.GetlblPhim().Text = "Phim đang hot";
                 Models.ModelView.addUserToPanel(this.panelContent, userRemove, film, DockStyle.Fill);
                 userRemove = film;
+            }
+            else if(panelContent.Contains(film))
+            {
+                string sql = "select * from Phim_PC_Hot";
+                DataTable dt = Process.DataReader(sql);
+                addListPicture(film.getflPanel(), dt);
+                film.GetlblPhim().Text = "Phim đang hot";
             }
             else
             {
