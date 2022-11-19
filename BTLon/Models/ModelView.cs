@@ -134,5 +134,22 @@ namespace BTLon.Models
                 process.UseProc2(MaHD, food.codeFood, food.size);
             }
         }
+        public static string InsertData3(string form, string TenKH, DateTime NgaySinh, string SDT)
+        {
+            DataProcess process = new DataProcess();
+            DataTable data = process.DataReader("select count(MaKH) from tblKhachHang");
+            int i = int.Parse(data.Rows[0][0].ToString());
+            string MaKH;
+            if (i < 9)
+            {
+                MaKH = form + "00" + (i + 1).ToString();
+            }
+            else
+            {
+                MaKH = form + "0" + (i + 1).ToString();
+            }
+            process.UseProc3(MaKH, TenKH, NgaySinh, SDT);
+            return MaKH;
+        }
     }
 }

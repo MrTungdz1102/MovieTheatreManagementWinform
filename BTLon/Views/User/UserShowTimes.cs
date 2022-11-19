@@ -88,9 +88,11 @@ namespace BTLon.Views.User
         private void btnTimes_Click(object sender, EventArgs e) // sự kiện người dùng click vào thời gian chiếu để hiện ra phần book ticket
         {
             Guna2GradientButton button = (Guna2GradientButton)sender;
+            BookTick.SetButton();
             BookTick.SetLabelTGC(button.Text);
             DataTable data = getPhongChieu(button.Text);
             BookTick.SetLabelPC(data.Rows[0][0].ToString(), data.Rows[0][1].ToString()); //Set tên phòng chiếu và mã lịch chiếu
+            BookTick.GetAndSetControls();
             Models.ModelView.addUserToPanel(ticket.GetPanelContent(), this, BookTick, DockStyle.Fill);
             ticket.setUserRemove(BookTick);
         }
@@ -103,16 +105,28 @@ namespace BTLon.Views.User
         }
         private DataTable getPhongChieu(string ThoiGianChieu) //Hàm này để lấy tên phòng chiếu
         {
-            string sql = "select * from dbo.ThongTinPC(N'" +MaPhim +"',N'" + calendar +"',N'" + ThoiGianChieu + "')";
-            DataTable data = Process.DataReader(sql);
-            return data;
+            //Check thông tin bán vé: nếu vé đã từng có lịch chiếu mình vừa chọn thì sẽ check thông tin ghế trống
+            try
+            {
+                string sql = "select * from dbo.ThongTinPC_2(N'" + MaPhim + "',N'" + calendar + "')";
+                DataTable data = Process.DataReader(sql);
+                BookTick.MaLC = data.Rows[0][1].ToString();
+                return data;
+            }
+            //nếu không có vé nào chứa lịch chiếu đó thì tức là phòng đó đang trống
+            catch (Exception)
+            {
+                string sql = "select * from dbo.ThongTinPC(N'" + MaPhim + "',N'" + calendar + "',N'" + ThoiGianChieu + "')";
+                DataTable data = Process.DataReader(sql);
+                return data;
+            }
         }
         private void Calendar_DateSelected(object sender, DateRangeEventArgs e)// chiếu ra những giờ chiếu trong ngày mà người dùng chọn lên panel
         {
             calendar = Calendar.SelectionEnd.ToString("yyyy/MM/dd");
             BookTick.SetLabelNgayChieu(calendar);
             DataTable detailPhim = GetDataTable(calendar);
-            if(detailPhim.Rows.Count > 0) 
+            if (detailPhim.Rows.Count > 0)
             {
                 lblThoiGianChieu.Text = "Chọn thời gian chiếu";
                 addListButton(this.panelListButton, detailPhim);

@@ -47,6 +47,7 @@
             this.lblPriceCB = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panelKH = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -165,8 +166,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button102 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lblPriceAFood = new System.Windows.Forms.Label();
             this.btnDeleteAll = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label21 = new System.Windows.Forms.Label();
             this.txtNumberSelected = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -190,7 +193,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.panelKH = new System.Windows.Forms.Panel();
+            this.btnSumAll = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPhim)).BeginInit();
             this.panel2.SuspendLayout();
@@ -235,9 +238,10 @@
             this.label22.Location = new System.Drawing.Point(1116, 73);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(23, 24);
+            this.label22.Size = new System.Drawing.Size(49, 24);
             this.label22.TabIndex = 44;
-            this.label22.Text = "&đ";
+            this.label22.Text = "&Vnđ";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDonVi
             // 
@@ -247,9 +251,9 @@
             this.lblDonVi.Location = new System.Drawing.Point(1116, 16);
             this.lblDonVi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDonVi.Name = "lblDonVi";
-            this.lblDonVi.Size = new System.Drawing.Size(23, 24);
+            this.lblDonVi.Size = new System.Drawing.Size(49, 24);
             this.lblDonVi.TabIndex = 43;
-            this.lblDonVi.Text = "&đ";
+            this.lblDonVi.Text = "&Vnđ";
             // 
             // lblCombo
             // 
@@ -278,7 +282,7 @@
             this.btnNext.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnNext.Location = new System.Drawing.Point(1129, 113);
+            this.btnNext.Location = new System.Drawing.Point(1128, 113);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(71, 46);
@@ -443,6 +447,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(885, 411);
             this.panel3.TabIndex = 6;
+            // 
+            // panelKH
+            // 
+            this.panelKH.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelKH.Location = new System.Drawing.Point(0, 95);
+            this.panelKH.Name = "panelKH";
+            this.panelKH.Size = new System.Drawing.Size(287, 316);
+            this.panelKH.TabIndex = 34;
             // 
             // panel9
             // 
@@ -2440,8 +2452,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.btnSumAll);
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.lblPriceAFood);
             this.panel4.Controls.Add(this.btnDeleteAll);
-            this.panel4.Controls.Add(this.guna2GradientButton1);
             this.panel4.Controls.Add(this.label21);
             this.panel4.Controls.Add(this.txtNumberSelected);
             this.panel4.Controls.Add(this.label20);
@@ -2463,6 +2478,43 @@
             this.panel4.Size = new System.Drawing.Size(331, 411);
             this.panel4.TabIndex = 5;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(158, 222);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(41, 20);
+            this.label25.TabIndex = 60;
+            this.label25.Text = "&Vnđ";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label24.Location = new System.Drawing.Point(4, 219);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 24);
+            this.label24.TabIndex = 59;
+            this.label24.Text = "Giá:";
+            // 
+            // lblPriceAFood
+            // 
+            this.lblPriceAFood.AutoSize = true;
+            this.lblPriceAFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceAFood.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblPriceAFood.Location = new System.Drawing.Point(77, 219);
+            this.lblPriceAFood.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPriceAFood.Name = "lblPriceAFood";
+            this.lblPriceAFood.Size = new System.Drawing.Size(21, 24);
+            this.lblPriceAFood.TabIndex = 58;
+            this.lblPriceAFood.Text = "0";
+            // 
             // btnDeleteAll
             // 
             this.btnDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2476,35 +2528,13 @@
             this.btnDeleteAll.FillColor2 = System.Drawing.Color.Red;
             this.btnDeleteAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAll.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDeleteAll.Location = new System.Drawing.Point(124, 359);
+            this.btnDeleteAll.Location = new System.Drawing.Point(223, 370);
             this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteAll.Name = "btnDeleteAll";
             this.btnDeleteAll.Size = new System.Drawing.Size(92, 28);
             this.btnDeleteAll.TabIndex = 57;
             this.btnDeleteAll.Text = "Xóa hết";
             this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
-            // 
-            // guna2GradientButton1
-            // 
-            this.guna2GradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GradientButton1.BorderRadius = 2;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Red;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Red;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2GradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientButton1.Image")));
-            this.guna2GradientButton1.Location = new System.Drawing.Point(120, 192);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(92, 28);
-            this.guna2GradientButton1.TabIndex = 56;
-            this.guna2GradientButton1.Text = "Thêm";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // label21
             // 
@@ -2582,7 +2612,7 @@
             this.btnDone.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDone.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnDone.Image = ((System.Drawing.Image)(resources.GetObject("btnDone.Image")));
-            this.btnDone.Location = new System.Drawing.Point(124, 192);
+            this.btnDone.Location = new System.Drawing.Point(134, 183);
             this.btnDone.Margin = new System.Windows.Forms.Padding(4);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(92, 28);
@@ -2631,7 +2661,7 @@
             this.panel8.Controls.Add(this.btnSub);
             this.panel8.Controls.Add(this.btnAdd);
             this.panel8.Controls.Add(this.txtNumberFood);
-            this.panel8.Location = new System.Drawing.Point(95, 126);
+            this.panel8.Location = new System.Drawing.Point(105, 116);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(149, 59);
@@ -2790,13 +2820,26 @@
             this.guna2Separator1.Size = new System.Drawing.Size(492, 12);
             this.guna2Separator1.TabIndex = 0;
             // 
-            // panelKH
+            // btnSumAll
             // 
-            this.panelKH.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelKH.Location = new System.Drawing.Point(0, 95);
-            this.panelKH.Name = "panelKH";
-            this.panelKH.Size = new System.Drawing.Size(287, 316);
-            this.panelKH.TabIndex = 34;
+            this.btnSumAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSumAll.BorderRadius = 2;
+            this.btnSumAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSumAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSumAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSumAll.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSumAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSumAll.FillColor = System.Drawing.Color.Red;
+            this.btnSumAll.FillColor2 = System.Drawing.Color.Red;
+            this.btnSumAll.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSumAll.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSumAll.Location = new System.Drawing.Point(13, 370);
+            this.btnSumAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSumAll.Name = "btnSumAll";
+            this.btnSumAll.Size = new System.Drawing.Size(92, 28);
+            this.btnSumAll.TabIndex = 61;
+            this.btnSumAll.Text = "Tổng giá";
+            this.btnSumAll.Click += new System.EventHandler(this.btnSumAll_Click);
             // 
             // UserBookTick
             // 
@@ -2987,9 +3030,12 @@
         private System.Windows.Forms.TextBox txtNumberSelected;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lblDonVi;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton btnDeleteAll;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panelKH;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblPriceAFood;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSumAll;
     }
 }

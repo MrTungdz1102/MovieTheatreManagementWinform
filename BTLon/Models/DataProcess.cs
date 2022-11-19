@@ -145,5 +145,20 @@ namespace BTLon.Models
             cmd.ExecuteNonQuery();
             CloseConnect();
         }
+        public void UseProc3(string MaKH, string TenKH, DateTime date, string SDT)
+        {
+            OpenConnect();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "InsertKH";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = sqlConnect;
+            //khai báo các thông tin của tham số truyền vào
+            cmd.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = MaKH;
+            cmd.Parameters.Add("@TenKH", SqlDbType.NVarChar).Value = TenKH;
+            cmd.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = date;
+            cmd.Parameters.Add("@SDT", SqlDbType.Char).Value = SDT;
+            cmd.ExecuteNonQuery();
+            CloseConnect();
+        }
     }
 }

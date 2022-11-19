@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblKH = new System.Windows.Forms.Label();
             this.btnOld = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -35,11 +36,13 @@
             this.btnConfirm = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
-            this.txtSDT = new BTLon.Views.Custom.TextBoxCus();
-            this.txtHoTen = new BTLon.Views.Custom.TextBoxCus();
             this.btnNew = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.errtxt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtSDT = new BTLon.Views.Custom.TextBoxCus();
+            this.txtHoTen = new BTLon.Views.Custom.TextBoxCus();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errtxt)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKH
@@ -115,7 +118,7 @@
             this.btnDestroy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDestroy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDestroy.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDestroy.Location = new System.Drawing.Point(16, 223);
+            this.btnDestroy.Location = new System.Drawing.Point(18, 223);
             this.btnDestroy.Margin = new System.Windows.Forms.Padding(2);
             this.btnDestroy.Name = "btnDestroy";
             this.btnDestroy.Size = new System.Drawing.Size(55, 23);
@@ -171,52 +174,6 @@
             this.lblDate.TabIndex = 9;
             this.lblDate.Text = "Ngày/Tháng/Năm sinh";
             // 
-            // txtSDT
-            // 
-            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtSDT.BorderColor = System.Drawing.Color.Lavender;
-            this.txtSDT.BorderFocusColor = System.Drawing.Color.Lavender;
-            this.txtSDT.BorderSize = 1;
-            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtSDT.Location = new System.Drawing.Point(16, 134);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSDT.Multiline = false;
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtSDT.PasswordChar = false;
-            this.txtSDT.Size = new System.Drawing.Size(188, 28);
-            this.txtSDT.TabIndex = 6;
-            this.txtSDT.Texts = "Số Điện Thoại:";
-            this.txtSDT.UnderlinedStyle = true;
-            this.txtSDT.Click += new System.EventHandler(this.txtSDT_Click);
-            this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtHoTen.BorderColor = System.Drawing.Color.Lavender;
-            this.txtHoTen.BorderFocusColor = System.Drawing.Color.Lavender;
-            this.txtHoTen.BorderSize = 1;
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtHoTen.Location = new System.Drawing.Point(16, 102);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHoTen.Multiline = false;
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtHoTen.PasswordChar = false;
-            this.txtHoTen.Size = new System.Drawing.Size(188, 28);
-            this.txtHoTen.TabIndex = 5;
-            this.txtHoTen.Texts = "Họ Và Tên:";
-            this.txtHoTen.UnderlinedStyle = true;
-            this.txtHoTen.Click += new System.EventHandler(this.txtHoTen_Click);
-            this.txtHoTen.Leave += new System.EventHandler(this.txtHoTen_Leave);
-            // 
             // btnNew
             // 
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -249,6 +206,57 @@
             this.guna2Separator2.Size = new System.Drawing.Size(215, 1);
             this.guna2Separator2.TabIndex = 3;
             // 
+            // errtxt
+            // 
+            this.errtxt.ContainerControl = this;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtSDT.BorderColor = System.Drawing.Color.Lavender;
+            this.txtSDT.BorderFocusColor = System.Drawing.Color.Lavender;
+            this.txtSDT.BorderSize = 1;
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSDT.Location = new System.Drawing.Point(16, 141);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSDT.Multiline = false;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtSDT.PasswordChar = false;
+            this.txtSDT.Size = new System.Drawing.Size(188, 28);
+            this.txtSDT.TabIndex = 6;
+            this.txtSDT.Texts = "Số Điện Thoại:";
+            this.txtSDT.UnderlinedStyle = true;
+            this.txtSDT.Click += new System.EventHandler(this.txtSDT_Click);
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
+            this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.txtHoTen.BorderColor = System.Drawing.Color.Lavender;
+            this.txtHoTen.BorderFocusColor = System.Drawing.Color.Lavender;
+            this.txtHoTen.BorderSize = 1;
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtHoTen.Location = new System.Drawing.Point(16, 102);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHoTen.Multiline = false;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtHoTen.PasswordChar = false;
+            this.txtHoTen.Size = new System.Drawing.Size(188, 28);
+            this.txtHoTen.TabIndex = 5;
+            this.txtHoTen.Texts = "Họ Và Tên:";
+            this.txtHoTen.UnderlinedStyle = true;
+            this.txtHoTen.Click += new System.EventHandler(this.txtHoTen_Click);
+            this.txtHoTen.Leave += new System.EventHandler(this.txtHoTen_Leave);
+            // 
             // UserBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +268,7 @@
             this.Load += new System.EventHandler(this.UserBill_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errtxt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +286,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2GradientButton btnDestroy;
         private Guna.UI2.WinForms.Guna2GradientButton btnConfirm;
+        private System.Windows.Forms.ErrorProvider errtxt;
     }
 }

@@ -30,11 +30,9 @@ namespace BTLon.Views
             printPreviewDialog1.Document = printDocument1;
             printDocument1.PrintPage += printDocument1_PrintPage;
             printPreviewDialog1.ShowDialog();
-            //printDocument1.Print();
         }
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.HasMorePages = true;
             Rectangle rectangle = e.PageBounds;
             e.Graphics.DrawImage(Bitmap, (rectangle.Width / 2) - (this.panelBillAndTick.Width / 2), this.panelTick.Location.Y);
         }
@@ -50,6 +48,11 @@ namespace BTLon.Views
         }
         private void setDetailToPrint()
         {
+            setDetailToPrintTick();
+            setDetailToPrintBill();
+        }
+        private void setDetailToPrintTick()
+        {
             List<DetailTicket> detailTickets = userBookTick.SoGheDaChon;
             int i = 0;
             this.lblKH.Text = TenKH;
@@ -62,18 +65,29 @@ namespace BTLon.Views
             lblGhe.Text = "";
             foreach (DetailTicket detail in detailTickets)
             {
-                if( i == 0 || i == detailTickets.Count)
+                if (i == 0 || i == detailTickets.Count)
                 {
                     lblGhe.Text += detail.MaGhe;
                 }
                 else
                 {
-                    lblGhe.Text += ", " +detail.MaGhe;
+                    lblGhe.Text += ", " + detail.MaGhe;
                 }
                 i++;
             }
         }
-
+        private void setDetailToPrintBill()
+        {
+            List<DetailFoodSelected> detailFoodSelecteds = userBookTick.foodSelecteds;
+            this.lblKhachHang.Text = TenKH;
+            this.lblNgayBanBill.Text = DateTime.Now.ToString("dd/MM/yyyy HH':'mm':'ss 'GMT'");
+            lblDetail.Text = "";
+            foreach (DetailFoodSelected foodSelected in detailFoodSelecteds)
+            {
+                lblDetail.Text += foodSelected.NameFood +" | " + foodSelected.size.ToString() +"\r\n";
+            }
+            lblTong.Text = userBookTick.GetPriceFood();
+        }
         private void printBill_Load(object sender, EventArgs e)
         {
             setDetailToPrint();

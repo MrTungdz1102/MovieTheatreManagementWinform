@@ -16,11 +16,13 @@ namespace BTLon.Views.User
     {
         DataProcess process;
         decimal SumTienGhe;
-        int numberFoodAll;
+        int numberFoodCount;
         Decimal FoodSum;
         Decimal SumAll;
         public List<DetailTicket> SoGheDaChon { get; set; }
         public List<DetailFoodSelected> foodSelecteds { get; set; }
+
+        public string MaLC;
         public UserBookTick()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace BTLon.Views.User
             SoGheDaChon = new List<DetailTicket>();
             foodSelecteds = new List<DetailFoodSelected>();
             SumTienGhe = 0;
-            numberFoodAll = 0;
+            numberFoodCount = 0;
             SumAll = 0;
         }
         private void UserBookTick_Load(object sender, EventArgs e)
@@ -73,6 +75,10 @@ namespace BTLon.Views.User
         {
             return lblPC.Text;
         }
+        public string GetTagPC()
+        {
+            return lblPC.Tag.ToString();
+        }
         public string GetTongTienVe()
         {
             return lblSum.Text;
@@ -81,7 +87,47 @@ namespace BTLon.Views.User
         {
             return lblTenPhim.Text;
         }
+        public string GetPriceFood()
+        {
+            return lblPriceCB.Text;
+        }
         //Tính vé
+        //Load những ghế đã có người đặt
+        public void SetButton()
+        {
+            foreach (Control control in panelListButton.Controls)
+            {
+                Button button = (Button)control;
+                button.Enabled = true;
+                button.BackColor = Color.White;
+            }
+        }
+        public void GetAndSetControls()
+        {
+            string sql = "select * from ThongTinGheTrong(N'" + MaLC + "')";
+            DataTable data = process.DataReader(sql);
+            if (data.Rows.Count > 0 ) 
+            {
+                string[] soPC = lblPC.Text.ToString().Split(' ');
+                foreach (Control control in panelListButton.Controls)
+                {
+                    Button button = (Button)control;
+                    string SoGhe = button.Tag.ToString() + soPC[2] + "-" + button.Text;
+                    for (int i = 0; i < data.Rows.Count; i++)
+                    {
+                        if (data.Rows[i][0].ToString() == SoGhe)
+                        {
+                            button.BackColor = Color.Gray;
+                            button.Enabled = false;
+                        }
+                    }
+                }
+            }
+            else 
+            {
+                return;
+            }
+        }
         //Hàm này để bắt sự kiện người dùng chọn ghế
         private void book_click(object sender, EventArgs e)
         {
@@ -122,26 +168,27 @@ namespace BTLon.Views.User
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            UserBill bill = new UserBill(this);
-            Models.ModelView.addUserToPanel(panelKH, null, bill, DockStyle.Fill);
-            //if (SoGheDaChon.Count > 0)
-            //{
-            //    ModelView.InsertData("V", "KH001", "NV01", lblPC.Tag.ToString(), SoGheDaChon);
-            //    if (foodSelecteds.Count > 0)
-            //    {
-            //        Decimal TongTien = Decimal.Parse(lblPriceCB.Text);
-            //        Models.ModelView.InsertData2("HD", "NV01", "KH001", TongTien, foodSelecteds);
-            //        MessageBox.Show("Thêm thành công!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Chưa chọn ghế!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //foreach (DetailFoodSelected selected in foodSelecteds)
-            //{
-            //    MessageBox.Show(selected.codeFood + "," + selected.NameFood + "," + selected.Price.ToString() + "," + selected.size);
-            //}
+            if (SoGheDaChon.Count == 0)
+            {
+                MessageBox.Show("Bạn chưa chọn ghế!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }else if(numberFoodCount > 0 && cbFoodSelected.Text == "")
+            {
+                if(MessageBox.Show("Bạn có muốn tiếp tục?", "Có vẻ như bạn chưa thêm đồ ăn vừa chọn!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    UserBill bill = new UserBill(this);
+                    Models.ModelView.addUserToPanel(panelKH, null, bill, DockStyle.Fill);
+                }
+            }
+            else
+            {
+                SumComBo();
+                UserBill bill = new UserBill(this);
+                Models.ModelView.addUserToPanel(panelKH, null, bill, DockStyle.Fill);
+                foreach (DetailFoodSelected selected in foodSelecteds)
+                {
+                    MessageBox.Show(selected.codeFood + "," + selected.NameFood + "," + selected.Price.ToString() + "," + selected.size);
+                }
+            }
         }
         //Tính hóa đơn
         private void AddFoodToCombo()
@@ -171,15 +218,8 @@ namespace BTLon.Views.User
         private void setFood()
         {
             txtNumberFood.Text = "0";
-            numberFoodAll = 0;
-            FoodSum = 0;
-        }
-        private void setSumFood(Decimal PriceFood) //Tính tiền khi cộng giá lên hoặc giảm giá đi
-        {
-            SumAll += PriceFood;
-            FoodSum += PriceFood;
-            lblPriceCB.Text = Math.Round(SumAll, 0).ToString();
-            txtNumberFood.Text = numberFoodAll.ToString();
+            numberFoodCount = 0;
+            lblPriceAFood.Text = "0";
         }
         private void cbFood_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -192,8 +232,8 @@ namespace BTLon.Views.User
                     if (selected.NameFood == food.NameFood)
                     {
                         txtNumberFood.Text = selected.size.ToString();
-                        numberFoodAll = selected.size;
-                        FoodSum = selected.Price;
+                        numberFoodCount = selected.size;
+                        lblPriceAFood.Text = selected.Price.ToString();
                         break;
                     }
                 }
@@ -211,9 +251,10 @@ namespace BTLon.Views.User
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            numberFoodAll++;
+            numberFoodCount++;
             Decimal PriceFood = Decimal.Parse(txtPrice.Text); //Lấy giá của từng sản phẩm
-            setSumFood(PriceFood);
+            lblPriceAFood.Text = Math.Round(PriceFood * numberFoodCount,2).ToString();
+            txtNumberFood.Text = numberFoodCount.ToString();
         }
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
@@ -222,40 +263,22 @@ namespace BTLon.Views.User
             txtNumberFood.Text = "0";
             txtNumberSelected.Text = "";
             lblPriceCB.Text = "";
-            numberFoodAll = 0;
+            numberFoodCount = 0;
             SumAll = 0;
         }
         private void btnSub_Click(object sender, EventArgs e)
         {
             Decimal PriceFood = Decimal.Parse(txtPrice.Text);
-            Decimal FirstFoodSum = FoodSum; //Lấy giá trị ban đầu khi chưa trừ
-            DetailFoodSelected foodSelected;
-            //Kiểm tra điều kiện khi trừ
-            if (numberFoodAll > 0 && FoodSum > 0 && Decimal.Parse(lblPriceCB.Text) >= (Decimal.Parse(lblPriceCB.Text) - FirstFoodSum))
+            if(numberFoodCount > 0)
             {
-                numberFoodAll--;
-                foreach (DetailFoodSelected selected in foodSelecteds)
-                {
-                    if (selected.NameFood == cbFood.Text)
-                    {
-                        selected.Price = FoodSum;
-                        selected.size = numberFoodAll;
-                        foodSelected = selected;
-                        if (numberFoodAll == 0)
-                        {
-                            foodSelecteds.Remove(selected);
-                            txtNumberSelected.Text = "";
-                        }
-                        AddFoodSelectedToCombo();
-                        break;
-                    }
-                }
-                setSumFood(-PriceFood);
+                numberFoodCount--;
             }
             else
             {
-                return;
+                numberFoodCount = 0;
             }
+            txtNumberFood.Text = numberFoodCount.ToString();
+            lblPriceAFood.Text = Math.Round(PriceFood * numberFoodCount, 2).ToString();
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -266,42 +289,40 @@ namespace BTLon.Views.User
             }
             else
             {
-                int number = int.Parse(txtNumberFood.Text);
-                foreach (DetailFoodSelected selected in foodSelecteds)
+                Decimal PriceFood = Decimal.Parse(txtPrice.Text);
+                foreach (DetailFoodSelected detailFoodSelected in foodSelecteds)
                 {
-                    if (selected.NameFood == cbFood.Text)
+                    if(detailFoodSelected.NameFood == cbFood.Text)
                     {
-                        if (selected.size == int.Parse(txtNumberFood.Text))
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            selected.size = number;
-                            AddFoodSelectedToCombo();
-                            return;
-                        }
+                        detailFoodSelected.Price = PriceFood * numberFoodCount;
+                        detailFoodSelected.size = numberFoodCount;
+                        AddFoodSelectedToCombo();
+                        return;
                     }
                 }
                 DetailFoodSelected foodSelected = new DetailFoodSelected()
                 {
                     NameFood = cbFood.Text,
-                    Price = SumAll,
-                    size = number,
+                    Price = PriceFood * numberFoodCount,
+                    size = numberFoodCount,
                     codeFood = cbFood.Tag.ToString()
                 };
                 foodSelecteds.Add(foodSelected);
                 AddFoodSelectedToCombo();
-                lblPriceCB.Text = SumAll.ToString();
             }
         }
-        private void GetControls()
+        private void SumComBo()
         {
-            foreach (Control control in panelListButton.Controls)
+            Decimal sum = 0;
+            foreach (DetailFoodSelected foodSelected in foodSelecteds)
             {
-                Button button = (Button)control;
-                button.BackColor = Color.Aqua;
+                sum += foodSelected.Price;
             }
+            lblPriceCB.Text = Math.Round(sum, 2).ToString();
+        }
+        private void btnSumAll_Click(object sender, EventArgs e)
+        {
+            SumComBo();
         }
     }
 }
