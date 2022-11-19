@@ -303,6 +303,12 @@
   <ItemGroup>
     <Content Include="Controls\Read.txt" />
     <Content Include="Models\Read2.txt" />
+    <Content Include="Picture\acc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Picture\anhbia.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Picture\avt.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -323,6 +329,12 @@
     <Content Include="Picture\logo3.png" />
     <Content Include="Picture\LogoMenu.png" />
     <Content Include="Picture\minimize.png" />
+    <Content Include="Picture\nam.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Picture\nu.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Picture\remove.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
 
 namespace BTLon.Views.User
 {
@@ -21,7 +22,10 @@ namespace BTLon.Views.User
 
         private void BillList_Load(object sender, EventArgs e)
         {
-            dgvHoaDon.DataSource = data.DataReader("Select * from tblHoaDon");
+            DataTable dataTable = new DataTable();
+            string sql1 = "select * from tblHoaDon";
+            dataTable = data.DataReader(sql1);
+            dgvHoaDon.DataSource = dataTable;
             cbbTK.Items.Add("Tất cả");
             cbbTK.Items.Add("Tùy chọn");
             Hidedtp();

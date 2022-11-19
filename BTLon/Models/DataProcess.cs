@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.Runtime.Remoting.Contexts;
 using System.Net.Configuration;
+using BTLon.Views;
 
 namespace BTLon.Models
 {
@@ -159,6 +160,19 @@ namespace BTLon.Models
             cmd.Parameters.Add("@SDT", SqlDbType.Char).Value = SDT;
             cmd.ExecuteNonQuery();
             CloseConnect();
+        }
+        public DataTable ReadDataSQL(string sqlSelect)
+        {
+            DataTable dt = new DataTable();
+            OpenConnect();
+            SqlCommand sqlCmd = new SqlCommand(sqlSelect, sqlConnect);
+            sqlCmd.Parameters.AddWithValue("@user", Login.tk);
+            sqlCmd.Parameters.AddWithValue("@pass", Login.mk);
+            SqlDataAdapter sqlData = new SqlDataAdapter(sqlCmd);
+            sqlData.Fill(dt);
+            CloseConnect();
+            sqlData.Dispose();
+            return dt;
         }
     }
 }

@@ -43,10 +43,10 @@
             // ptbLogo
             // 
             this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.Location = new System.Drawing.Point(121, 54);
-            this.ptbLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.ptbLogo.Location = new System.Drawing.Point(161, 66);
+            this.ptbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(148, 99);
+            this.ptbLogo.Size = new System.Drawing.Size(197, 122);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
@@ -64,10 +64,10 @@
             this.btnLogin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogin.Location = new System.Drawing.Point(101, 349);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(135, 430);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(188, 37);
+            this.btnLogin.Size = new System.Drawing.Size(251, 46);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -77,9 +77,9 @@
             this.panelTitle.Controls.Add(this.btnClose);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(391, 23);
+            this.panelTitle.Size = new System.Drawing.Size(521, 28);
             this.panelTitle.TabIndex = 4;
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             // 
@@ -96,10 +96,10 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(10, 10);
-            this.btnClose.Location = new System.Drawing.Point(370, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(493, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(18, 23);
+            this.btnClose.Size = new System.Drawing.Size(24, 28);
             this.btnClose.TabIndex = 5;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -111,15 +111,15 @@
             this.txtPassWord.BorderSize = 2;
             this.txtPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWord.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPassWord.Location = new System.Drawing.Point(94, 263);
-            this.txtPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassWord.Location = new System.Drawing.Point(125, 324);
+            this.txtPassWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassWord.Multiline = false;
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassWord.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.txtPassWord.PasswordChar = true;
-            this.txtPassWord.Size = new System.Drawing.Size(202, 29);
+            this.txtPassWord.Size = new System.Drawing.Size(269, 35);
             this.txtPassWord.TabIndex = 2;
-            this.txtPassWord.Texts = "Pass";
+            this.txtPassWord.Texts = "";
             this.txtPassWord.UnderlinedStyle = true;
             // 
             // txtUserName
@@ -130,16 +130,16 @@
             this.txtUserName.BorderSize = 2;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUserName.Location = new System.Drawing.Point(94, 186);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUserName.Location = new System.Drawing.Point(125, 229);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserName.Multiline = false;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUserName.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.txtUserName.PasswordChar = false;
-            this.txtUserName.Size = new System.Drawing.Size(202, 29);
+            this.txtUserName.Size = new System.Drawing.Size(269, 35);
             this.txtUserName.TabIndex = 1;
             this.txtUserName.TabStop = false;
-            this.txtUserName.Texts = "UserName:";
+            this.txtUserName.Texts = "";
             this.txtUserName.UnderlinedStyle = true;
             // 
             // btnExit
@@ -155,20 +155,20 @@
             this.btnExit.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnExit.Location = new System.Drawing.Point(101, 407);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(135, 501);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(188, 37);
+            this.btnExit.Size = new System.Drawing.Size(251, 46);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(391, 567);
+            this.ClientSize = new System.Drawing.Size(521, 698);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.btnLogin);
@@ -176,7 +176,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.ptbLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
