@@ -24,7 +24,8 @@ namespace BTLon.Views.User
         //Set
         public void setPictureBox(Image image)
         {
-            ptbAvt.Image = image;
+            ptbAnh.Image = null;
+            ptbAnh.Image = image;
         }
         private void btnUp_Click(object sender, EventArgs e)
         {
@@ -32,8 +33,8 @@ namespace BTLon.Views.User
             {
                 DataGridViewRow row = dgvPhim.CurrentRow;
                 string MaPhim = row.Cells[0].Value.ToString();
-                ptbAvt.Image = Image.FromFile(openImage.FileName);
-                Process.InsertImage(MaPhim, ptbAvt.Image);
+                ptbAnh.Image = Image.FromFile(openImage.FileName);
+                Process.InsertImage(MaPhim, ptbAnh.Image);
                 MessageBox.Show("upload successfully", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvPhim.ReadOnly = true;
             }

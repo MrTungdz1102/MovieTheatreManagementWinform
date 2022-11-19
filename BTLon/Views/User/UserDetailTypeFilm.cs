@@ -36,10 +36,11 @@ namespace BTLon.Views.User
         }
         public void UpDateDataBase()
         {
-            string update = "update tblLoaiPhim set TenLP = N'" + txtTenLP.Text + "'";
-            update += "where MaLP = N'" + txtMaLP.Text + "';";
-            MessageBox.Show("Update successfully!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Process.DataChange(update);
+            //string update = "update tblLoaiPhim set TenLP = N'" + txtTenLP.Text + "'";
+            //update += ",MoTa = N'" + txtMoTa.Text + "'";
+            //update += "where MaLP = N'" + txtMaLP.Text + "';";
+            //MessageBox.Show("Update successfully!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Process.DataChange(update);
         }
 
         private void panelDetail_Paint(object sender, PaintEventArgs e)

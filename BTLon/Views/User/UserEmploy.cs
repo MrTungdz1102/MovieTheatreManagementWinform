@@ -89,6 +89,7 @@ namespace BTLon.Views.User
             DetailDepart.UpDateDataBase();
             DetailDepart.setEnable(false);
             setEditPanelDetail(false, false);
+            
         }
 
         private void txtSeach_Click(object sender, EventArgs e)
@@ -104,6 +105,8 @@ namespace BTLon.Views.User
         {           
             setEditPanelDetail(true, false);
             panelDetail.Visible = true;
+           
+
         }
         private void txtSeach__TextChanged(object sender, EventArgs e)
         {

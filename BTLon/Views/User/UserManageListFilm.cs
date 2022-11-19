@@ -81,8 +81,6 @@ namespace BTLon.Views.User
                 object oj = dt.Rows[0][0];
                 byte[] img = oj as byte[];
                 image = ModelView.ByteArrayToImage(img);
-                PictureBox pictureBox = new PictureBox();
-                MessageBox.Show(dt.Rows.Count.ToString());
                 DetailManageFilm.setPictureBox(image);
             }
             catch (Exception)

@@ -183,20 +183,6 @@ namespace BTLon.Views
 
         }
 
-        private void btnFD_Click(object sender, EventArgs e)
-        {
-            if (userRemove != foodanddrink)
-            {
-                Models.ModelView.addUserToPanel(panelContent, userRemove, foodanddrink, DockStyle.Fill);
-                userRemove = foodanddrink;
-            }
-            else
-            {
-                Models.ModelView.addUserToPanel(panelContent, null, foodanddrink, DockStyle.Fill);
-                userRemove = foodanddrink;
-            }
-        }
-
         private void btnRevenue_Click(object sender, EventArgs e)
         {
             if (userRemove != revenue)
@@ -249,12 +235,12 @@ namespace BTLon.Views
             if (userRemove != manageFilm)
             {
                 Models.ModelView.addUserToPanel(panelContent, userRemove, manageFilm, DockStyle.Fill);
-                userRemove = ticketList;
+                userRemove = manageFilm;
             }
             else
             {
                 Models.ModelView.addUserToPanel(panelContent, null, manageFilm, DockStyle.Fill);
-                userRemove = ticketList;
+                userRemove = manageFilm;
             }
         }
 
@@ -289,6 +275,20 @@ namespace BTLon.Views
             {
                 Models.ModelView.addUserToPanel(panelContent, null, userBilllist, DockStyle.Fill);
                 userRemove = userBilllist;
+            }
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            if (userRemove != foodanddrink)
+            {
+                Models.ModelView.addUserToPanel(panelContent, userRemove, foodanddrink, DockStyle.Fill);
+                userRemove = foodanddrink;
+            }
+            else
+            {
+                Models.ModelView.addUserToPanel(panelContent, null, foodanddrink, DockStyle.Fill);
+                userRemove = foodanddrink;
             }
         }
     }

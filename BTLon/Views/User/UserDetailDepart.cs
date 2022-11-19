@@ -43,10 +43,22 @@ namespace BTLon.Views.User
             LoadDataToComBo(txtMaPB.Text);
             this.cbQuanLy.Text = MaNV;
         }
+        public void ClearData()
+        {
+            txtMaPB.Text = "";
+            txtTenPB.Text = "";
+            cbQuanLy.Text = "";
+        }
+        public void UpdateData()
+        {
+            string insert = "insert tblPhongBan values('" + txtMaPB.Text + "','" + txtTenPB.Text + "','" + cbQuanLy.Text + "')";
+        }
+
         public void setEnable(bool check)
         {
             txtTenPB.Enabled = check;
             cbQuanLy.Enabled = check;
+            
         }
         public void UpDateDataBase()
         {

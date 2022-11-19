@@ -48,10 +48,5 @@ namespace BTLon.Views.User
             depart.setTenPB(TenPB);
             depart.setQuanLy(QuanLy);
         }
-
-        private void dgvPhongBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

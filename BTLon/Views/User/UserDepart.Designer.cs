@@ -72,7 +72,7 @@
             this.dgvPhongBan.EnableHeadersVisualStyles = false;
             this.dgvPhongBan.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvPhongBan.Location = new System.Drawing.Point(0, 0);
-            this.dgvPhongBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPhongBan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPhongBan.Name = "dgvPhongBan";
             this.dgvPhongBan.ReadOnly = true;
             this.dgvPhongBan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -91,7 +91,6 @@
             this.dgvPhongBan.Size = new System.Drawing.Size(563, 281);
             this.dgvPhongBan.TabIndex = 8;
             this.dgvPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellClick);
-            this.dgvPhongBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellContentClick);
             // 
             // txtMaPB
             // 
@@ -131,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvPhongBan);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserDepart";
             this.Size = new System.Drawing.Size(563, 281);
             this.Load += new System.EventHandler(this.UserDepart_Load);

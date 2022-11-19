@@ -124,23 +124,23 @@ namespace BTLon.Views.User
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            //{
-            //    foreach (DataGridViewRow row in dgvPhim.SelectedRows)
-            //    {
-            //        try
-            //        {
-            //            string MaNV = row.Cells[0].Value.ToString();
-            //            string sql = "delete from tblPhim where MaPhim = N'" + MaPhim + "'";
-            //            Process.DataChange(sql);
-            //            dgvPhim.Rows.Remove(row);
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            dgvPhim.AllowUserToAddRows = false;
-            //        }
-            //    }
-            //}
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in dgvPhim.SelectedRows)
+                {
+                    try
+                    {
+                        string MaPhim = row.Cells[0].Value.ToString();
+                        string sql = "delete from tblPhim where MaPhim = N'" + MaPhim + "'";
+                        Process.DataChange(sql);
+                        dgvPhim.Rows.Remove(row);
+                    }
+                    catch (Exception ex)
+                    {
+                        dgvPhim.AllowUserToAddRows = false;
+                    }
+                }
+            }
         }
 
         private void btnAddPB_Click(object sender, EventArgs e)

@@ -37,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
             this.panelTitleMenu = new System.Windows.Forms.Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@
             this.btnStatistical = new Guna.UI2.WinForms.Guna2Button();
             this.btnSales = new Guna.UI2.WinForms.Guna2Button();
             this.panelManage = new System.Windows.Forms.Panel();
-            this.btnFD = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhim = new Guna.UI2.WinForms.Guna2Button();
             this.btnLichChieu = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
@@ -65,10 +66,10 @@
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.ptbAvt = new BTLon.Views.Custom.CirclePictureBox();
             this.panelTitleBar.SuspendLayout();
             this.panelViewPro.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.panelTitleMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -78,7 +79,6 @@
             this.panelManage.SuspendLayout();
             this.panelProfile.SuspendLayout();
             this.panelContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -221,6 +221,24 @@
             this.label1.Size = new System.Drawing.Size(97, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "LongNT";
+            // 
+            // ptbAvt
+            // 
+            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
+            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.ptbAvt.BorderSize = 2;
+            this.ptbAvt.GradientAngle = 50F;
+            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
+            this.ptbAvt.Location = new System.Drawing.Point(33, 2);
+            this.ptbAvt.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbAvt.Name = "ptbAvt";
+            this.ptbAvt.Size = new System.Drawing.Size(49, 49);
+            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAvt.TabIndex = 0;
+            this.ptbAvt.TabStop = false;
             // 
             // panelTitleMenu
             // 
@@ -527,7 +545,7 @@
             // panelManage
             // 
             this.panelManage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelManage.Controls.Add(this.btnFD);
+            this.panelManage.Controls.Add(this.btnSanPham);
             this.panelManage.Controls.Add(this.btnPhim);
             this.panelManage.Controls.Add(this.btnLichChieu);
             this.panelManage.Controls.Add(this.btnCustomer);
@@ -541,31 +559,32 @@
             this.panelManage.TabIndex = 13;
             this.panelManage.Visible = false;
             // 
-            // btnFD
+            // btnSanPham
             // 
-            this.btnFD.BackColor = System.Drawing.Color.White;
-            this.btnFD.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnFD.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnFD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFD.FillColor = System.Drawing.Color.DimGray;
-            this.btnFD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFD.ForeColor = System.Drawing.Color.White;
-            this.btnFD.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnFD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFD.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnFD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnFD.Location = new System.Drawing.Point(0, 197);
-            this.btnFD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFD.Name = "btnFD";
-            this.btnFD.PressedColor = System.Drawing.Color.Transparent;
-            this.btnFD.Size = new System.Drawing.Size(195, 52);
-            this.btnFD.TabIndex = 17;
-            this.btnFD.Tag = "     Sản phẩm";
-            this.btnFD.Text = "     Sản phẩm";
+            this.btnSanPham.BackColor = System.Drawing.Color.White;
+            this.btnSanPham.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSanPham.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSanPham.FillColor = System.Drawing.Color.DimGray;
+            this.btnSanPham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSanPham.ForeColor = System.Drawing.Color.White;
+            this.btnSanPham.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSanPham.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSanPham.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnSanPham.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSanPham.Location = new System.Drawing.Point(0, 197);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.PressedColor = System.Drawing.Color.Transparent;
+            this.btnSanPham.Size = new System.Drawing.Size(195, 52);
+            this.btnSanPham.TabIndex = 17;
+            this.btnSanPham.Tag = "     Sản phẩm";
+            this.btnSanPham.Text = "     Sản phẩm";
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnPhim
             // 
@@ -619,7 +638,6 @@
             this.btnLichChieu.TabIndex = 15;
             this.btnLichChieu.Tag = "     Lịch chiếu";
             this.btnLichChieu.Text = "     Lịch chiếu";
-            this.btnLichChieu.Click += new System.EventHandler(this.btnFD_Click);
             // 
             // btnCustomer
             // 
@@ -790,24 +808,6 @@
             this.panelContent.Size = new System.Drawing.Size(1221, 685);
             this.panelContent.TabIndex = 4;
             // 
-            // ptbAvt
-            // 
-            this.ptbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbAvt.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.ptbAvt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbAvt.BorderColor2 = System.Drawing.Color.Gray;
-            this.ptbAvt.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.ptbAvt.BorderSize = 2;
-            this.ptbAvt.GradientAngle = 50F;
-            this.ptbAvt.Image = ((System.Drawing.Image)(resources.GetObject("ptbAvt.Image")));
-            this.ptbAvt.Location = new System.Drawing.Point(33, 2);
-            this.ptbAvt.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbAvt.Name = "ptbAvt";
-            this.ptbAvt.Size = new System.Drawing.Size(49, 49);
-            this.ptbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbAvt.TabIndex = 0;
-            this.ptbAvt.TabStop = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -826,6 +826,7 @@
             this.panelViewPro.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.panelTitleMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -835,7 +836,6 @@
             this.panelManage.ResumeLayout(false);
             this.panelProfile.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -873,7 +873,7 @@
         private Guna.UI2.WinForms.Guna2Button btnTrend;
         private Guna.UI2.WinForms.Guna2Button btnRank;
         private Guna.UI2.WinForms.Guna2Button btnRevenue;
-        private Guna.UI2.WinForms.Guna2Button btnFD;
+        private Guna.UI2.WinForms.Guna2Button btnSanPham;
         private Guna.UI2.WinForms.Guna2Button btnPhim;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private System.Windows.Forms.Panel panelReport;
